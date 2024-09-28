@@ -9,8 +9,8 @@ This project converts plain text recipes into CookLang format using various lang
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/williambrach/llm-text2cooklang.git
+   cd llm-text2cooklang
    ```
 
 2. Install cooklang-in-c:
@@ -45,100 +45,102 @@ This project converts plain text recipes into CookLang format using various lang
    - Save the optimized programs in the `data/programs/` directory
 
 2. The `predict.ipynb` notebook will:
-   - Parse the input dataset
-   - Create examples for training
-   - Train and optimize various models (Llama, Azure OpenAI)
-   - Save the optimized programs in the `data/programs/` directory
+   - Load and parse the input dataset from a TSV file
+   - Set up language models (Azure OpenAI or Ollama) based on environment variables
+   - Load optimized programs from JSON files in the `data/programs/` directory
+   - Prepare to generate CookLang predictions for each recipe using the loaded programs
+   - Cooklang prediction into CSV output
 
 3. The `eval.ipynb` notebook will:
-   - Parse the input dataset
-   - Create examples for training
-   - Train and optimize various models (Llama, Azure OpenAI)
-   - Save the optimized programs in the `data/programs/` directory
+   - Load and process evaluation data from TSV files
+   - Calculate various metrics (WER, ROUGE-L, TER) on the predictions
+   - Evaluate ingredient, unit, and amount accuracy
+   - Generate visualizations comparing model performance across different metrics
+   - Save the resulting plots in the `plots/` directory
 
 
 # Results table 
 
-|    | with_cooklang   | without_ings   | model        | prompt_techqnique   |       WER |   ROUGE-L |       TER |
-|---:|:----------------|:---------------|:-------------|:--------------------|----------:|----------:|----------:|
-| 13 | False           | True           | gpt-4o       | RandomFewShot       | 0.0476775 |  0.990331 |  0.125271 |
-| 24 | True            | True           | gpt-4o       | MIPROv2             | 0.0517735 |  0.990195 |  0.1246   |
-| 25 | True            | True           | gpt-4o       | RandomFewShot       | 0.0559931 |  0.984831 |  0.15703  |
-| 12 | False           | True           | gpt-4o       | MIPROv2             | 0.058581  |  0.983952 |  0.1391   |
-| 16 | False           | True           | gpt-4o-mini  | RandomFewShot       | 0.0606936 |  0.983308 |  0.175653 |
-| 28 | True            | True           | gpt-4o-mini  | RandomFewShot       | 0.0697857 |  0.982162 |  0.19549  |
-|  1 | False           | False          | gpt-4o       | RandomFewShot       | 0.115338  |  0.941359 |  0.34636  |
-|  3 | False           | False          | gpt-4o-mini  | MIPROv2             | 0.135256  |  0.93586  |  0.397854 |
-|  4 | False           | False          | gpt-4o-mini  | RandomFewShot       | 0.129098  |  0.928446 |  0.381446 |
-| 26 | True            | True           | gpt-4o       | zeroshot            | 0.199238  |  0.907482 |  1.13835  |
-| 15 | False           | True           | gpt-4o-mini  | MIPROv2             | 0.185536  |  0.903004 |  1.104    |
-|  2 | False           | False          | gpt-4o       | zeroshot            | 0.339778  |  0.869209 |  1.26664  |
-| 14 | False           | True           | gpt-4o       | zeroshot            | 0.372436  |  0.843238 |  1.7383   |
-|  0 | False           | False          | gpt-4o       | MIPROv2             | 0.555943  |  0.841092 |  2.72135  |
-| 27 | True            | True           | gpt-4o-mini  | MIPROv2             | 0.278445  |  0.837479 |  1.81314  |
-| 29 | True            | True           | gpt-4o-mini  | zeroshot            | 0.274373  |  0.811401 |  2.32433  |
-| 31 | True            | True           | llama3.1:70b | RandomFewShot       | 0.46743   |  0.731679 |  2.73804  |
-| 32 | True            | True           | llama3.1:70b | zeroshot            | 0.46743   |  0.731679 |  2.73804  |
-| 17 | False           | True           | gpt-4o-mini  | zeroshot            | 0.675318  |  0.730529 |  2.80864  |
-|  5 | False           | False          | gpt-4o-mini  | zeroshot            | 0.912785  |  0.674131 |  3.78378  |
-| 35 | True            | True           | llama3.1:8b  | zeroshot            | 0.692294  |  0.636374 |  4.05067  |
-| 30 | True            | True           | llama3.1:70b | MIPROv2             | 0.854265  |  0.621998 |  4.0269   |
-| 34 | True            | True           | llama3.1:8b  | RandomFewShot       | 0.635604  |  0.617826 |  3.4939   |
-|  7 | False           | False          | llama3.1:70b | RandomFewShot       | 0.879641  |  0.586772 |  3.96347  |
-| 22 | False           | True           | llama3.1:8b  | RandomFewShot       | 0.848772  |  0.583771 |  3.64784  |
-| 23 | False           | True           | llama3.1:8b  | zeroshot            | 0.963108  |  0.565372 |  4.07367  |
-|  8 | False           | False          | llama3.1:70b | zeroshot            | 1.08496   |  0.560791 |  4.69368  |
-| 11 | False           | False          | llama3.1:8b  | zeroshot            | 1.10464   |  0.560307 |  5.1225   |
-| 20 | False           | True           | llama3.1:70b | zeroshot            | 1.04453   |  0.534683 |  4.54761  |
-| 19 | False           | True           | llama3.1:70b | RandomFewShot       | 1.26057   |  0.532556 |  6.50786  |
-| 18 | False           | True           | llama3.1:70b | MIPROv2             | 1.30568   |  0.410476 |  6.35512  |
-| 33 | True            | True           | llama3.1:8b  | MIPROv2             | 1.9784    |  0.321543 |  9.43973  |
-| 21 | False           | True           | llama3.1:8b  | MIPROv2             | 1.99379   |  0.289787 |  9.4096   |
-| 10 | False           | False          | llama3.1:8b  | RandomFewShot       | 2.06598   |  0.267919 | 10.2592   |
-|  9 | False           | False          | llama3.1:8b  | MIPROv2             | 1.87905   |  0.230551 |  8.92181  |
-|  6 | False           | False          | llama3.1:70b | MIPROv2             | 1.45797   |  0.197413 |  7.50252  |
+| with_cooklang | without_ings | model        | prompt_techqnique |       WER |   ROUGE-L |       TER |
+|:--------------|:-------------|:-------------|:------------------|----------:|----------:|----------:|
+| False         | True         | gpt-4o       | Few-Shot     | 0.0476775 |  0.990331 |  0.125271 |
+| True          | True         | gpt-4o       | MIPROv2           | 0.0517735 |  0.990195 |  0.1246   |
+| True          | True         | gpt-4o       | Few-Shot     | 0.0559931 |  0.984831 |  0.15703  |
+| False         | True         | gpt-4o       | MIPROv2           | 0.058581  |  0.983952 |  0.1391   |
+| False         | True         | gpt-4o-mini  | Few-Shot     | 0.0606936 |  0.983308 |  0.175653 |
+| True          | True         | gpt-4o-mini  | Few-Shot     | 0.0697857 |  0.982162 |  0.19549  |
+| False         | False        | gpt-4o       | Few-Shot     | 0.115338  |  0.941359 |  0.34636  |
+| False         | False        | gpt-4o-mini  | MIPROv2           | 0.135256  |  0.93586  |  0.397854 |
+| False         | False        | gpt-4o-mini  | Few-Shot     | 0.129098  |  0.928446 |  0.381446 |
+| True          | True         | gpt-4o       | Zero-Shot          | 0.199238  |  0.907482 |  1.13835  |
+| False         | True         | gpt-4o-mini  | MIPROv2           | 0.185536  |  0.903004 |  1.104    |
+| False         | False        | gpt-4o       | Zero-Shot          | 0.339778  |  0.869209 |  1.26664  |
+| False         | True         | gpt-4o       | Zero-Shot          | 0.372436  |  0.843238 |  1.7383   |
+| False         | False        | gpt-4o       | MIPROv2           | 0.555943  |  0.841092 |  2.72135  |
+| True          | True         | gpt-4o-mini  | MIPROv2           | 0.278445  |  0.837479 |  1.81314  |
+| True          | True         | gpt-4o-mini  | Zero-Shot          | 0.274373  |  0.811401 |  2.32433  |
+| True          | True         | llama3.1:70b | Few-Shot     | 0.46743   |  0.731679 |  2.73804  |
+| True          | True         | llama3.1:70b | Zero-Shot          | 0.46743   |  0.731679 |  2.73804  |
+| False         | True         | gpt-4o-mini  | Zero-Shot          | 0.675318  |  0.730529 |  2.80864  |
+| False         | False        | gpt-4o-mini  | Zero-Shot          | 0.912785  |  0.674131 |  3.78378  |
+| True          | True         | llama3.1:8b  | Zero-Shot          | 0.692294  |  0.636374 |  4.05067  |
+| True          | True         | llama3.1:70b | MIPROv2           | 0.854265  |  0.621998 |  4.0269   |
+| True          | True         | llama3.1:8b  | Few-Shot     | 0.635604  |  0.617826 |  3.4939   |
+| False         | False        | llama3.1:70b | Few-Shot     | 0.879641  |  0.586772 |  3.96347  |
+| False         | True         | llama3.1:8b  | Few-Shot     | 0.848772  |  0.583771 |  3.64784  |
+| False         | True         | llama3.1:8b  | Zero-Shot          | 0.963108  |  0.565372 |  4.07367  |
+| False         | False        | llama3.1:70b | Zero-Shot          | 1.08496   |  0.560791 |  4.69368  |
+| False         | False        | llama3.1:8b  | Zero-Shot          | 1.10464   |  0.560307 |  5.1225   |
+| False         | True         | llama3.1:70b | Zero-Shot          | 1.04453   |  0.534683 |  4.54761  |
+| False         | True         | llama3.1:70b | Few-Shot     | 1.26057   |  0.532556 |  6.50786  |
+| False         | True         | llama3.1:70b | MIPROv2           | 1.30568   |  0.410476 |  6.35512  |
+| True          | True         | llama3.1:8b  | MIPROv2           | 1.9784    |  0.321543 |  9.43973  |
+| False         | True         | llama3.1:8b  | MIPROv2           | 1.99379   |  0.289787 |  9.4096   |
+| False         | False        | llama3.1:8b  | Few-Shot     | 2.06598   |  0.267919 | 10.2592   |
+| False         | False        | llama3.1:8b  | MIPROv2           | 1.87905   |  0.230551 |  8.92181  |
+| False         | False        | llama3.1:70b | MIPROv2           | 1.45797   |  0.197413 |  7.50252  |
 
 
 # Results table domain
 
-|    | with_cooklang   | without_ings   | model        | prompt_techqnique   |   find_all_ings |   num_bonus_ings |   num_missing_ings |   find_all_units |   find_all_amounts |
-|---:|:----------------|:---------------|:-------------|:--------------------|----------------:|-----------------:|-------------------:|-----------------:|-------------------:|
-| 27 | True            | True           | gpt-4o-mini  | MIPROv2             |         0.90625 |          4.375   |            0.15625 |          0.59375 |           0.65625  |
-| 15 | False           | True           | gpt-4o-mini  | MIPROv2             |         0.84375 |          2.59375 |            0.28125 |          0.65625 |           0.671875 |
-| 24 | True            | True           | gpt-4o       | MIPROv2             |         0.84375 |          0.28125 |            0.15625 |          0.6875  |           0.78125  |
-| 13 | False           | True           | gpt-4o       | RandomFewShot       |         0.8125  |          0.46875 |            0.25    |          0.78125 |           0.78125  |
-| 12 | False           | True           | gpt-4o       | MIPROv2             |         0.78125 |          0.84375 |            0.28125 |          0.75    |           0.75     |
-| 26 | True            | True           | gpt-4o       | zeroshot            |         0.78125 |          0.78125 |            0.25    |          0.6875  |           0.71875  |
-| 25 | True            | True           | gpt-4o       | RandomFewShot       |         0.75    |          0.375   |            0.28125 |          0.71875 |           0.71875  |
-| 16 | False           | True           | gpt-4o-mini  | RandomFewShot       |         0.71875 |          0.53125 |            0.34375 |          0.59375 |           0.59375  |
-| 28 | True            | True           | gpt-4o-mini  | RandomFewShot       |         0.6875  |          0.84375 |            0.5625  |          0.59375 |           0.5625   |
-| 29 | True            | True           | gpt-4o-mini  | zeroshot            |         0.59375 |          1       |            0.78125 |          0.34375 |           0.46875  |
-|  1 | False           | False          | gpt-4o       | RandomFewShot       |         0.53125 |          2.125   |            1.09375 |          0.21875 |           0.25     |
-|  3 | False           | False          | gpt-4o-mini  | MIPROv2             |         0.53125 |          2.4375  |            0.96875 |          0.1875  |           0.1875   |
-|  0 | False           | False          | gpt-4o       | MIPROv2             |         0.53125 |          2.28125 |            0.96875 |          0.15625 |           0.15625  |
-| 30 | True            | True           | llama3.1:70b | MIPROv2             |         0.5     |          1.21875 |            4.09375 |          0.40625 |           0.375    |
-| 31 | True            | True           | llama3.1:70b | RandomFewShot       |         0.5     |          1.375   |            2.28125 |          0.3125  |           0.34375  |
-| 32 | True            | True           | llama3.1:70b | zeroshot            |         0.5     |          1.375   |            2.28125 |          0.3125  |           0.34375  |
-|  4 | False           | False          | gpt-4o-mini  | RandomFewShot       |         0.46875 |          2.25    |            1.09375 |          0.21875 |           0.1875   |
-| 35 | True            | True           | llama3.1:8b  | zeroshot            |         0.4375  |          0.3125  |            3.875   |          0.34375 |           0.375    |
-| 34 | True            | True           | llama3.1:8b  | RandomFewShot       |         0.40625 |          0.5625  |            4.5     |          0.34375 |           0.34375  |
-| 14 | False           | True           | gpt-4o       | zeroshot            |         0.28125 |          5.25    |            3.875   |          0       |           0        |
-| 19 | False           | True           | llama3.1:70b | RandomFewShot       |         0.28125 |          1.53125 |            4.875   |          0.25    |           0.25     |
-| 18 | False           | True           | llama3.1:70b | MIPROv2             |         0.25    |          1.625   |            6.46875 |          0.125   |           0.125    |
-|  2 | False           | False          | gpt-4o       | zeroshot            |         0.21875 |          7.0625  |            3.53125 |          0       |           0        |
-|  7 | False           | False          | llama3.1:70b | RandomFewShot       |         0.125   |          2.71875 |            5.65625 |          0.03125 |           0.03125  |
-| 33 | True            | True           | llama3.1:8b  | MIPROv2             |         0.03125 |          0.5     |            8.78125 |          0.03125 |           0        |
-|  8 | False           | False          | llama3.1:70b | zeroshot            |         0       |          0       |            9.03125 |          0       |           0        |
-|  5 | False           | False          | gpt-4o-mini  | zeroshot            |         0       |          0.53125 |            8.90625 |          0       |           0        |
-|  6 | False           | False          | llama3.1:70b | MIPROv2             |         0       |          0.09375 |            8.84375 |          0       |           0        |
-| 17 | False           | True           | gpt-4o-mini  | zeroshot            |         0       |          0.71875 |            8.84375 |          0       |           0        |
-| 10 | False           | False          | llama3.1:8b  | RandomFewShot       |         0       |          1.40625 |            8.96875 |          0       |           0        |
-| 11 | False           | False          | llama3.1:8b  | zeroshot            |         0       |          0       |            9.03125 |          0       |           0        |
-| 23 | False           | True           | llama3.1:8b  | zeroshot            |         0       |          0       |            9.03125 |          0       |           0        |
-| 22 | False           | True           | llama3.1:8b  | RandomFewShot       |         0       |          0       |            9.03125 |          0       |           0        |
-| 21 | False           | True           | llama3.1:8b  | MIPROv2             |         0       |          0.75    |            9       |          0       |           0        |
-| 20 | False           | True           | llama3.1:70b | zeroshot            |         0       |          0       |            9.03125 |          0       |           0        |
-|  9 | False           | False          | llama3.1:8b  | MIPROv2             |         0       |          0.15625 |            9       |          0       |           0        |
+| with_cooklang   | without_ings   | model        | prompt_techqnique   |   find_all_ings |   num_bonus_ings |   num_missing_ings |   find_all_units |   find_all_amounts |
+|:----------------|:---------------|:-------------|:--------------------|----------------:|-----------------:|-------------------:|-----------------:|-------------------:|
+| True            | True           | gpt-4o-mini  | MIPROv2             |         0.90625 |          4.375   |            0.15625 |          0.59375 |           0.65625  |
+| False           | True           | gpt-4o-mini  | MIPROv2             |         0.84375 |          2.59375 |            0.28125 |          0.65625 |           0.671875 |
+| True            | True           | gpt-4o       | MIPROv2             |         0.84375 |          0.28125 |            0.15625 |          0.6875  |           0.78125  |
+| False           | True           | gpt-4o       | Few-Shot       |         0.8125  |          0.46875 |            0.25    |          0.78125 |           0.78125  |
+| False           | True           | gpt-4o       | MIPROv2             |         0.78125 |          0.84375 |            0.28125 |          0.75    |           0.75     |
+| True            | True           | gpt-4o       | Zero-Shot            |         0.78125 |          0.78125 |            0.25    |          0.6875  |           0.71875  |
+| True            | True           | gpt-4o       | Few-Shot       |         0.75    |          0.375   |            0.28125 |          0.71875 |           0.71875  |
+| False           | True           | gpt-4o-mini  | Few-Shot       |         0.71875 |          0.53125 |            0.34375 |          0.59375 |           0.59375  |
+| True            | True           | gpt-4o-mini  | Few-Shot       |         0.6875  |          0.84375 |            0.5625  |          0.59375 |           0.5625   |
+| True            | True           | gpt-4o-mini  | Zero-Shot            |         0.59375 |          1       |            0.78125 |          0.34375 |           0.46875  |
+| False           | False          | gpt-4o       | Few-Shot       |         0.53125 |          2.125   |            1.09375 |          0.21875 |           0.25     |
+| False           | False          | gpt-4o-mini  | MIPROv2             |         0.53125 |          2.4375  |            0.96875 |          0.1875  |           0.1875   |
+| False           | False          | gpt-4o       | MIPROv2             |         0.53125 |          2.28125 |            0.96875 |          0.15625 |           0.15625  |
+| True            | True           | llama3.1:70b | MIPROv2             |         0.5     |          1.21875 |            4.09375 |          0.40625 |           0.375    |
+| True            | True           | llama3.1:70b | Few-Shot       |         0.5     |          1.375   |            2.28125 |          0.3125  |           0.34375  |
+| True            | True           | llama3.1:70b | Zero-Shot            |         0.5     |          1.375   |            2.28125 |          0.3125  |           0.34375  |
+| False           | False          | gpt-4o-mini  | Few-Shot       |         0.46875 |          2.25    |            1.09375 |          0.21875 |           0.1875   |
+| True            | True           | llama3.1:8b  | Zero-Shot            |         0.4375  |          0.3125  |            3.875   |          0.34375 |           0.375    |
+| True            | True           | llama3.1:8b  | Few-Shot       |         0.40625 |          0.5625  |            4.5     |          0.34375 |           0.34375  |
+| False           | True           | gpt-4o       | Zero-Shot            |         0.28125 |          5.25    |            3.875   |          0       |           0        |
+| False           | True           | llama3.1:70b | Few-Shot       |         0.28125 |          1.53125 |            4.875   |          0.25    |           0.25     |
+| False           | True           | llama3.1:70b | MIPROv2             |         0.25    |          1.625   |            6.46875 |          0.125   |           0.125    |
+| False           | False          | gpt-4o       | Zero-Shot            |         0.21875 |          7.0625  |            3.53125 |          0       |           0        |
+| False           | False          | llama3.1:70b | Few-Shot       |         0.125   |          2.71875 |            5.65625 |          0.03125 |           0.03125  |
+| True            | True           | llama3.1:8b  | MIPROv2             |         0.03125 |          0.5     |            8.78125 |          0.03125 |           0        |
+| False           | False          | llama3.1:70b | Zero-Shot            |         0       |          0       |            9.03125 |          0       |           0        |
+| False           | False          | gpt-4o-mini  | Zero-Shot            |         0       |          0.53125 |            8.90625 |          0       |           0        |
+| False           | False          | llama3.1:70b | MIPROv2             |         0       |          0.09375 |            8.84375 |          0       |           0        |
+| False           | True           | gpt-4o-mini  | Zero-Shot            |         0       |          0.71875 |            8.84375 |          0       |           0        |
+| False           | False          | llama3.1:8b  | Few-Shot       |         0       |          1.40625 |            8.96875 |          0       |           0        |
+| False           | False          | llama3.1:8b  | Zero-Shot            |         0       |          0       |            9.03125 |          0       |           0        |
+| False           | True           | llama3.1:8b  | Zero-Shot            |         0       |          0       |            9.03125 |          0       |           0        |
+| False           | True           | llama3.1:8b  | Few-Shot       |         0       |          0       |            9.03125 |          0       |           0        |
+| False           | True           | llama3.1:8b  | MIPROv2             |         0       |          0.75    |            9       |          0       |           0        |
+| False           | True           | llama3.1:70b | Zero-Shot            |         0       |          0       |            9.03125 |          0       |           0        |
+| False           | False          | llama3.1:8b  | MIPROv2             |         0       |          0.15625 |            9       |          0       |           0        |
 
 
 ## MIPROv2 with cooklang with ings prompt example
@@ -235,7 +237,6 @@ Reasoning: Let's think step by step in order to
 ## Few-shot example with cooklang with ingredients
 
 ```
-
 Convert plain recipe text with provided ingredients into Cooklang text format.
 Cooklang Recipe Specification:
     1. Ingredients
@@ -324,7 +325,6 @@ Cooklang:
 ## Few-shot example without cooklang with ingredients
 
 ```
-
 Convert plain recipe text with provided ingredients into Cooklang text format.
 Return only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.
 
