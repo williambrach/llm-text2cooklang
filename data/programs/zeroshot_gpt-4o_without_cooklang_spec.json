@@ -1,0 +1,12 @@
+{
+  "prog": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+    "signature_prefix": "Cooklang:",
+    "extended_signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+    "extended_signature_prefix": "Cooklang:"
+  }
+}

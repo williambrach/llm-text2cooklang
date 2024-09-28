@@ -1,0 +1,33 @@
+{
+  "prog": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "recipe_text": "In a large mixing bowl mix together the flour (3 cups), baking powder (1 tbsp), garlic salt (1 tsp), sugar (1\/2 cup), shredded Cheddar cheese (1 cup) and green onions (3). Mix in the beer (12 oz) using as few strokes as possible until the mix is well moistened. Pour the batter (it will be thick) into a greased bread loaf pan. Drizzle with melted butter (1\/2 cup) on top before baking. Bake for 50 minutes in a 375 degree oven, allow to cool.",
+        "rationale": "Cooklang: In a large #mixing bowl{} mix together the @flour{3%cups}, @baking powder{1%tbsp}, @garlic salt{1%tsp}, @sugar{1\/2%cup}, shredded @Cheddar cheese{1%cup} and @green onions{3}. Mix in the @beer{12%oz} using as few strokes as possible until the mix is well moistened. Pour the @batter{} (it will be thick) into a greased #bread loaf pan{}. Drizzle with melted @butter{1\/2%cup} on top before baking. Bake for 50 minutes in a 375 degree #oven{}, allow to cool.",
+        "cooklang": "In a large #mixing bowl{} mix together the @flour{3%cups}, @baking powder{1%tbsp}, @garlic salt{1%tsp}, @sugar{1\/2%cup}, shredded @Cheddar cheese{1%cup} and @green onions{3}. Mix in the @beer{12%oz} using as few strokes as possible until the mix is well moistened. Pour the @batter{} (it will be thick) into a greased #bread loaf pan{}. Drizzle with melted @butter{1\/2%cup} on top before baking. Bake for 50 minutes in a 375 degree #oven{}, allow to cool."
+      },
+      {
+        "augmented": true,
+        "recipe_text": " Remove any excess fat or sinew and finely dice the beef loin or beef fillet (120g). Peel and finely dice the red onion (15g). Mix together the diced beef and onion in a mixing bowl, season with salt (1\/4 tsp), pepper (1\/5 tsp) and Worcester sauce (15g). You can also add some finely chopped parsley to the tar-tar. Toast the ciabatta (2 slices) in a pan without oil. It's nice to use a griddle pan to get the toasted lines. Place the tar-tar on a plate and serve with the ciabatta and a wedge of lemon.  ",
+        "rationale": "Cooklang: Remove any excess fat or sinew and finely dice the @beef loin{120%g} or @beef fillet{120%g}. Peel and finely dice the @red onion{15%g}. Mix together the diced beef and onion in a #mixing bowl{}, season with @salt{1\/4%tsp}, @pepper{1\/5%tsp} and @Worcester sauce{15%g}. You can also add some finely chopped @parsley{} to the tar-tar. Toast the @ciabatta{2%slices} in a #pan{} without oil. It's nice to use a griddle pan to get the toasted lines. Place the tar-tar on a plate and serve with the ciabatta and a wedge of @lemon{}.",
+        "cooklang": "Remove any excess fat or sinew and finely dice the @beef loin{120%g} or @beef fillet{120%g}. Peel and finely dice the @red onion{15%g}. Mix together the diced beef and onion in a #mixing bowl{}, season with @salt{1\/4%tsp}, @pepper{1\/5%tsp} and @Worcester sauce{15%g}. You can also add some finely chopped @parsley{} to the tar-tar. Toast the @ciabatta{2%slices} in a #pan{} without oil. It's nice to use a griddle pan to get the toasted lines. Place the tar-tar on a plate and serve with the ciabatta and a wedge of @lemon{}."
+      },
+      {
+        "recipe_text": "Wash tomatoes, cucumber, red bell pepper and cut into large chunks, tear up the lettuce and mix together in a bowl with the other ingredients. Add the pesto and olives, toss lightly. Place on a plate, garnish with thinly sliced rings of red onion and blocks of feta cheese. If necessary drizzle with a little olive oil and season.",
+        "cooklang": " Wash @tomatoes{50%g}, @cucumber{50%g}, @red bell pepper{50%g} and cut into large chunks, tear up the @lettuce{40%g} and mix together in a #bowl with the other ingredients.  Add the @pesto{20%g} and @olives{20%g}, toss lightly. Place on a plate, garnish with thinnly sliced rings of @red onion{10%g} and blocks of @feta cheese{50%g}. If necessary drizzle with a little olive oil and season."
+      },
+      {
+        "recipe_text": "Wash the tomatoes and slice them into chunks, if they are cherry tomatoes, you can just halve them. Peel the red onions and slice them into thin rings, which you can then halve. Wash the coriander and chop coarsely. Mix the tomatoes, onion and coriander in a bowl and season with salt, pepper, a splash of olive oil and Worcester sauce. Enjoy as a simple side salad with any meal.",
+        "cooklang": " Wash the @tomatoes{200%g} and slice them into chunks, if they are cherry tomatoes, you can just halve them. Peel the @red onions{10%g} and slice them into thin rings, which you can then halve. Wash the @coriander{10%g} and chop coarsely. Mix the tomatoes, onion and coriander in a bowl and season with @salt{1\/4%tsp}, pepper, a splash of olive oil and @Worcester sauce{10%g}. Enjoy as a simple side salad with any meal."
+      }
+    ],
+    "signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+    "signature_prefix": "Cooklang:",
+    "extended_signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+    "extended_signature_prefix": "Cooklang:"
+  }
+}

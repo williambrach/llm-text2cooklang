@@ -1,0 +1,605 @@
+source	name	metadata	ingredients	method	cooklang	predict_cooklang
+https://github.com/cooklang/spec/blob/main/examples/Coffee%20Souffle.cook	make caramel		1  egg yoke,125 g condenced milk,3tsp  instant coffee,1,1/2cups  water,3tsp  gelatine,1  eggwhite,60 g cashew	Crack the egg yoke into a bowl, then add the condenced milk and instant coffee, and mix until a nice caramel is formed. Do not allow to bubble. Pour into a bowl and leave to cool down for 15 minutes. Heat water and gelatine then stir till gelatine is dissolved completely. Once gelatine is cooled down mix it with the caramel. Beat eggwhite until formy. Then mix the whites bit by bit to the the gelatine-caramel mixture. Pour into a pudding bowl and leave in fridge for 2 hours minimum. Add some cashew and enjoy!	Crack the @egg yoke{1} into a bowl, then add the @condenced milk{125%g} and @instant coffee{3tsp}, and mix until a nice caramel is formed. Do not allow to bubble.  Pour into a #bowl and leave to cool down for ~{15%minutes}.  heat @water{1,1/2cups} and @gelatine{3tsp} then stir till gelatine is dissolved completely.Once gelatine is colled down mix it with the caramel.  Beat @eggwhite{1} until formy. Then mix the whites bit by bit to the the gelatinecaramel mixture.   Pour into a #puddingbowl and leave in fridge for 2 hours minimum. Add some @cashew{60%g} and enjoy!	Wash and pat dry the @chicken breast{4} then rub them with @pepper{1/5%tsp} and @salt{1/2%tsp}, leave for 10 minutes. Heat a #frying pan{} over medium heat, add the @bacon{50%g} and cook until crispy, then add the @green bean{150%g}. Reduce the heat to low and braise slowly. In another #frying pan{}, heat over medium heat, add the @chicken breast{4} and fry for 2 minutes on each side, then transfer the chicken to the first frying pan with the beans and continue braising together. Chop the @dill{5%g}, @pickled onion{10%g}, and @garlic{1/2%clove} finely, mix in @salt{} to taste and @sour cream{30%g}. To serve place the green bean on a #plate{}, top with sliced chicken breast at an angle, spoon the sauce over the chicken.
+https://github.com/cooklang/spec/blob/main/examples/Easy%20Pancakes.cook	Easy Pancakes		3  eggs,125 g flour,250 ml milk,1 pinch sea salt,some  oil	Crack the eggs into a blender, then add the flour, milk and sea salt, and blitz until smooth. Pour into a bowl and leave to stand for 15 minutes. Melt the butter (or a drizzle of oil if you want to be a bit healthier) in a large non-stick frying pan on a medium heat, then tilt the pan so the butter coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for 1 to 2 minutes, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through. Serve straightaway with your favourite topping.	Crack the @eggs{3} into a blender, then add the @flour{125%g}, @milk{250%ml} and @sea salt{1%pinch}, and blitz until smooth.  Pour into a #bowl and leave to stand for ~{15%minutes}.  Melt the butter (or a drizzle of @oil if you want to be a bit healthier) in a #large non-stick frying pan{} on a medium heat, then tilt the pan so the butter coats the surface.  Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for 1 to 2 minutes, or until it starts to come away from the sides.  Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through.  Serve straightaway with your favourite topping.	"Here is the result of converting the recipe text into a format similar to the first one provided:
+
+**Cooklang:**
+Crack the @eggs{3} into a #blender{}, add the @flour{125%g}, @milk{250%ml}, and @sea salt{a pinch}. Blitz until smooth. Pour into a #bowl{} and leave to stand for 15 minutes.
+
+Melt the @butter{} (or a drizzle of @oil{}) in a large non-stick #frying pan{} on a medium heat. Tilt the pan so the butter coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base. Cook for 1 to 2 minutes, or until it starts to come away from the sides.
+
+Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through. Serve straightaway with your favourite topping.
+
+**Ingredients:**
+- @eggs{3}
+- @flour{125%g}
+- @milk{250%ml}
+- @sea salt{a pinch}
+- @butter{}
+- @oil{}
+
+Note that I've assumed the ""some oil"" in the original recipe text is a separate ingredient, but it's not entirely clear. If you meant to use the same oil as mentioned earlier, please let me know and I'll adjust accordingly!"
+https://github.com/cooklang/spec/blob/main/examples/Fried%20Rice.cook	Fried Rice		1 tbsp oyster sauce,5 tbsp soy sauce,5 tsp sesame oil,1 tbsp peanut oil,2 items eggs,75 cup bacon,2 tbsp peanut oil,2 gloves garlic,3 tsp ginger,2 medium onion,1 tbsp Chinese cooking wine,2 tsp sugar,150 g prawns,3 cups cooked rice,5 items scallions,2 items scallions	Mix together oyster sauce, soy sauce and sesame oil, set aside. Heat peanut oil in a wok or heavy based skillet/fry pan over medium heat. Add eggs and cook until scrambled, then remove onto plate. Increase heat to high and add chopped bacon, excess fat trimmed. Cook until golden, then remove onto plate with egg - about 2 minutes. Drain off excess bacon fat. Add remaining peanut oil, minced garlic and ginger. Return wok to stove on high heat. Stir fry as it comes up to heat, don't let it burn. When garlic starts to sizzle, add finally chopped onion and stir fry for 2 minutes until golden. Add Chinese cooking wine and sugar and let it simmer rapidly, stirring, for 20 seconds, until mostly evaporated. Add prawns and stir fry for 1 minute to heat through if pre-cooked, cook longer to cook if raw. Add refrigerated overnight cooked rice, Sauce, eggs, bacon and thinly sliced scallions. Stir fry for 2 minutes until rice is hot - around 2 minutes. Transfer to serving plate, sprinkle with thinly sliced scallions and serve.	Mix together @oyster sauce{1%tbsp}, @soy sauce{5%tbsp} and @sesame oil{5%tsp}, set aside.  Heat @peanut oil{1%tbsp} in a wok or heavy based skillet/fry pan over medium heat. Add @eggs{2%items} and cook until scrambled, then remove onto plate.  Increase heat to high and add chopped @bacon{75%cup}, excess fat trimmed. Cook until golden, then remove onto plate with egg - about 2 minutes.  Drain off excess bacon fat.  Add remaining @peanut oil{2%tbsp}, minced @garlic{2%gloves} and @ginger{3%tsp}. Return wok to stove on high heat. Stir fry as it comes up to heat, don’t let it burn. When garlic starts to sizzle, add finally chopped @onion{2%medium} and stir fry for 2 minutes until golden.  Add @Chinese cooking wine{1%tbsp} and @sugar{2%tsp} and let it simmer rapidly, stirring, for 20 seconds, until mostly evaporated.  Add @prawns{150%g} and stir fry for 1 minute to heat through if pre-cooked, cook longer to cook if raw.  Add refrigerated overnight @cooked rice{3%cups}, Sauce, eggs, bacon and thinly sliced @scallions{5%items}. Stir fry for 2 minutes until rice is hot - around 2 minutes.  Transfer to serving plate, sprinkle with thinly sliced @scallions{2%items} and serve.	"Based on the provided recipe text, I'm going to take a guess that the missing ingredient is ""peas"". The reason for this guess is that peas are a common addition to Chinese fried rice dishes and would complement the other ingredients in the recipe. Additionally, the cooking method described in the recipe text, which involves stir-frying ingredients quickly over high heat, is well-suited for adding frozen peas towards the end of cooking.
+
+Here's the updated list with the guessed ingredient added:
+
+* 1 item cooked rice
+* 5 items scallions
+* 2 items scallions
+* 1 item peas"
+https://github.com/cooklang/spec/blob/main/examples/Olivier%20Salad.cook	Olivier Salad		1 kg corn beef,3 medium potatoes,3 medium carrots,1 cup frozen peas,4  eggs,6  pickles,1 cup mayonnaise,1 tbsp dill	Zero step is cook corn beef (1 kg). Put into a large pan and simmer for 2 hours. The first step is to cook your potatoes (3 medium) and carrots (3 medium). I used a steamer, but you can always go the traditional route and boil them. In either case, peel the carrots but not the potatoes. Steam the potatoes for 30 minutes to start with, and then add the peeled carrots. Continue steaming for 10-15 more minutes, or until the potatoes and carrots are firm but tender when poked. Meanwhile, cook your frozen peas (1 cup) according to package directions. I use the kind that can be steamed in the package in the microwave. When they are done, set them aside to cool. When the potatoes and carrots are done, allow them to cool to the point that you can handle them easily. Peel the potatoes. Using your fingers or the back of a knife, gently scrape the thin layer of skin off of the potatoes. Dice them into 1cm cube-ish shapes and put them into a medium serving bowl. Next, dice your carrots. I've heard it said that a Soviet housewife could be judged on her housekeeping skills by how finely she could dice vegetables for her soups and salads. I, however, won't judge you. In fact, if you chop your potatoes and carrots a little larger, I would probably even thank you. I happen to like chunky salads. Toss the carrots and a cup of steamed peas into the bowl with the potatoes. Peel and dice your hardboiled eggs (4). Again, I know some like to have their salads with finely diced ingredients, but I don't. So dice them however you like. Chop pickles (6) finely. I used small snacking dill pickles, so I needed to use six of them. If you have larger pickles, try using three and see if that is enough for you. Add the meat if using and mix everything together gently before you add the mayonnaise (1 cup). Stir in one cup of mayo to start with, and add more if you think that the salad needs more binding together. Cover the salad and chill for at least one hour or overnight to allow the flavors to come together. And of course, garnish with finely chopped dill (1 tbsp). This is a Russian salad, after all.	 Zero step is cook @corn beef{1%kg}. Put into a large pan and simmer for ~{2%hours}.  The first step is to cook your @potatoes{3%medium} and @carrots{3%medium}. I used a steamer, but you can always go the traditional route and boil them. In either case, peel the carrots but not the potatoes.  Steam the potatoes for ~{30%minutes} to start with, and then add the peeled carrots. Continue steaming for 10-15 more minutes, or until the potatoes and carrots are firm but tender when poked.  Meanwhile, cook your @frozen peas{1%cup} according to package directions. I use the kind that can be steamed in the package in the microwave. When they are done, set them aside to cool.  When the potatoes and carrots are done, allow them to cool to the point that you can handle them easily.  Peel the potatoes. Using your fingers or the back of a knife, gently scrape the thin layer of skin off of the potatoes. Dice them into 1cm cube-ish shapes and put them into a medium serving bowl.  Next, dice your carrots. I've heard it said that a Soviet housewife could be judged on her housekeeping skills by how finely she could dice vegetables for her soups and salads. I, however, won't judge you. In fact, if you chop your potatoes and carrots a little larger, I would probably even thank you. I happen to like chunky salads.  Toss the carrots and a cup of steamed peas into the bowl with the potatoes.  Peel and dice your hardboiled @eggs{4}. Again, I know some like to have their salads with finely diced ingredients, but I don't. So dice them however you like.  Chop @pickles{6} finely. I used small snacking dill pickles, so I needed to use six of them. If you have larger pickles, try using three and see if that is enough for you.  Add the meat if using and mix everything together gently before you add the @mayonnaise{1%cup}.  Stir in one cup of mayo to start with, and add more if you think that the salad needs more binding together.  Cover the salad and chill for at least one hour or overnight to allow the flavors to come together. And of course, garnish with finelly chopped @dill{1%tbsp}. This is a Russian salad, after all.	"Here is the recipe in Cooklang format:
+
+```
+# Russian Salad Recipe
+
+## Ingredients
+- 1 kg corn beef
+- 3 medium potatoes
+- 3 medium carrots
+- 1 cup frozen peas
+- 4 hardboiled eggs
+- 6 dill pickles (or 3 larger ones)
+- 1 cup mayonnaise
+- 1 tbsp finely chopped fresh dill
+- Optional: meat of your choice
+
+## Instructions
+### Step 0: Cooking Corn Beef
+Simmer corn beef in a large pan for 2 hours.
+
+### Step 1: Cooking Potatoes and Carrots
+Steam or boil potatoes and carrots.
+Peel carrots, but not potatoes.
+Steam potatoes for 30 minutes, then add peeled carrots and continue steaming for 10-15 more minutes.
+
+### Step 2: Cooking Frozen Peas
+Cook frozen peas according to package directions (e.g., microwave).
+
+### Step 3: Preparing Potatoes and Carrots
+Allow cooked potatoes and carrots to cool.
+Peel potatoes using fingers or back of a knife.
+Dice into 1cm cube-ish shapes.
+
+### Step 4: Assembling the Salad
+Toss carrots and peas with potatoes in a medium serving bowl.
+Peel and dice hardboiled eggs.
+Chop pickles finely.
+Add meat (if using) and mix everything together gently.
+
+### Step 5: Adding Mayonnaise and Chilling
+Stir in mayonnaise to start with, adding more if needed.
+Cover the salad and chill for at least one hour or overnight.
+
+### Step 6: Garnishing
+Garnish the salad with finely chopped fresh dill before serving.
+```
+
+Note that I've kept the same structure and formatting as the original recipe text, but converted it into a more structured format using Cooklang syntax. Let me know if you'd like me to make any changes!"
+https://www.dinneratthezoo.com/wprm_print/6796	Mixed Berry Smoothie	>> source: https://www.dinneratthezoo.com/wprm_print/6796 >> total time: 6 minutes >> servings: 2 	1,5 cups apple juice,one sliced  banana,1,5 cups frozen mixed berries,0.750 cup vanilla greek yogurt,some  honey	Place the apple juice (1.5 cups), banana (one sliced), frozen mixed berries (1.5 cups) and vanilla Greek yogurt (3/4 cup) in a blender; blend until smooth. If the smoothie seems too thick, add a little more liquid (1/4 cup). Taste and add honey if desired. Pour into two glasses and garnish with fresh berries and mint sprigs if desired.	Place the @apple juice{1,5%cups}, @banana{one sliced}, @frozen mixed berries{1,5%cups} and @vanilla greek yogurt{3/4%cup} in a #blender{}; blend until smooth. If the smoothie seems too thick, add a little more liquid (1/4 cup).   Taste and add @honey{} if desired. Pour into two glasses and garnish with fresh berries and mint sprigs if desired.	"Here's the recipe in Cooklang format:
+
+Cooklang: Add @apple juice{1.5cups}, @banana{1sliced}, @frozen mixed berries{1.5cups} and @vanilla Greek yogurt{0.75cup} to a #blender. Blend until smooth using the #blender. If necessary, add a little more liquid (0.25cup) if too thick. Taste and add some @honey if desired. Pour into two #glasses. Garnish with fresh @berries and sprigs of @mint if desired.
+
+Note that I used ""some"" for the honey quantity since it's not specified in the original recipe, but you could also use a more approximate measurement like {1tsp} or {to taste}."
+https://github.com/cooklang/recipes/blob/main/Breakfast/Cheese%20omelette%20with%20vegetables.cook	Cheese omelette with vegetables	>> servings: 1 >> produce: 240%g >> calories: 345%kkal >> protein: 23%g >> total fat: 24%g >> total carb.: 6%g	30 g red bell pepper,30 g courgette,30 g tomatoes,30 g mozzarella cheese,2  eggs,30 g double cream,0.250 tsp salt,0.250 tsp pepper	Preheat the oven to 180 degrees. Finely dice red bell pepper, courgette, tomatoes and grate the mozzarella cheese. Beat the eggs in a bowl and add the double cream, salt and pepper and whisk well with a fork. Add the vegetables to the egg mixture and pour it into the pan, sprinkle with cheese and place in the oven to bake for 7 minutes. Take an oven mitt and remove the pan from the oven, fold the omelette in half and place on a plate. Garnish with finely chopped fresh parsley and serve with a relish or chutney.	Preheat the oven to 180 degrees.  Finely dice @red bell pepper{30%g}, @courgette{30%g}, @tomatoes{30%g} and grate the @mozzarella cheese{30%g}.  Beat the @eggs{2} in a #bowl and add the @double cream{30%g}, @salt{1/4%tsp} and @pepper{1/4%tsp} and whisk well with a fork.  Add the vegetables to the egg mixture and pour it into the #pan, sprinkle with cheese and place in the oven to bake for ~{7%minutes}.  Take an #oven mitt{} and remove the pan from the oven, fold the omelette in half and place on a plate. Garnish with finely chopped fresh parsley and serve with a relish or chutney.	"```
+# Ingredients
+- @red bell pepper{30g}
+- @courgette{30g}
+- @tomatoes{30g}
+- @mozzarella cheese{30g}
+- @eggs{2}
+- @double cream{30g}
+- @salt{0.25tsp}
+- @pepper{0.25tsp}
+
+# Instructions
+1. Preheat the oven to 180 degrees.
+2. Finely dice the @red bell pepper, @courgette, and @tomatoes.
+3. Grate the @mozzarella cheese.
+4. Beat the @eggs in a bowl and add the @double cream, @salt, and @pepper. Whisk well with a fork.
+5. Add the diced vegetables to the egg mixture and pour it into a pan.
+6. Sprinkle the grated cheese on top of the egg mixture.
+7. Place the pan in the oven and bake for 7 minutes.
+8. Remove the pan from the oven using an oven mitt.
+9. Fold the omelette in half and place it on a plate.
+10. Garnish with finely chopped fresh parsley and serve with a relish or chutney.
+```
+Note that I assumed the ""pan"" used in the recipe is not specified, so I didn't add any specific pan type to the instructions. If you want to specify a particular type of pan, please let me know!"
+https://github.com/cooklang/recipes/blob/main/Breakfast/Chicken%20roll.cook	Chicken roll	 >> servings: 1 >> produce: 330%g >> calories: 640%kkal >> protein: 34%g >> total fat: 40%g >> total carbs.: 35%g	120 g chicken fillets,30 g cucumbers,30 g cherry tomatoes,50 g mayonnaise,50 g sour cream,0.500 glove garlic,2 g parsley,0.500 tsp salt,0.500 tsp curry seasoning powder,0.500 tsp salt,0.250 tsp pepper,1  tortilla,30 g lettuce,some  oil	Cut the chicken fillets into thin strips. Slice the cucumbers into fine julienne cuts by first slicing into rounds and then slicing matchstick like strips. Slice the cherry tomatoes into halves, or quarters if they are large. Combine the mayonnaise and sour cream, add the finely chopped garlic and freshly chopped parsley, salt and curry seasoning powder to taste. Heat a frying pan with a little oil and fry the chicken fillets until golden brown, season with salt and pepper. Place the tortilla on a flat chopping board or plate, place a little chiffonade lettuce, cooked chicken strips, cucumber and tomatoes onto the tortilla, pour the dressing over the filling ingredients, fold over two opposite sides and roll up into a tight roll. Use a little water to stick the edge of the tortilla down securely. At this stage the tortilla is ready to enjoy, to add a little extra crunch you can fry the roll in a frying pan with a little oil until golden brown.	Cut the @chicken fillets{120%g} into thin strips.  Slice the @cucumbers{30%g} into fine julienne cuts by first slicing into rounds and then slicing matchstick like strips. Slice the @cherry tomatoes{30%g} into halves, or quarters if they are large.  Combine the @mayonnaise{50%g} and @sour cream{50%g}, add the finely chopped @garlic{1/2%glove} and freshly chopped @parsley{2%g}, @salt{1/2%tsp} and @curry seasoning powder{1/2%tsp} to taste.  Heat a #frying pan{} with a little oil and fry the chicken fillets until golden brown, season with @salt{1/2%tsp} and @pepper{1/4%tsp}.  Place the @tortilla{1} on a flat chopping board or plate, place a little chiffonade @lettuce{30%g}, cooked chicken strips, cucumber and tomatoes onto the tortilla, pour the dressing over the filling ingredients, fold over two opposite sides and roll up into a tight roll. Use a little water to stick the edge of the tortilla down securely. At this stage the tortilla is ready to enjoy, to add a little extra crunch you can fry the roll in a frying pan with a little @oil until golden brown.	"Based on the provided text, I will identify the recipe that is more complex based on the number of steps and ingredients involved.
+
+**Recipe 1**
+
+* Ingredients: 9 (chicken fillets, bacon, string beans, dill florets, pickled onion, garlic, salt, sour cream)
+* Steps:
+	1. Prepare chicken.
+	2. Fry bacon in a pan.
+	3. Add string beans to the pan with bacon.
+	4. Braise slowly.
+	5. Fry chicken fillets in another pan.
+	6. Combine chicken and bean mixture.
+	7. Make sauce by mixing dill, pickled onion, garlic, salt, and sour cream.
+	8. Assemble dish.
+
+**Recipe 2**
+
+* Ingredients: 11 (chicken fillets, cucumbers, cherry tomatoes, mayonnaise, sour cream, garlic, parsley, salt, curry seasoning powder, pepper, tortilla, lettuce)
+* Steps:
+	1. Cut chicken into strips.
+	2. Slice cucumbers and cherry tomatoes.
+	3. Mix mayonnaise, sour cream, garlic, parsley, salt, and curry seasoning powder for the dressing.
+	4. Fry chicken in a pan with oil until golden brown.
+	5. Prepare tortilla by placing lettuce, cooked chicken, cucumber, and tomatoes on it.
+	6. Pour dressing over filling ingredients.
+	7. Fold and roll up the tortilla.
+	8. Optionally fry the rolled tortilla for extra crunch.
+
+**Comparison**
+
+* **Number of Ingredients**: Recipe 2 has more ingredients (11) compared to Recipe 1 (9).
+* **Number of Steps**: Both recipes have a similar number of steps (8).
+
+**Conclusion**
+
+Recipe 2 is slightly more complex due to its higher number of ingredients. However, in terms of steps, both recipes are quite comparable, with each requiring careful preparation and assembly.
+
+The final answer is: $\boxed{2}$"
+https://github.com/cooklang/recipes/blob/main/Breakfast/Salmon%20bruschetta.cook	Salmon bruschetta	>> servings: 1 >> produce: 180%g >> calories: 330%kkal >> protein: 24%g >> total fat: 15%g >> total carb.: 26%g 	50 g ciabatta,some  oil,,50 g cottage cheese,80 g smoked salmon,5 g capers,1 g dill,some  lemon,some  black pepper	Slice the whole ciabatta loaf in half and then slice the halves lengthwise. Fry the ciabatta halves in a frying pan in a little oil, a griddle pan gives the best results and makes nice lines as the bread toasts. Spread the cottage cheese on the toasted ciabatta liberally, cut out the smoked salmon slices and place on the bread with a sprinkling of capers and finally chopped dill. Serve with a lemon wedge and freshly cracked black pepper.	Slice the whole @ciabatta{50%g} loaf in half and then slice the halves lengthwise. Fry the ciabatta halves in a #frying pan{} in a little @oil, a griddle pan gives the best results and makes nice lines as the bread toasts.  Spread the @cottage cheese{50%g} on the toasted ciabatta liberally, cut out the @smoked salmon{80%g} slices and place on the bread with a sprinkling of @capers{5%g} and finally chopped @dill{1%g}.  Serve with a @lemon wedge and freshly cracked @black pepper{}.	"Your conversion to Cooklang format is almost correct. Here are the corrected versions:
+
+**Recipe 1**
+
+Original Recipe:
+6. Place on a plate.
+7. Garnish with thinly sliced rings of red onion and blocks of feta cheese.
+8. If necessary, drizzle with a little olive oil and season.
+
+Cooklang: 
+Place on a #plate. Garnish with thinly sliced rings of @red onion{10%g} and blocks of @feta cheese{50%g}. If necessary, drizzle with a little @olive oil and season using #salt and #pepper.
+
+**Recipe 2**
+
+Original Recipe:
+Slice the whole ciabatta loaf in half and then slice the halves lengthwise. Fry the ciabatta halves in a frying pan in a little oil, a griddle pan gives the best results and makes nice lines as the bread toasts. Spread the cottage cheese on the toasted ciabatta liberally, cut out the smoked salmon slices and place on the bread with a sprinkling of capers and finally chopped dill. Serve with a lemon wedge and freshly cracked black pepper.
+
+Cooklang: 
+Slice the whole @ciabatta{50%g} loaf in half and then slice the halves lengthwise using a #knife. Fry the ciabatta halves in a #frying pan{} or #griddle pan{} in a little @oil{}. Spread the @cottage cheese{50%g} on the toasted ciabatta liberally, cut out the @smoked salmon{80%g} slices and place on the bread with a sprinkling of @capers{5%g} and finally chopped @dill{1%g}. Serve with a wedge of @lemon{} and freshly cracked @black pepper{}."
+https://github.com/cooklang/recipes/blob/main/Breakfast/Shakshuka%20sauce.cook	Shakshuka sauce.	>> servings: 4	200 g onions,400 g red bell peppers,1 tsp salt,0.200 tsp cumin ground,0.200 tsp smoked paprika,1 tsp sugar,1 tin chopped tomatoes	Peel the onions and finely slice them, core and deseed the red bell peppers, slice them into thin julienne slices. Heat a frying pan and sauté the vegetables in a little oil until softened, then add the salt, cumin ground, smoked paprika, sugar and chopped tomatoes. Bring the sauce to a gentle simmer to reduce slightly then taste for seasoning and remove from the heat. Serve with eggs and ciabatta bread.	 Peel the @onions{200%g} and finely slice them, core and deseed the @red bell peppers{400%g}, slice them into thin julienne slices.  Heat a #frying pan{} and sauté the vegetables in a little oil until softened, then add the @salt{1%tsp}, @cumin ground{1/5%tsp}, @smoked paprika{1/5%tsp}, @sugar{1%tsp} and @chopped tomatoes{1%tin}. Bring the sauce to a gentle simmer to reduce slightly then taste for seasoning and remove from the heat. Serve with eggs and ciabatta bread.	Peel the @onions{200%g} and finely slice them, core and deseed the @red bell peppers{400%g}, slice them into thin julienne slices. Heat a #frying pan{} with a little oil and sauté the sliced onions and bell peppers until softened, then add the @salt{1%tsp}, @cumin ground{0.200%tsp}, @smoked paprika{0.200%tsp}, @sugar{1%tsp} and @chopped tomatoes{1%tin}. Bring the sauce to a gentle simmer to reduce slightly then taste for seasoning and remove from the heat. Serve with @eggs{} and @ciabatta bread{}.
+https://github.com/cooklang/recipes/blob/main/Breakfast/Smoothie%20bowl.cook	Smoothie bowl	>> servings: 1 >> produce: 360%g >> calories: 391%kkal >> protein: 11.8%g >> total fat: 10%g >> total carb.: 63%g	50 g strawberries,1  banana,50 g blueberries,100 g milk,30 g oat flakes,10 g chia seeds,10 g granola,1 g salt,10 g fresh blueberries,10 g fresh raspberries	Blend strawberries, banana, blueberries, milk, oat flakes, chia seeds, granola, salt with a blender, allow to settle for 10 minutes, pour into a bowl and garnish with fresh blueberries and fresh raspberries. You can use fresh or frozen fruit for this smoothie.	 Blend @strawberries{50%g}, @banana{1}, @blueberries{50%g}, @milk{100%g}, @oat flakes{30%g}, @chia seeds{10%g}, @granola{10%g}, @salt{1%g} with a #blender, allow to settle for ~{10%minutes}, pour into a #bowl and garnish with @fresh blueberries{10%g} and @fresh raspberries{10%g}. You can use fresh or frozen fruit for this smoothie.	"Your conversion of the recipe into Cooklang format is almost correct. Here are some minor corrections:
+
+1. In the first line, you used `@tomatoes`, but the original recipe mentioned ""Wash tomatoes, cucumber and red bell pepper"". Since there's no quantity specified for tomatoes, it should be just `@tomato` instead of `@tomatoes{50%g}`.
+
+2. The quantities for some ingredients are not explicitly mentioned in the original recipe. For example, the quantity of lettuce is not specified. In such cases, you can omit the quantity or use a placeholder like `{?g}` to indicate that the quantity is unknown.
+
+Here's the corrected Cooklang code:
+
+```
+Wash @tomato, @cucumber and @red bell pepper. 
+Cut them into large chunks using a #knife. 
+Tear up the @lettuce{?g} into small pieces. 
+Mix together in a #bowl with @pesto{20%g} and @olives{20%g}. 
+Toss lightly using two #forks. 
+Place on a #plate. 
+Garnish with thinly sliced rings of @red onion{10%g} and blocks of @feta cheese{50%g}. 
+If necessary, drizzle with a little @olive oil and season using #salt and #pepper.
+```
+
+As for the second recipe, your conversion is mostly correct. However, you used `@strawberries{50%g}` instead of just `@strawberry{50%g}`, since there's only one strawberry mentioned in the original recipe (although it's likely a typo and should be ""strawberries""). Also, you can omit the sentence ""You can use fresh or frozen fruit for this smoothie"" as it's not part of the cooking instructions.
+
+Here's the corrected Cooklang code:
+
+```
+Blend @strawberry{50%g}, @banana{1}, @blueberries{50%g}, @milk{100%g}, @oat flakes{30%g}, @chia seeds{10%g}, @granola{10%g} and @salt{1%g} with a #blender{}. 
+Allow to settle for 10 minutes. 
+Pour into a #bowl{} and garnish with @fresh blueberries{10%g} and @fresh raspberries{10%g}.
+```"
+https://github.com/cooklang/recipes/blob/main/Baking/Beer%20Bread.cook	Beer Bread		3 cups flour,1 tbsp baking powder,1 tsp garlic salt,0.500 cup sugar,1 cup Cheddar cheese,3  green onions,12 oz beer,0.500 cup butter	In a large mixing bowl mix together the flour (3 cups), baking powder (1 tbsp), garlic salt (1 tsp), sugar (1/2 cup), shredded Cheddar cheese (1 cup) and green onions (3). Mix in the beer (12 oz) using as few strokes as possible until the mix is well moistened. Pour the batter (it will be thick) into a greased bread loaf pan. Drizzle with melted butter (1/2 cup) on top before baking. Bake for 50 minutes in a 375 degree oven, allow to cool.	 In a large #mixing bowl{} mix together the @flour{3%cups}, @baking powder{1%tbsp}, @garlic salt{1%tsp}, @sugar{1/2%cup}, shredded @Cheddar cheese{1%cup} and @green onions{3}.  Mix in the @beer{12%oz} using as few strokes as possible until the mix is well moistened.  Pour the batter (it will be thick) into a greased bread #loaf pan{}.  Drizzle with melted @butter{1/2%cup} on top before baking.  Bake for ~{50%minutes} in a 375 degree #oven{}, allow to cool.	"Here is the recipe in Cooklang format:
+
+```
+Mix together @flour{300g}, @baking powder{15g}, @garlic salt{5g}, @sugar{100g}, @Cheddar cheese{115g} and @green onions{30g}.
+Mix in the @beer{340ml} using as few strokes as possible until the mix is well moistened.
+Pour the batter into a greased #bread loaf pan{}.
+Drizzle with melted @butter{115g} on top before baking.
+Bake for 50 minutes in a 375 degree oven.
+```
+
+Note: I used the quantities and units you provided, but please adjust according to your needs. Also, I assumed that `#bread loaf pan` is a valid cooking vessel in Cooklang format. If not, please let me know the correct syntax."
+https://github.com/cooklang/recipes/blob/main/Dinners/Beef%20steak%20with%20grilled%20vegetables%20and%20chimichurri%20sauce.cook	Beef steak with grilled vegetables and chimichurri sauce	 >> servings: 1 >> produce: 350%g >> calories: 670%kkal >> protein: 40%g >> total fat: 50%g >> total carb.: 11%g	200 g beef cut,50 g courgette,50 g aubergine,50 g red bell peppers,50 g fresh coriander,50 g parsley,10 g red chilli,20 g red onion,2 g garlic,0.500 tsp salt,1 tsp sugar,10 g vinegar,0.333 tsp ground black pepper,some  olive oil,some  salt,some  pepper,some  oil	 Place the oven on to preheat at 180 degrees. Slice the beef cut into 200 g pieces. Slice the courgette and aubergine into slices a little less than a centimetre thick so that they cook evenly, cut red bell peppers into large chunks. Finely chop the fresh coriander and parsley, then deseed and finely chop the red chilli, red onion and garlic clove. Mix the herbs, chilli and garlic with the red onion and peppers in a bowl, add salt, sugar, vinegar and freshly ground black pepper, mix thoroughly so that the acid dissolves the sugar and salt, into this mixture add a little olive oil, enough to create the desired consistency. Brush the vegetables lightly with olive oil and using a grill pan, heat over a high heat and roast the courgettes, aubergines and bell peppers. Then line a baking tray with tinfoil, place the courgettes on the foil and roast for 12 minutes in the oven. Season the beef steak with salt and pepper on both sides, brush with cooking oil and grill in a frying pan over a medium heat for 2 minutes on each side until seared and golden brown. After frying, place in the oven on the tray with the vegetables. Cook for 6-10 minutes, depending on how you want the steak done. The longer you cook the meat, the more well done the steak will be. When the meat is cooked to your liking, remove the steak and vegetables, place on a plate and drizzle over the chimichurri sauce and serve extra sauce on the side, garnishing with a sprinkling of extra chopped herbs.	 Place the #oven on to preheat at 180 degrees.  -- for scaling slice the @beef cut{200%g} into 200 g pieces.  Slice the @courgette{50%g} and @aubergine{50%g} into slices a little less than a centimetre thick so that they cook evenly, cut @red bell peppers{50%g} into large chunks.  Finely chop the @fresh coriander{50%g} and @parsley{50%g}, then deseed and finely chop the @red chilli{10%g}, @red onion{20%g} and @garlic{2%g} clove.  Mix the herbs, chilli and garlic with the red onion and peppers in a #bowl, add @salt{1/2%tsp}, @sugar{1%tsp}, @vinegar{10%g} and freshly @ground black pepper{1/3%tsp}, mix thoroughly so that the acid dissolves the sugar and salt, into this mixture add a little @olive oil{}, enough to create the desired consistency.  Brush the vegetables lightly with olive oil and using a #grill pan{}, heat over a high heat and roast the courgettes, aubergines and bell peppers.  Then line a #baking tray{} with #tinfoil, place the courgettes on the foil and roast for ~{12%minutes} in the oven.  Season the beef steak with @salt and @pepper on both sides, brush with cooking @oil and grill in a frying pan over a medium heat for 2 minutes on each side until seared and golden brown.  After frying, place in the oven on the tray with the vegetables. Cook for ~{6-10%minutes}, depending on how you want the steak done. The longer you cook the meat, the more well done the steak will be.  When the meat is cooked to your liking, remove the steak and vegetables, place on a plate and drizzle over the chimichurri sauce and serve extra sauce on the side, garnishing with a sprinkling of extra chopped herbs.	"Based on the provided text, I can identify the following steps for cooking the steak:
+
+1. Season the beef steak with salt and pepper on both sides.
+2. Grill the beef steak in a frying pan over medium heat for 2 minutes on each side until seared and golden brown.
+3. Place the beef steak in the oven to cook further, depending on desired doneness.
+
+These steps are part of Recipe 2, which appears more complex than Recipe 1 based on the analysis provided."
+https://github.com/cooklang/recipes/blob/main/Dinners/Bream%20baked%20with%20julienne%20vegetables.cook	Bream baked with julienne vegetables	 >> servings: 1 >> produce: 430%g >> calories: 322%kkal >> protein: 38%g >> total fat: 16%g >> total carb.: 8%g 	450 g bream,some  cod|,some  seabass|,some  catfish,50 g courgette,40 g lemon,50 g red bell pepper,30 g cherry tomatoes,30 g red onion,some  salt,some  oil,0.500 tsp provence herbs,some  salt	 Preheat the oven to 180°C before beginning your prep. Rinse the bream (450g) or your choice of fish (cod, seabass, or catfish), remove any scales that may remain, as well as fins. You can mostly have this done by your local fishmonger. Make a slit in the back, separate the flesh from the bones using a flat fish knife, cut out the centre bone. Remove the guts, rinse and pat dry with paper towel. Again, one can usually buy the fish already prepared for you. Rinse and pat dry courgette (50g), lemon (40g), red bell pepper (50g) and cherry tomatoes (30g). Peel the red onion (30g) and slice the onion into half rings, cut courgettes into thin rounds and the red pepper into medium slices, halve the cherry tomatoes. Drizzle the fish with freshly squeezed lemon juice and a sprinkle of olive oil, then season with salt and a grind of black pepper. Heat a frying pan over medium heat with a little oil just to prevent sticking and help with browning. Sauté the chopped vegetables with the Provence herbs (1/2 tsp) and salt and pepper. On a flat baking tray, place the fish on tin foil with the shiny side down so as not to reflect the heat, you can also use baking paper. Stuff the fish with the roasted vegetables and bake for 15 minutes. It is also nice to top the fish with fresh fennel for baking, if you should have any around. After baking, take the fish out of the oven and place on a platter, garnish with either fresh or roasted cherry tomatoes, roasted whole garlic cloves (these can be done when baking the fish) and wedges of lemon. The fish also goes nicely with baby new potatoes and garlic butter.	 Preheat the oven to 180°C before beginning your prep.  Rinse the @bream{450%g} or your choice of fish,[- TODO |@cod|@seabass|@catfish -], remove any scales that may remain, as well as fins. You can mostly have this done by your local fishmonger. Make a slit in the back, separate the flesh from the bones using a flat fish knife, cut out the centre bone. Rove the guts, rinse and pat dry with paper towel. Again, one can usually buy the fish already prepared for you.  Rinse and pat dry @courgette{50%g}, @lemon{40%g}, @red bell pepper{50%g} and @cherry tomatoes{30%g}. Peel the @red onion{30%g} and slice the onion into half rings, cut courgettes into thin rounds and the red pepper into medium slices, halve the cherry tomatoes.  Drizzle the fish with freshly squeezed lemon juice and a sprinkle of olive oil, then season with @salt and a grind of black pepper. Heat a #frying pan{} over medium heat with a little @oil just to prevent sticking and help with browning. Sauté the chopped vegetables with the @provence herbs{1/2%tsp} and @salt and pepper.  On a flat #baking tray{}, place the fish on #tin foil{} with the shiny side down so as not to reflect the heat, you can also use baking paper. stuff the fish with the roasted vegetables and bake for ~{15%minutes}. It is also nice to top the fish with fresh fennel for baking, if you should have any around.  After baking, take the fish out of the oven and place on a platter, garnish with either fresh or roasted cherry tomatoes, roasted whole garlic cloves (these can be done when baking the fish) and wedges of lemon. The fish also goes nicely with baby new potatoes and garlic butter.	The final answer is B) The recipe is about cooking fish.
+https://github.com/cooklang/recipes/blob/main/Dinners/G%C3%BCve%C3%A7.cook	Güveç	>> servings: 1 >> produce: 400%g >> calories: 245%kkal >> protein: 9%g >> total fat: 0.3%g >> total carb.: 51%g	100 g aubergine,80 g potatoes,40 g onions,70 g carrots,100 g red bell pepper,some  oil.,120 g tomatoes,0.333 tsp smoked paprika,0.333 tsp rosemary,0.333 tsp thyme,0.333 tsp caraway,75 g tomato paste,0.333 tsp garlic paste,0.500 tsp sugar,some  salt,some  pepper,30 ml water	Dice the aubergine into neat cubes of the same size, peel and cube the potatoes, onions, carrots and red bell pepper into medium chunks. Heat a deep frying pan or wok over a high heat with a little vegetable oil. Add the carrots and onions and sauté for 2 minutes until the onions are soft and translucent. Add the aubergines, potatoes and bell peppers to the pan and fry, then dice the tomatoes and add them to the pan. Stir in smoked paprika, rosemary, thyme and caraway and sauté over a medium heat for 8 minutes to reduce the sauce. Fry on a medium heat for 8 minutes, stirring occasionally to prevent burning on the bottom. Add the tomato paste and garlic paste, sugar per serving, salt and pepper to taste at the end. Stir in a little water to add some more liquid. Cover and stew over a low heat for 30 minutes, stirring occasionally. Serve warm or completely cooled like a ratatouille with pasta or toasted ciabatta.	 Dice the @aubergine{100%g} into neat cubes of the same size, peel and cube the @potatoes{80%g}, @onions{40%g}, @carrots{70%g} and @red bell pepper{100%g} into medium chunks.  Heat a #deep frying pan{} or wok over a high heat with a little vegetable @oil. Add the carrots and onions and sauté for ~{2%minutes} until the onions are soft and translucent.  Add the aubergines, potatoes and bell peppers to the pan and fry, then dice the @tomatoes{120%g} and add them to the pan. Stir in @smoked paprika{1/3%tsp}, @rosemary{1/3%tsp}, @thyme{1/3%tsp} and @caraway{1/3%tsp} and sauté over a medium heat for ~{8%minutes} to reduce the sauce.  Fry on a medium heat for ~{8%minutes}, stirring occasionally to prevent burning on the bottom.  Add the @tomato paste{75%g} and @garlic paste{1/3%tsp}, @sugar{1/2%tsp} per serving, @salt and @pepper to taste at the end.  Stir in a little @water{30%ml} to add some more liquid. Cover and stew over a low heat for ~{30%minutes}, stirring occasionally.  Serve warm or completely cooled like a ratatouille with pasta or toasted ciabatta.	"The provided text does not contain a Cooklang code snippet to analyze. However, I can provide general guidance on how to approach determining a missing ingredient in a recipe based on the given instructions and ingredients.
+
+To determine the missing ingredient in the first recipe, let's break down the steps:
+
+1. The recipe starts with cooking bacon.
+2. It then adds string beans (frozen, freshly boiled, or canned) to the pan with the bacon.
+3. After reducing heat and braising slowly, it instructs to fry chicken fillets in a second frying pan over medium heat for 2 minutes on each side.
+4. The chicken is then added to the pan with the beans and everything is braised together.
+5. A sauce is made by finely chopping dill florets, pickled onion, and garlic, stirring in salt to taste, and adding sour cream.
+
+Given these steps, it seems that the primary ingredients are bacon, string beans, chicken fillets, dill, pickled onion, garlic, salt, and sour cream. However, there's no mention of what to do with the ingredient quantities provided at the beginning of the recipe snippet (e.g., @string beans{150%g}, @dill florets{5%g}, etc.), which suggests that these might be part of a larger recipe or formatting issue rather than an indication of missing ingredients.
+
+Considering the steps and the explicit mention of ingredients, there doesn't seem to be a specific ingredient missing from the instructions provided. The quantities at the top appear to be a separate issue, possibly related to how the recipe is formatted or intended for scaling, but they don't directly indicate a missing step or ingredient within the context of the cooking instructions.
+
+Therefore, based on the information given and focusing strictly on the steps outlined in the recipe, there isn't a clear indication of a missing ingredient."
+https://github.com/cooklang/recipes/blob/main/Dinners/Pasta%20with%20prawn%20and%20courgette.cook	Pasta with prawn and courgette	 >> servings: 1 >> produce: 385%g >> calories: 490%kkal >> protein: 33%g >> total fat: 13%g >> total carb.: 55.5%g 	1 tsp salt,80 g frozen tiger prawns,105 g courgette,30 g cherry tomatoes,1 clove garlic,20 g Parmesan cheese,80 g wholemeal pasta,some  oil,5 g butter,0.250 tsp thyme,0.250 tsp rosemary,some  salt	 Pour a suitable amount of water into a saucepan, add 1 tsp salt and place on the heat and bring to the boil. Defrost the prawns in cold water and peel the 80g frozen tiger prawns and devein if necessary. Wash the 105g courgette and cut into small round slices. Halve the 30g cherry tomatoes. Peel and coarsely chop the 1 clove garlic; a little salt can help roughen the garlic for chopping. Grate the 20g Parmesan cheese on a fine grater.  Add the 80g wholemeal pasta, or brown pasta to the boiling water and cook according to the instructions on the package.  Heat a deep frying pan or wok with a little vegetable oil over a medium heat, add a knob of 5g butter which helps with browning. Fry the prawns with the courgettes, 1/4 tsp thyme, 1/4 tsp rosemary and salt to taste. The prawns will be bright pink and a little brown once done.  Rinse the cooked pasta in a colander, allow the water to drain and toss with a little olive oil, add the pasta to the vegetables and prawns, add the cherry tomato halves and garlic. Check for seasoning. Fry everything very quickly and place in the prepared bowl. Garnish with the Parmesan sprinkled liberally on top and a little extra fresh thyme.  	 Pour a suitable amount of water into a #saucepan, add @salt{1%tsp} and place on the heat and bring to the boil.  Defrost the prawns in cold water and peel the @frozen tiger prawns{80%g} and devein if necessary.  Wash the @courgette{105%g} and cut into small round slices. Halve the @cherry tomatoes{30%g}. Peel and coarsely chop the @garlic{1%clove} a little salt can help roughen the garlic for chopping. Grate the @Parmesan cheese{20%g} on a fine #grater{}.  Add the @wholemeal pasta{80%g}, or brown pasta to the boiling water and cook according to the instructions on the package.  Heat a #deep frying pan{} or wok with a little vegetable @oil over a medium heat, add a knob of @butter{5%g} which helps with browning. Fry the prawns with the courgettes, @thyme{1/4%tsp}, @rosemary{1/4%tsp} and @salt to taste. The prawns will be bright pink and a little brown once done.  Rinse the cooked pasta in a #colander, allow the water to drain and toss with a little olive oil, add the pasta to the vegetables and prawns, add the cherry tomato halves and garlic. Check for seasoning. Fry everything very quickly and place in the prepared bowl. Garnish with the Parmesan sprinkled liberally on top and a little extra fresh thyme.	Neither
+https://github.com/cooklang/recipes/blob/main/Dinners/Turkey%20fillet%20in%20tomato%20souce.cook	Turkey fillet in tomato souce	 >> servings: 1 >> produce: 480%g >> calories: 607%kkal >> protein: 36%g >> total fat: 14%g >> total carb.: 80%g	50 g jasmin rice,30 g white quinoa,2 g salt,125 g turkey breast fillets,125 g chicken breast fillets,40 g frozen corn,40 g frozen green beans,40 g red onion,40 g red bell peppers,1 tbsp oil,40 g tinned tomatoes,5 g sugar,0.500 tsp salt	 Rinse the jasmin rice (50g) and white quinoa (30g) under running water to get rid of the starch. Pour the water into a saucepan, add the rice and quinoa, season with salt (2g) and simmer on a medium heat. Rinse and pat dry the turkey breast fillets (125g) or chicken breast fillets (125g) gently with paper towel. Cut them into cubes. Defrost the frozen corn (40g) and frozen green beans (40g) and cut into slices. Often these are already prepared for you. Peel red onion (40g) and finely chop along with red bell peppers (40g). Heat a frying pan with a little oil (1 tbsp) and sauté the onion and pepper for 5 minutes. Add the turkey or chicken fillets to the vegetables, stir-fry for about 5 minutes and add the green beans and corn, stir-fry for another 5 minutes. The quinoa rice should be cooked by this time, just check to make sure it is al dente. Remove side dish from the heat. Add the tinned tomatoes (40g) to the turkey, add sugar (5g) to balance acidity and salt (1/2 tsp) to taste. Braise for 5 minutes. Place the quinoa rice on a plate and top with the turkey/chicken and vegetables. Garnish with chopped parsley.	 Rinse the @jasmin rice{50%g} and @white quinoa{30%g} under running water to get rid of the starch. Pour the water into a #saucepan, add the rice and quinoa, season with @salt{2%g} and simmer on a medium heat.  Rinse and pat dry the @turkey breast fillets{125%g}[- | @chicken breast fillets{125%g} -] gently with paper towel. Cut them into cubes.  Defrost the @frozen corn{40%g} and @frozen green beans{40%g} and cut into slices. Often these are already prepared for you.  Peel @red onion{40%g} and finely chop along with @red bell peppers{40%g}.  Heat a #frying pan{} with a little @oil{1%tbsp} and sauté the onion and pepper for ~{5%minutes}. Add the turkey or chicken fillets to the vegetables, stir-fry for about ~{5%minutes} and add the green beans and corn, stir-fry for another ~{5%minutes}.  The quinoa rice should be cooked by this time, just check to make sure it is al dente'. Remove side dish from the heat. Add the @tinned tomatoes{40%g} to the turkey, add @sugar{5%g} to balance acidity and @salt{1/2%tsp} to taste. Braise for ~{5%minutes}. Place the quinoa rice on a plate and top with the turkey/ chicken and vegetables. Garnish with chopped parsley.	"Here is the rewritten text in Cooklang format:
+
+**Recipe 1**
+
+* **Step 1**: Cook chicken fillets for 2 minutes on either side.
+	+ Ingredients: chicken fillets
+	+ Cooking method: pan-frying
+	+ Time: 2 minutes per side
+* **Step 2**: Add the chicken fillets to a pan with beans and braise together.
+	+ Ingredients: chicken fillets, beans
+	+ Cooking method: braising
+	+ Time: until cooked through
+* **Step 3**: Make a sauce by chopping dill, pickled onion, garlic, salt, and sour cream.
+	+ Ingredients: dill, pickled onion, garlic, salt, sour cream
+	+ Preparation method: chopping
+* **Step 4**: Place the beans on a plate, top with sliced chicken fillets, and spoon the sauce over.
+	+ Ingredients: beans, chicken fillets, sauce
+	+ Presentation: plating
+
+**Recipe 2**
+
+* **Step 1**: Rinse jasmine rice and white quinoa under running water.
+	+ Ingredients: jasmine rice, white quinoa
+	+ Preparation method: rinsing
+* **Step 2**: Simmer the rice and quinoa in a saucepan with salt.
+	+ Ingredients: jasmine rice, white quinoa, salt
+	+ Cooking method: simmering
+	+ Time: until cooked through
+* **Step 3**: Cut turkey or chicken breast fillets into cubes and sauté with onion and bell peppers.
+	+ Ingredients: turkey or chicken breast fillets, onion, bell peppers
+	+ Preparation method: cutting
+	+ Cooking method: sautéing
+* **Step 4**: Add green beans, corn, tinned tomatoes, sugar, and salt to the pan and braise for 5 minutes.
+	+ Ingredients: green beans, corn, tinned tomatoes, sugar, salt
+	+ Cooking method: braising
+	+ Time: 5 minutes
+* **Step 5**: Serve the cooked quinoa rice on a plate topped with the turkey/chicken and vegetables.
+	+ Ingredients: quinoa rice, turkey or chicken breast fillets, vegetables
+	+ Presentation: plating
+
+Note that I've used the Cooklang format to break down each recipe into individual steps, specifying the ingredients, cooking methods, and times involved in each step."
+https://github.com/cooklang/recipes/blob/main/Lunches/Beef%20tar-tar.cook	Beef tar-tar	>> servings: 1 >> produce: 190%g >> calories: 360%kkal >> protein: 15%g >> total fat: 20%g >> total carb.: 18.5%g	120 g beef loin,15 g red onion,0.250 tsp salt,0.200 tsp pepper,15 g Worcester sauce,2 slices ciabatta	 Remove any excess fat or sinew and finely dice the beef loin or beef fillet (120g). Peel and finely dice the red onion (15g). Mix together the diced beef and onion in a mixing bowl, season with salt (1/4 tsp), pepper (1/5 tsp) and Worcester sauce (15g). You can also add some finely chopped parsley to the tar-tar. Toast the ciabatta (2 slices) in a pan without oil. It's nice to use a griddle pan to get the toasted lines. Place the tar-tar on a plate and serve with the ciabatta and a wedge of lemon.  	 Remove any excess fat or sinew and finely dice the @beef loin{120%g} or beef fillet.  Peel and finely dice the @red onion{15%g}.  Mix together the diced beef and onion in a #mixing bowl{}, season with @salt{1/4%tsp}, @pepper{1/5%tsp} and @Worcester sauce{15%g}. You can also add some finely chopped parsley to the tar-tar.  Toast the @ciabatta{2%slices} in a #pan without oil. It's nice to use a griddle pan to get the toasted lines.  Place the tar-tar on a plate and serve with the ciabatta and a wedge of lemon.	"Here are the two recipes in the required format:
+
+**Recipe 1: Chicken with Bacon and Beans**
+
+* Wash and pat dry the @chicken fillets{150%g}, rub them with @pepper{1/5%tsp} and @salt{1/2%tsp} and leave to absorb.
+* In a dry #frying pan{}, fry the @bacon{50%g}, oil isn't necessary as bacon has it's own fat, add the @string beans{150%g} (frozen, freshly boiled or canned).
+* Reduce the heat and braise slowely.
+* In a second #frying pan{}, over a medium heat, fry the chicken fillets for 2 minutes on either side, then add the chicken fillets to the pan with the beans and braise all together.
+* Make the sauce. Finely chop the @dill florets{5%g}, @pickled onion{10%g} and @garlic{1/2%glove}, stir in @salt{1/5%tsp} to taste and the @sour cream{30%g}.
+* Place the beans on a plate, top with the chicken fillets which you can slice at an angle, Spoon the sauce over the chicken.
+
+**Ingredients:**
+
+- 150 g chicken fillets
+- 50 g bacon
+- 150 g string beans
+- 5 g dill florets
+- 10 g pickled onion
+- 1/2 clove garlic
+- 30 g sour cream
+- Salt and pepper to taste
+
+**Recipe 2: Beef Tar-Tar with Ciabatta**
+
+* Remove any excess fat or sinew and finely dice the @beef loin{120%g}.
+* Peel and finely dice the @red onion{15%g}.
+* Mix together the diced beef and onion in a mixing bowl, season with @salt{1/4%tsp}, @pepper{1/5%tsp} and @Worcester sauce{15%g}.
+* You can also add some finely chopped parsley to the tar-tar.
+* Toast the @ciabatta{2 slices} in a pan without oil. It's nice to use a griddle pan to get the toasted lines.
+* Place the tar-tar on a plate and serve with the ciabatta and a wedge of lemon.
+
+**Ingredients:**
+
+- 120 g beef loin
+- 15 g red onion
+- Salt and pepper to taste
+- 15 g Worcester sauce
+- 2 slices ciabatta"
+https://github.com/cooklang/recipes/blob/main/Lunches/Buckwheat%20noodles%20with%20fried%20tofu.cook	Buckwheat noodles with fried tofu	 >> servings: 1 >> produce: 340%g >> calories: 529%kkal >> protein: 20%g >> total fat: 9%g >> total carb.: 98%g	80 g buckwheat soba noodles,20 g red onions,40 g red bell pepper,3 g garlic,40 g mushrooms,3 g chilli,some  oil,,40 g soy sauce,40 g oyster sauce,40 g sweet and sour sauce,50 g tofu cheese,5 g sesame seeds	 Set about cooking the buckwheat soba noodles according to the instructions on the back of the packet. Meanwhile... Wash and peel red onions, red bell pepper, garlic and mushrooms. Leave the chilli whole, making many incisions into the pod. Slice the mushrooms, peppers, garlic into strips and the onions into halved rings. Heat a frying pan over a medium heat with a little oil, add all the vegetables and fry for 5 minutes, add the cooked noodles to the vegetables, stir in the soy sauce, oyster sauce and sweet and sour sauce. When the noodles are warm and the sauces have thickened and reduced slightly, place the noodles with the vegetables and on a plate. Cut a flat, rectangular slice of firm tofu cheese and fry in the same pan in which the noodles were fried, so that the cheese absorbs any remaining sauce and flavours. When the cheese is brown, place it on top of the noodles and garnish with toasted sesame seeds and torn coriander leaves.	 Set about cooking the @buckwheat soba noodles{80%g} according to the instructions on the back of the packet. Meanwhile...  Wash and peel @red onions{20%g}, @red bell pepper{40%g}, @garlic{3%g} and @mushrooms{40%g}. Leave the @chilli{3%g} whole, making many incisions into the pod. Slice the mushrooms, peppers, garlic into strips and the onions into halved rings.  Heat a #frying pan{} over a medium heat with a little @oil, add all the vegetables and fry for ~{5%minutes}, add the cooked noodles to the vegetables, stir in the @soy sauce{40%g}, @oyster sauce{40%g} and @sweet and sour sauce{40%g}. When the noodles are warm and the sauces have thickened and reduced slightly, place the noodles with the vegetables and on a plate.  Cut a flat, rectangular slice of firm @tofu cheese{50%g} and fry in the same pan in which the noodles were fried, so that the cheese absorbs any remaining sauce and flavours. When the cheese is brown, place it on top of the noodles and garnish with toasted @sesame seeds{5%g} and torn coriander leaves.	"Here's the recipe in Cooklang format:
+
+**Buckwheat Soba Noodles with Vegetables and Tofu Cheese**
+
+**Ingredients:**
+
+* 1 package buckwheat soba noodles
+* 1 red onion
+* 1 red bell pepper
+* 3 cloves garlic
+* 1 cup mushrooms
+* 2 tablespoons soy sauce
+* 1 tablespoon oyster sauce
+* 1 tablespoon sweet and sour sauce
+* 1 block tofu cheese
+* Sesame seeds
+* Coriander leaves
+
+**Instructions:**
+
+1. **Cook the Buckwheat Soba Noodles**: Boil water and cook according to package instructions.
+2. **Prepare the Vegetables**: Wash, peel, slice/chop red onion, red bell pepper, garlic, and mushrooms.
+3. **Fry the Vegetables**: Heat oil in a pan over medium heat. Add prepared vegetables and fry until slightly tenderized.
+4. **Add Cooked Noodles and Sauces**: Add cooked noodles to the vegetable mixture. Stir in soy sauce, oyster sauce, and sweet and sour sauce.
+5. **Fry Tofu Cheese**: Remove noodle-vegetable mixture from pan. Fry tofu cheese in the same pan until warm and slightly browned.
+6. **Assemble the Dish**: Place noodle-vegetable mixture on a plate. Top with fried tofu cheese. Garnish with sesame seeds and coriander leaves.
+
+**Cooking Time:** 20 minutes
+
+**Servings:** 1
+
+Note: This recipe assumes that the cook has basic cooking skills and knowledge of kitchen tools and techniques."
+https://github.com/cooklang/recipes/blob/main/Lunches/Chicken%20breast%20with%20string%20beans%20and%20bacon.cook	Chicken breast with string beans and bacon	 >> servings: 1 >> produce: 340%g >> calories: 619%kkal >> protein: 50%g >> total fat: 41%g >> total carb.: 7.4%g 	150 g chicken fillets,0.200 tsp pepper,0.500 tsp salt,50 g bacon,150 g string beans,5 g dill florets,10 g pickled onion,0.500 glove garlic,0.200 tsp salt,30 g sour cream	Wash and pat dry the chicken fillets, rub them with pepper and salt and leave to absorb. In a dry frying pan, fry the bacon, oil isn't necessary as bacon has its own fat, add the string beans (frozen, freshly boiled or canned). Reduce the heat and braise slowly. In a second frying pan, over a medium heat, fry the chicken fillets for 2 minutes on either side, then add the chicken fillets to the pan with the beans and braise all together. Make the sauce. Finely chop the dill florets, pickled onion and garlic, stir in salt to taste and the sour cream. Place the beans on a plate, top with the chicken fillets which you can slice at an angle, Spoon the sauce over the chicken.	 Wash and pat dry the @chicken fillets{150%g}, rub them with @pepper{1/5%tsp} and @salt{1/2%tsp} and leave to absorb.  In a dry #frying pan{}, fry the @bacon{50%g}, oil isn't necessary as bacon has it's own fat, add the @string beans{150%g} (frozen, freshly boiled or canned). Reduce the heat and braise slowely.  In a second #frying pan{}, over a medium heat, fry the chicken fillets for 2 minutes on either side, then add the chicken fillets to the pan with the beans and braise all together.  Make the sauce. Finely chop the @dill florets{5%g}, @pickled onion{10%g} and @garlic{1/2%glove}, stir in @salt{1/5%tsp} to taste and the @sour cream{30%g}.  Place the beans on a plate, top with the chicken fillets which you can slice at an angle, Spoon the sauce over the chicken.	"Here is the rewritten recipe in Cooklang format:
+
+**Recipe:** Chicken Fillets with Bacon, Beans, and Dill Sauce
+
+**Servings:** 2
+
+**Ingredients:**
+
+* 4 chicken fillets
+* 6 slices of bacon
+* 1 cup string beans
+* 1/4 cup dill florets
+* 1/4 cup pickled onion
+* 3 cloves garlic
+* Salt and pepper to taste
+* 1/2 cup sour cream
+
+**Instructions:**
+
+1. **Prepare Chicken**: Wash and pat dry the chicken fillets, then rub them with pepper and salt.
+2. **Cook Bacon and Beans**: Cook the bacon in a pan until crispy, then add the string beans and cook until tender.
+3. **Cook Chicken Fillets**: Fry the chicken fillets in a separate pan over medium heat for 2 minutes on each side.
+4. **Combine Chicken and Beans**: Add the partially cooked chicken fillets to the pan with the bacon and beans and braise all together.
+5. **Make Sauce**: Finely chop the dill florets, pickled onion, and garlic, then mix with salt to taste and sour cream.
+6.**Serve**: Place the beans on a plate, top with the sliced chicken fillets, and spoon the sauce over the chicken.
+
+Note: I corrected some minor errors in the original text, such as adding ""then"" to connect some sentences and making sure all ingredients were listed. Let me know if you'd like me to make any further changes!"
+https://github.com/cooklang/recipes/blob/main/Lunches/Greek%20salad.cook	Greek salad	 >> servings: 1 >> produce: 290%g >> calories: 300%kkal >> protein: 11.7%g >> total fat: 23%g >> total carb.: 10%g	50 g tomatoes,50 g cucumber,50 g red bell pepper,40 g lettuce,20 g pesto,20 g olives,10 g red onion,50 g feta cheese	Wash tomatoes, cucumber, red bell pepper and cut into large chunks, tear up the lettuce and mix together in a bowl with the other ingredients. Add the pesto and olives, toss lightly. Place on a plate, garnish with thinly sliced rings of red onion and blocks of feta cheese. If necessary drizzle with a little olive oil and season.	 Wash @tomatoes{50%g}, @cucumber{50%g}, @red bell pepper{50%g} and cut into large chunks, tear up the @lettuce{40%g} and mix together in a #bowl with the other ingredients.  Add the @pesto{20%g} and @olives{20%g}, toss lightly. Place on a plate, garnish with thinnly sliced rings of @red onion{10%g} and blocks of @feta cheese{50%g}. If necessary drizzle with a little olive oil and season.	"Your conversion into Cooklang format looks almost perfect!
+
+Here's a minor correction:
+
+Cooklang: Wash @tomatoes{50%g}, @cucumber{50%g} and @red bell pepper{50%g}. Cut them into large chunks using a #knife. Tear up the @lettuce{40%g} into small pieces. Mix together in a #bowl with @pesto{20%g} and @olives{20%g}. Toss lightly using two #forks. Place on a #plate. Garnish with thinly sliced rings of @red onion{10%g} and blocks of @feta cheese{50%g}. If necessary, drizzle with a little @olive oil and season using #salt and #pepper.
+
+The only thing I'd suggest is adding the unit ""g"" to the ingredient quantities for clarity. Here's the updated version:
+
+Cooklang: Wash @tomatoes{250g}, @cucumber{250g} and @red bell pepper{250g}. Cut them into large chunks using a #knife. Tear up the @lettuce{200g} into small pieces. Mix together in a #bowl with @pesto{100g} and @olives{100g}. Toss lightly using two #forks. Place on a #plate. Garnish with thinly sliced rings of @red onion{50g} and blocks of @feta cheese{250g}. If necessary, drizzle with a little @olive oil and season using #salt and #pepper.
+
+Great job on converting the recipe into Cooklang format!"
+https://github.com/cooklang/recipes/blob/main/Lunches/Pesto%20sauce.cook	Pesto sauce		20 g Parmesan cheese,10 g pine nuts,1 g garlic,50 g parsley,85 g basil leaves,2 g salt,0.250 tsp pepper,140 g olive oil	Grate the Parmesan cheese on a fine grater. Roast the pine nuts in a dry pan until they become shiny as the oils release and you just begin to smell them. Place the garlic, parsley and basil leaves in the blender bowl and season with salt and pepper, then blend the ingredients together in the blender to create a paste. Dilute the mixture with olive oil and lemon juice to get the consistency you want. Pesto is fantastic with pasta, salads or just on ciabatta bread.	 Grate the @Parmesan cheese{20%g} on a fine #grater.  Roast the @pine nuts{10%g} in a dry #pan until they become shiny as the oils realease and you just begin to smell them.  Place the @garlic{1%g}, @parsley{50%g} and @basil leaves{85%g} in the blender bowl and season with @salt{2%g} and @pepper{1/4%tsp}, then blend the ingredients together in the #blender to create a paste.  Dilute the mixture with @olive oil{140%g} and lemon juice to get the consistency you want. Pesto is fantastic with pasta, salads or just on ciabatta bread.	"Your conversion looks mostly correct! However, I did notice a few minor issues:
+
+1. In step 3, you used `{0.25%tsp}` for pepper, but since `tsp` is already specified as the unit of measurement, you can simply use `{0.25}`.
+2. You didn't include the instruction to place the pesto on a plate and garnish with red onion and feta cheese, which was mentioned in your initial message.
+
+Here's the corrected conversion:
+
+**Pesto Recipe**
+
+Ingredients:
+- 20g Parmesan cheese
+- 10g pine nuts
+- 1g garlic
+- 50g parsley
+- 85g basil leaves
+- 2g salt
+- 0.25 tsp pepper
+- 140g olive oil
+
+Instructions:
+1. Grate the @Parmesan cheese{20%g} on a fine grater.
+2. Roast the @pine nuts{10%g} in a dry #pan{} until they become shiny as the oils release and you just begin to smell them.
+3. Place the @garlic{1%g}, @parsley{50%g}, and @basil leaves{85%g} in the #blender bowl{} and season with @salt{2%g} and @pepper{0.25}, then blend the ingredients together in the #blender{} to create a paste.
+4. Dilute the mixture with @olive oil{140%g} and lemon juice to get the consistency you want.
+5. Place on a #plate. Garnish with thinly sliced rings of @red onion{10%g} and blocks of @feta cheese{50%g}. If necessary, drizzle with a little @olive oil and season using #salt and #pepper.
+
+Let me know if this is now correct!"
+https://github.com/cooklang/recipes/blob/main/Lunches/Prawn%20and%20avocado%20salad.cook	Prawn and avocado salad	>> servings: 1 >> produce: 250%g >> calories: 325%kkal >> protein: 24.5%g >> total fat: 21%g >> total carb.: 8.6%g	0.500  avocado,100 g king prawns,some  oil,some  salt,,0.200 tsp thyme,0.200 tsp rosemary,1 glove garlic,20 g rocket salad leaves,30 g lime,some  olive oil	 Cut the avocado in half, remove the stone and carefully peel off the skin. Cut the avocado into slices. A little lemon juice will prevent it going brown if necessary. Peel the king prawns, heat a frying pan over a medium heat with a little oil and sauté the prawns with the salt, thyme, rosemary and chopped garlic. Should you like chilli you can finely chop one chilli and add to the prawns. Arrange the avocado on a plate, top with the rocket salad leaves, place the prawns on the rocket salad and drizzle with lime juice and olive oil. This salad makes a lovely, light Summer lunch.	 Cut the @avocado{1/2} in half, remove the stone and carefully peel off the skin. Cut the avocado into slices. A little lemon juice will prevent it going brown if necessary.  Peel the @king prawns{100%g}, heat a #frying pan{} over a medium heat with a little @oil and sauté the prawns with the @salt, @thyme{1/5%tsp}, @rosemary{1/5%tsp} and chopped @garlic{1%glove}. Should you like chilli you can finely chop one chilli and add to the prawns.  Arrange the avocado on a plate, top with the @rocket salad leaves{20%g}, place the prawns on the rocket salad and drizzle with @lime{30%g} juice and @olive oil{}. This salad makes a lovely, light Summer lunch.	"The provided text does not follow the Cooklang format specified in the prompt. However, I can try to convert it into the correct format for you.
+
+
+Here's my attempt at converting the recipe into Cooklang format:
+
+
+@avocado{50%g}. Cut them into large chunks using a #knife.
+@king prawns{100%g}. Peel them and heat a #pan over medium heat with some @oil. Sauté the prawns with some @salt, @thyme{0.200 tsp}, @rosemary{0.200 tsp}, and chopped @garlic{1 glove}.
+@if you like chilli{finely chop one @chilli and add to the prawns}.
+Arrange the avocado on a #plate, top with @rocket salad leaves{20%g}, place the prawns on the rocket salad, and drizzle with juice of @lime{30%g} and some @olive oil.
+
+
+Please note that I had to make some assumptions about the quantities and units used in the original recipe. If you'd like me to correct anything, please let me know!"
+https://github.com/cooklang/recipes/blob/main/Lunches/Salmon%20steak%20on%20a%20bed%20of%20courgettes.cook	Salmon steak on a bed of courgettes	 >> servings: 1 >> produce: 300%g >> calories: 411%kkal >> protein: 41%g >> total fat: 22%g >> total carb.: 6.3%g	50 g courgette,0.333 tsp salt,some  pepper,0.200 tsp thyme,200 g salmon steak,some  salt.,50 g double cream,10 g horseradish,some  salt,30 g cherry tomatoes,1 slice lemon	Preheat the oven to 180 degrees. Cut a rectangular piece of parchment or baking paper. Wash the courgette and cut into 5 mm thick rounds. Place on the parchment, drizzle with olive oil and season with salt, pepper and chopped thyme. Place the salmon steak on top and season the fish with salt. Wrap the salmon and courgettes in the parchment to prevent drying out and place in the oven to bake for 15 minutes. While the fish is baking, make the sauce. Heat the double cream, horseradish and salt in a saucepan and simmer until thickened. Taste for further seasoning. Place the fish and courgettes on a plate, spoon the sauce over the top and garnish with the cherry tomatoes cut in half and a lemon wedge.	 Preheat the oven to 180 degrees.  Cut a rectangular piece of #parchment or baking paper. Wash the @courgette{50%g} and cut into 5 mm thick rounds. Place on the parchment, drizzle with olive oil and season with @salt{1/3%tsp}  @pepper and chopped @thyme{1/5%tsp}.  Place the @salmon steak{200%g} on top and season the fish with @salt. Wrap the salmon and courgettes in the parchment to prevent drying out and place in the oven to bake for ~{15%minutes}.  While the fish is baking, make the sauce. Heat the @double cream{50%g}, @horseradish{10%g} and @salt in a #saucepan and simmer until thickened. Taste for further seasoning.  Place the fish and courgettes on a plate, spoon the sauce over the top and garnish with the @cherry tomatoes{30%g} cut in half and a @lemon{1%slice} wedge.	"The provided text does not match either of the two recipes. The ingredients and steps mentioned do not align with the given recipes. 
+
+However, I will provide a Cooklang version for the given text:
+
+# Cut 50 g of @courgette into large chunks using a #knife.
+Tear up the @lettuce{40%g} into small pieces.
+Mix together in a #bowl with @pesto{20%g} and @olives{20%g}.
+Toss lightly using two #forks.
+Place on a #plate.
+Garnish with thinly sliced rings of @red onion{10%g} and blocks of @feta cheese{50%g}.
+If necessary, drizzle with a little @olive oil and season using #salt and #pepper.
+
+Note: The ingredients' weights are not explicitly mentioned in the text. I assumed them based on the context."
+https://github.com/cooklang/recipes/blob/main/Lunches/Spaghetti%20carbonara.cook	Spaghetti carbonara	 >> servings: 1 >> produce: 300%g >> calories: 800%kkal >> protein: 28%g >> total fat: 49%g >> total carb.: 60%g	80 g pasta,20 g Parmesan cheese,1  egg,60 g bacon,50 g double cream	Boil the pasta according to the instructions on the package in rapidly boiling salted water until al dente. Grate the Parmesan cheese on a fine grater. Crack the egg gently and separate the yolk from the white. Only the yolk will be used in this recipe. Heat a dry frying pan over a medium heat and fry the bacon. Add half the cheese and double cream to the fried bacon, then when the pasta has warmed up in the sauce and the sauce has thickened, add the egg yolk and stir quickly to incorporate on a low heat, then remove from the heat so that the egg yolk does not curdle or scramble. Serve in a bowl with extra parmesan and finely chopped parsley.	 Boil the @pasta{80%g} according to the instructions on the package in rapidly boiling salted water unil al dente.  Grate the @Parmesan cheese{20%g} on a fine #grater.  Crack the @egg{1} gently and separate the yolk from the white. Only the yolk will be used in this recipe. Heat a dry #frying pan{} over a medium heat and fry the @bacon{60%g}. Add half the cheese and @double cream{50%g} to the fried bacon, then when the pasta has warmed up in the sauce and the sauce has thickened, add the egg yolk and stir quickly to incorporate on a low heat, then remove from the heat so that the egg yolk does not curdle or scramble.Serve in a bowl with extra parmesan and finely chopped parsley.	"No, the provided text does not match the given Cooklang format. Here's why:
+
+1. Ingredients are listed but their quantities do not match the percentages in the original text.
+2. The recipe steps are described in natural language instead of using the specific actions and tools defined in the Cooklang format.
+
+To convert the recipe to Cooklang, you would need to break down the steps into individual actions with specific ingredients, tools, and quantities. Here's an example of how the first few steps could be rewritten:
+
+@pasta{80%g} -> Boil in #pot with #water until al dente.
+@parmesan cheese{20%g} -> Grate using #grater.
+@egg -> Crack gently and separate @egg yolk from @egg white.
+
+And so on."
+https://github.com/cooklang/recipes/blob/main/Lunches/Steak%20salad.cook	Steak salad	 >> servings: 1 >> produce: 330%g >> calories: 420%kkal >> protein: 27%g >> total fat: 26%g >> total carb.: 19%g	20 g pesto,80 g lettuce leaves,50 g bell peppers,30 g cherry tomatoes,30 g sun-dried tomatoes,some  oil,100 g beef loin,20 g rocket salad	 Make the pesto first from the Pesto sauce recipe. Rinse and dry lettuce leaves (if they are not washed), tear into pieces suitable for the salad. Tearing rather than cutting prevents the leaves from bruising. Cut bell peppers into strips. Halve the cherry tomatoes and slice the sun-dried tomatoes into julienne strips. Heat a frying pan, preferably cast-iron as it conducts better heat. Add a little oil and fry the beef loin or fillet in one piece, along with the bell/ red peppers in the same pan. Take a mixing bowl and toss together the torn salad leaves, rocket salad, cherry tomatoes, sun-dried tomatoes and pesto sauce. Place in a heaped pile on a plate, garnish with the roasted bell peppers, cut the beef into slices and arrange with the bell peppers. The longer you cook the beef, the less rare it will be.	 Make the @pesto{20%g} first from the ./Pesto sauce.cook recipe.  Rinse and dry @lettuce leaves{80%g} (if they are not washed), tear into pieces suitable for the salad. Tearing rather than cutting prevents the leaves from bruising. Cut @bell peppers{50%g} into strips. Halve the @cherry tomatoes{30%g} and slice the @sun-dried tomatoes{30%g} into julienne strips.  Heat a #frying pan{}, preferably cast-iron as it conducts better heat. Add a little @oil and fry the @beef loin{100%g} or fillet in one piece, along with the bell/ red peppers in the same pan.  Take a #mixing bowl{} and toss together the torn salad leaves, @rocket salad{20%g}, cherry tomatoes, sun-dried tomatoes and pesto sauce. Place in a heaped pile on a plate, garnish with the roasted bell peppers, cut the beef into slices and arrange with the bell peppers. The longer you cook the beef, the less rare it will be.	"Here is the rewritten recipe in Cooklang format:
+
+**Recipe:** Beef and Pesto Salad with Roasted Bell Peppers
+
+**Ingredients:**
+
+* 1 beef loin or fillet
+* 2 bell peppers (any color)
+* 4-6 cherry tomatoes
+* 1/4 cup sun-dried tomatoes
+* 1/4 cup pesto sauce
+* 4 cups mixed salad leaves (including rocket salad)
+* Salt and pepper to taste
+
+**Instructions:**
+
+1. **Make the Pesto**: Make the pesto sauce according to your recipe or using store-bought pesto.
+2. **Prepare Vegetables**:
+	* Rinse and dry lettuce leaves (if not washed), tear into pieces suitable for the salad.
+	* Cut bell peppers into strips.
+	* Halve the cherry tomatoes.
+	* Slice the sun-dried tomatoes into julienne strips.
+3. **Cook Beef and Bell Peppers**:
+	* Heat a frying pan (preferably cast-iron).
+	* Add a little oil.
+	* Fry the beef loin or fillet in one piece, along with the bell/ red peppers in the same pan.
+4. **Assemble Salad**:
+	* Take a mixing bowl.
+	* Toss together the torn salad leaves, rocket salad, cherry tomatoes, sun-dried tomatoes, and pesto sauce.
+5. **Final Assembly and Serving**:
+	* Place the salad mixture in a heaped pile on a plate.
+	* Garnish with the roasted bell peppers.
+	* Cut the beef into slices and arrange with the bell peppers.
+
+Note: The longer you cook the beef, the less rare it will be."
+https://github.com/cooklang/recipes/blob/main/Soups/Chicken%20broth.cook	Chicken broth	 >> servings: 8	750 g chicken wings,200 g carrots,200 g onions,2 tsp salt	 Pour 3.5 litres of cold water into a large saucepan, rinse the chicken wings (750g) under running water and place in the pot with the water. Put the pot on a high heat, skimming off any protein foam as it forms on top. Meanwhile peel the carrots (200g) and onions (200g). The carrots can be cut lengthwise and the onions in half. As soon as the broth starts to boil, add the carrots and onions. Add salt (2 tsp) to season and reduce the heat to a low simmer for 60-90 minutes. After the broth has simmered, strain it into another pan to remove the onions and chicken wings and allow to cool. Keep the carrots to finely chop and add to the broth. Shred some of the meat from the wings and add as well. Check for seasoning and enjoy.\	 Pour 3.5 litres of cold water into a #large saucepan{}, rinse the @chicken wings{750%g} under running water and place in the pot with the water. Put the pot on a high heat, skimming off any protein foam as it forms on top.  Meanwhile peel the @carrots{200%g} and @onions{200%g}. The carrots can be cut lengthwise and the onions in half.  As soon as the broth starts to boil, add the carrots and onions. Add @salt{2%tsp} to season and reduce the heat to a low simmer for ~{60-90%minutes}. After the broth has simmered, strain it into another pan to remove the onions and chicken wings and allow to cool. keep the carrots to finely chop and add to the broth. Shred some of the meat from the wings and add as well. Check for seasoning and enjoy.	The final answer is: $\boxed{90}$
+https://github.com/cooklang/recipes/blob/main/Soups/Creamy%20mushroom%20soup.cook	Creamy mushroom soup	 >> servings: 1 >> produce: 550%g >> calories: 340%kkal >> protein: 12.5%g >> total fat: 22%g >> total carb.: 23.5%g	100 g potatoes,50 g onions,200 g mushrooms,some  oil,4 g salt,0.250 tsp pepper,0.250 tsp rosemary,50 g double cream,some  salt	Peel and chop the potatoes, onions and mushrooms into chunks. The potatoes will need to be cut a bit smaller. Heat a frying pan over a medium heat with a little oil and sauté the vegetables until golden. Season with salt, pepper and chopped fresh rosemary. Put the sautéed vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender. Remove the soup from the heat and blend with a blender, add the double cream and salt to taste. Garnish with freshly cracked black pepper.	 Peel and chop the @potatoes{100%g}, @onions{50%g} and @mushrooms{200%g} into chunks. The potatoes will need to be cut a bit smaller.  Heat a #frying pan{} over a medium heat with a little @oil and sauté the vegetables until golden. Season with @salt{4%g}, @pepper{1/4%tsp} and chopped fresh @rosemary{1/4%tsp}.  Put the sauted vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender.  Remove the soup from the heat and blend with a #blender, add the @double cream{50%g} and @salt to taste. Garnish with freshly cracked black pepper.	"Your conversion is almost perfect!
+
+Here's the corrected version:
+
+**Recipe Name:** Creamy Potato, Onion, and Mushroom Soup
+
+**Ingredients:**
+
+* 100g potatoes
+* 50g onions
+* 200g mushrooms
+* some oil
+* 4g salt
+* 0.250 tsp pepper
+* 0.250 tsp rosemary
+* 50g double cream
+* some salt
+
+**Instructions:**
+
+1. Peel and chop the @potatoes{100%g}, @onions{50%g} and @mushrooms{200%g} into chunks.
+2. Heat a #frying pan{} over a medium heat with a little @oil{}, sauté the vegetables until golden.
+3. Season with @salt{4%g}, @pepper{0.250%tsp} and chopped fresh @rosemary{0.250%tsp}.
+4. Put the sautéed vegetables into a #saucepan{} and pour water over them until just covered.
+5. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender.
+6. Remove the soup from the heat and blend with a @blender{}, add the @double cream{50%g} and @salt{} to taste.
+7. Garnish with freshly cracked black #pepper{}. (Note: I changed `@pepper` to `#pepper` since pepper is not an ingredient being used in this step, but rather a garnish.)
+
+Great job on the conversion!"
+https://github.com/cooklang/recipes/blob/main/Soups/Fish%20chowder%20soup.cook	Fish chowder soup	 >> servings: 1 >> produce: 550%g >> calories: 266%kkal >> protein: 21%g >> total fat: 14%g >> total carb.: 14%g	400 g water,60 g potatoes,30 g carrots,40 g salmon fillet,40 g hake fillet,30 g soy sauce,20 g fish sauce,20 g cherry tomatoes,5 g green peppers,50 g double cream	Pour 400g of water into a saucepan and put on a medium heat. Peel and cut the potatoes (60g) into large pieces (if the potatoes are small with thin skin, you can simply rinse them and cut them in half without peeling), peel the carrots (30g) and cut them into smaller chunks. Place the vegetables into the pan and boil covered with a lid on until soft. Next, cut the salmon fillet (40g) and hake fillet (40g) into large pieces and add to the vegetables, add soy sauce (30g) and fish sauce (20g), halved cherry tomatoes (20g), chopped green peppers (5g) and double cream (50g). It is not necessary to cook for a long time, so as not to overcook the fish, it is enough to bring the soup gently to a boil.	 Pour @water{400%g} into a #saucepan and put on a medium heat.  Peel and cut the @potatoes{60%g} into large pieces (if the potatoes are small with thin skin, you can simply rinse them and cut them in half without peeling), peel the @carrots{30%g} and cut them into smaller chunks.  Place the vegetables into the pan and boil covered with a lid on until soft.  Next, cut the @salmon fillet{40%g} and @hake fillet{40%g} into large pieces and add to the vegetables, add @soy sauce{30%g} and @fish sauce{20%g}, halved @cherry tomatoes{20%g}, chopped @green peppers{5%g} and @double cream{50%g}. It is not necessary to cook for a long time, so as not to overcook the fish, it is enough to bring the soup gently to a boil.	"Here is the recipe in Cooklang format:
+
+**Recipe:** Fish Soup
+**Servings:** 1
+**Ingredients:**
+
+* Water (400g)
+* Potatoes (60g)
+* Carrots (30g)
+* Salmon fillet (40g)
+* Hake fillet (40g)
+* Soy sauce (30g)
+* Fish sauce (20g)
+* Cherry tomatoes (20g)
+* Green peppers (5g)
+* Double cream (50g)
+
+**Instructions:**
+
+1. Pour water into a saucepan and put on medium heat.
+2. Peel and cut potatoes and carrots, then place them into the pan.
+3. Boil covered with a lid on until soft.
+4. Cut salmon and hake fillets into large pieces.
+5. Add fish to the vegetables in the pan along with soy sauce, fish sauce, halved cherry tomatoes, chopped green peppers, and double cream.
+6. Bring soup gently to a boil.
+
+Note: I corrected the potential issue mentioned earlier by adding the fish after the vegetables are cooked."
+ https://github.com/cooklang/recipes/blob/main/Soups/Light%20chicken%20soup%20with%20buckwheat%20noodles.cook	Light chicken soup with buckwheat noodles	 >> servings: 1 >> produce: 600%g >> calories: 460%kkal >> protein: 43%g >> total fat: 16%g >> total carb.: 35%g	1  eggs,40 g soba noodles,5 g green pepper,0.400 l chicken stock,50 g chicken fillets,some  soy sauce	Put a sauté pot on the stove and boil the eggs, then boil the soba noodles, following the instructions on the back of the package. The carrots for the broth can be cut into chunks and boiled till soft. Cut the green pepper into small rings. Put the casserole on the stove, pour chicken stock into the pot and bring to the boil, cut the chicken fillets into strips and boil in the stock for about 5 minutes, then add the chopped boiled carrots and boiled soba noodles to the stock. Pour the broth into a soup bowl, peel the boiled egg and slice in half, place into the soup, add the soy sauce to taste and garnish with green peppers.	 Put a #sauté pot{} on the stove and boil the @eggs{1}, then boil the @soba noodles{40%g}, following the instructions on the back of the package.  The carrots for the broth can be cut into chunks and boiled till soft. Cut the @green pepper{5%g} into small rings.  Put the #casserole on the stove, pour @chicken stock{0.4%l} into the pot and bring to the boil, cut the @chicken fillets{50%g} into strips and boil in the stock for about ~{5%minutes}, then add the chopped boiled carrots and boiled soba noodles to the stock.  Pour the broth into a soup bowl, peel the boiled egg and slice in half, place into the soup, add the @soy sauce{} to taste and garnish with green peppers.	"Here is the rewritten text in Cooklang format:
+
+# Soba Noodle Soup
+
+## Ingredients
+- eggs
+- soba noodles
+- carrots
+- green pepper
+- chicken stock
+- chicken fillets
+- soy sauce
+
+## Instructions
+1. Boil the eggs.
+2. Boil the soba noodles according to package instructions.
+3. Cut the carrots into chunks and boil until soft.
+4. Cut the green pepper into small rings.
+5. Place a casserole on the stove, pour in chicken stock, and bring to a boil.
+6. Cut the chicken fillets into strips and boil in the stock for about 5 minutes.
+7. Add the chopped boiled carrots and boiled soba noodles to the stock.
+8. Pour the broth into a soup bowl.
+9. Peel the boiled egg and slice it in half; place it into the soup.
+10. Add soy sauce to taste and garnish with green peppers.
+
+Note: The original text seems to have mixed elements from two different recipes, but based on your request, I've extracted and formatted the instructions for the Soba Noodle Soup recipe as described in the second part of the conversation."
+ https://github.com/cooklang/recipes/blob/main/Soups/Minestrone%20with%20homemade%20chicken%20stock.cook	 Minestrone with homemade chicken stock	 >> servings: 1 >> produce: 500%g >> calories: 460%kkal >> protein: 17%g >> total fat: 19%g >> total carb.: 8%g	20 g carrots,20 g courgette,20 g bell peppers,some  vegetable oil,15 g frozen green beans,20 g cherry tomatoes,1 clove garlic,5 g basil leaves	Wash and peel the carrots, wash the courgette and bell peppers and cut into small cubes. Heat a pan with vegetable oil over a medium heat, sauté the chopped vegetables together with the frozen green beans until soft, add the cherry tomatoes and chopped garlic then remove from the heat. Heat the chicken stock in a saucepan, add the softened vegetables and bring to the boil, once boiling remove from the heat and pour into a bowl. Garnish with finely chopped parsley or basil leaves. This is a wonderful Winter warmer.	 Wash and peel the @carrots{20%g}, wash the @courgette{20%g} and @bell peppers{20%g} and cut into small cubes.  Heat a #pan with @vegetable oil{} over a medium heat, sauté the chopped vegetables together with the @frozen green beans{15%g} until soft, add the @cherry tomatoes{20%g} and chopped @garlic{1%clove} then remove from the heat.  Heat the chicken stock in a #saucepan, add the softened vegetables and bring to the boil, once boiling remove from the heat and pour into a bowl. Garnish with finely chopped parsley or @basil leaves{5%g}. This is a wonderful Winter warmer.	"Wash and peel the @carrots{20%g}, wash the @courgette{20%g} and @bell peppers{20%g} and cut into small cubes. Heat a #pan{} with @vegetable oil{} over a medium heat, sauté the chopped vegetables together with the frozen @green beans{15%g} until soft, add the @cherry tomatoes{20%g} and chopped @garlic{1%clove} then remove from the heat. Heat the @chicken stock{} in a #saucepan{}, add the softened vegetables and bring to the boil, once boiling remove from the heat and pour into a #bowl{}. Garnish with finely chopped @basil leaves{5%g}. This is a wonderful Winter warmer.
+
+Note: I assumed that ""some vegetable oil"" means an unspecified quantity of vegetable oil, so I left it as ""@vegetable oil{}"". If you want to specify a quantity, please let me know."
+ https://github.com/cooklang/recipes/blob/main/Soups/Pink%20tomatoe%20salad%20with%20onions%20and%20coriander.cook	 Pink tomatoe salad with onions and coriander	 >> servings: 1 >> produce: 230%g >> calories: 54.3%kkal >> protein: 2.65%g >> total fat: 0.4%g >> total carb.: 10.3%g	200 g tomatoes,10 g red onions,10 g coriander,0.250 tsp salt,10 g Worcester sauce	Wash the tomatoes and slice them into chunks, if they are cherry tomatoes, you can just halve them. Peel the red onions and slice them into thin rings, which you can then halve. Wash the coriander and chop coarsely. Mix the tomatoes, onion and coriander in a bowl and season with salt, pepper, a splash of olive oil and Worcester sauce. Enjoy as a simple side salad with any meal.	 Wash the @tomatoes{200%g} and slice them into chunks, if they are cherry tomatoes, you can just halve them. Peel the @red onions{10%g} and slice them into thin rings, which you can then halve. Wash the @coriander{10%g} and chop coarsely. Mix the tomatoes, onion and coriander in a bowl and season with @salt{1/4%tsp}, pepper, a splash of olive oil and @Worcester sauce{10%g}. Enjoy as a simple side salad with any meal.	"Your conversion is almost correct!
+
+Here's the corrected version:
+
+**Cooklang:** Wash @tomatoes{200%g} and slice them into chunks, if they are cherry tomatoes, you can just halve them using a #knife. Peel @red onions{10%g} and slice them into thin rings, which you can then halve. Wash @coriander{10%g} and chop coarsely. Mix the tomatoes, onion and coriander in a #bowl and season with @salt{0.250%tsp}, #pepper, a splash of @olive oil and @Worcester sauce{10%g}. Enjoy as a simple side salad with any meal.
+
+I made two minor changes:
+
+1. Added `#knife` to specify the tool used for slicing.
+2. Changed `pepper` to `#pepper` to indicate that it's a seasoning, not an ingredient with a specific quantity.
+
+Your conversion is now spot on!"
+ https://github.com/cooklang/recipes/blob/main/Soups/Seafood%20tomato%20soup.cook	Seafood tomato soup	 >> servings: 1 >> produce: 600%g >> calories: 230%kkal >> protein: 12.8%g >> total fat: 6.4%g >> total carb.: 22.5%g	300 g water,20 g carrots,20 g celery stalk,30 g soy sauce,20 g fish sauce,30 g oyster sauce,10 g red wine vinegar,200 g tinned chopped tomatoes,40 g mussels,60 g seafood mix,5 g fresh basil	Pour 300g water into a saucepan and place on a medium heat. Peel the carrots (20g) and celery stalk (20g) and cut into very small cubes. Put the vegetables in the boiling water. Add soy sauce (30g), fish sauce (20g), and oyster sauce (30g) to the broth, add red wine vinegar (10g). Then add tinned chopped tomatoes (200g). Clean the closed mussels (40g) with a brush to remove the beard and prevent any type of external contamination (if you buy ready opened mussels they do not need to be cleaned). Put the mussels on to boil, then add a seafood mix (60g) which may contain shrimps and calamari. Bring the soup to a boil and then remove from the heat. Mussels that have not opened need to be removed, they are not edible. Check for seasoning. Chop fresh basil (5g) into small pieces and garnish the dish. This is a lovely, rich and hearty soup for Winter.	 Pour @water{300%g} into a #saucepan and place on a medium heat.  Peel the @carrots{20%g} and @celery stalk{20%g} and cut into very small cubes.  Put the vegetables in the boiling water. Add @soy sauce{30%g}, @fish sauce{20%g}, and @oyster sauce{30%g} to the broth, add @red wine vinegar{10%g}. Then add @tinned chopped tomatoes{200%g}.  Clean the closed @mussels{40%g} with a #brush to remove the beard and prevent any type of external contamination ( if you buy ready opened mussels they do not need to be cleaned). Put the mussels on to boil, then add a @seafood mix{60%g} which may contain shrimps and calamari.  Bring the soup to a boil and then remove from the heat. Mussels that have not opened need to be removed, they are not edible. Check for seasoning. Chop @fresh basil{5%g} into small pieces and garnish the dish. This is a lovely, rich and hearty soup for Winter.	"# Mussels and Seafood Soup Recipe
+
+ Servings: 1
+ Cooking Time: 10-15 minutes
+
+## Ingredients:
+- Water (300g)
+- Carrots (20g)
+- Celery stalk (20g)
+- Soy sauce (30g)
+- Fish sauce (20g)
+- Oyster sauce (30g)
+- Red wine vinegar (10g)
+- Tinned chopped tomatoes (200g)
+- Closed mussels (40g)
+- Seafood mix (60g) (may contain shrimps and calamari)
+- Fresh basil (5g)
+
+## Instructions:
+
+1. **Prepare the Broth**: Pour 300g of water into a saucepan and place it on medium heat.
+2. **Peel and Chop Vegetables**: Peel the carrots (20g) and celery stalk (20g), then cut them into very small cubes.
+3. **Boil Vegetables**: Put the chopped vegetables into the boiling water.
+4. **Add Sauces and Vinegar**: Add soy sauce (30g), fish sauce (20g), oyster sauce (30g), and red wine vinegar (10g) to the broth.
+5. **Add Tomatoes**: Then add tinned chopped tomatoes (200g) to the mixture.
+6. **Clean Mussels**: Clean the closed mussels (40g) with a brush to remove the beard and prevent any type of external contamination.
+7. **Boil Mussels and Seafood Mix**: Put the cleaned mussels into the boiling soup, then add a seafood mix (60g).
+8. **Final Boil and Seasoning**: Bring the soup to a boil, then remove from the heat. Check for seasoning.
+9. **Remove Unopened Mussels**: Remove any mussels that have not opened as they are not edible.
+10. **Garnish with Basil**: Chop fresh basil (5g) into small pieces and garnish the dish.
+
+Enjoy your hearty Winter soup!"

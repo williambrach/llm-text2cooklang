@@ -1,0 +1,12 @@
+{
+  "prog": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+    "signature_prefix": "Cooklang:",
+    "extended_signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+    "extended_signature_prefix": "Cooklang:"
+  }
+}
