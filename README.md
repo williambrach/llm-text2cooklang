@@ -366,7 +366,7 @@ Cooklang: Pour @water{400%g} into a #saucepan and put on a medium heat. Peel and
 
 ---
 
-Ingredients: {recipe text}
+Ingredients: {ingredients}
 
 Recipe Text: {recipe text}
 
