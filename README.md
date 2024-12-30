@@ -15,7 +15,8 @@ Evaluating Large Language Models for Recipe Conversion. Code repository for the 
 
 ## Prompt examples
 
-- **[Few-shot example with cooklang with ingredients](./examples/few-shot-cooklang-with-ings.txt)** (default and best performing prompt)
+
+- **[Few-shot example with cooklang with ingredients](./examples/few-shot-no-cooklang-with-ings.txt)** (default and best performing prompt)
 - [Few-shot example without cooklang with ingredients](./examples/few-shot-no-cooklang-with-ings.txt) (example without cooklang specification)
 - [MIPROv2 with cooklang with ings prompt example](./examples/miprov2-with-cooklang-with-ings.txt) (example of MIPROv2 prompt)
 
