@@ -1,5 +1,5 @@
-# CookLang Recipe Converter
-This project converts plain text recipes into CookLang format using various language models. This is just repository for the paper project.
+# Project
+Evaluating Large Language Models for Recipe Conversion. Code repository for the project.
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ This project converts plain text recipes into CookLang format using various lang
    - Save the resulting plots in the `plots/` directory
 
 
-# Results table 
+# Results table (WER, ROUGUE-L, TER)
 
 | with_cooklang | without_ings | model        | prompt_techqnique |       WER |   ROUGE-L |       TER |
 |:--------------|:-------------|:-------------|:------------------|----------:|----------:|----------:|
@@ -100,47 +100,11 @@ This project converts plain text recipes into CookLang format using various lang
 | False         | False        | llama3.1:8b  | MIPROv2           | 1.87905   |  0.230551 |  8.92181  |
 | False         | False        | llama3.1:70b | MIPROv2           | 1.45797   |  0.197413 |  7.50252  |
 
+## Model comparison
 
-# Results table domain
+![Model comparison](./plots/standard_model_comparison.png)
 
-| with_cooklang   | without_ings   | model        | prompt_techqnique   |   find_all_ings |   num_bonus_ings |   num_missing_ings |   find_all_units |   find_all_amounts |
-|:----------------|:---------------|:-------------|:--------------------|----------------:|-----------------:|-------------------:|-----------------:|-------------------:|
-| True            | True           | gpt-4o-mini  | MIPROv2             |         0.90625 |          4.375   |            0.15625 |          0.59375 |           0.65625  |
-| False           | True           | gpt-4o-mini  | MIPROv2             |         0.84375 |          2.59375 |            0.28125 |          0.65625 |           0.671875 |
-| True            | True           | gpt-4o       | MIPROv2             |         0.84375 |          0.28125 |            0.15625 |          0.6875  |           0.78125  |
-| False           | True           | gpt-4o       | Few-Shot       |         0.8125  |          0.46875 |            0.25    |          0.78125 |           0.78125  |
-| False           | True           | gpt-4o       | MIPROv2             |         0.78125 |          0.84375 |            0.28125 |          0.75    |           0.75     |
-| True            | True           | gpt-4o       | Zero-Shot            |         0.78125 |          0.78125 |            0.25    |          0.6875  |           0.71875  |
-| True            | True           | gpt-4o       | Few-Shot       |         0.75    |          0.375   |            0.28125 |          0.71875 |           0.71875  |
-| False           | True           | gpt-4o-mini  | Few-Shot       |         0.71875 |          0.53125 |            0.34375 |          0.59375 |           0.59375  |
-| True            | True           | gpt-4o-mini  | Few-Shot       |         0.6875  |          0.84375 |            0.5625  |          0.59375 |           0.5625   |
-| True            | True           | gpt-4o-mini  | Zero-Shot            |         0.59375 |          1       |            0.78125 |          0.34375 |           0.46875  |
-| False           | False          | gpt-4o       | Few-Shot       |         0.53125 |          2.125   |            1.09375 |          0.21875 |           0.25     |
-| False           | False          | gpt-4o-mini  | MIPROv2             |         0.53125 |          2.4375  |            0.96875 |          0.1875  |           0.1875   |
-| False           | False          | gpt-4o       | MIPROv2             |         0.53125 |          2.28125 |            0.96875 |          0.15625 |           0.15625  |
-| True            | True           | llama3.1:70b | MIPROv2             |         0.5     |          1.21875 |            4.09375 |          0.40625 |           0.375    |
-| True            | True           | llama3.1:70b | Few-Shot       |         0.5     |          1.375   |            2.28125 |          0.3125  |           0.34375  |
-| True            | True           | llama3.1:70b | Zero-Shot            |         0.5     |          1.375   |            2.28125 |          0.3125  |           0.34375  |
-| False           | False          | gpt-4o-mini  | Few-Shot       |         0.46875 |          2.25    |            1.09375 |          0.21875 |           0.1875   |
-| True            | True           | llama3.1:8b  | Zero-Shot            |         0.4375  |          0.3125  |            3.875   |          0.34375 |           0.375    |
-| True            | True           | llama3.1:8b  | Few-Shot       |         0.40625 |          0.5625  |            4.5     |          0.34375 |           0.34375  |
-| False           | True           | gpt-4o       | Zero-Shot            |         0.28125 |          5.25    |            3.875   |          0       |           0        |
-| False           | True           | llama3.1:70b | Few-Shot       |         0.28125 |          1.53125 |            4.875   |          0.25    |           0.25     |
-| False           | True           | llama3.1:70b | MIPROv2             |         0.25    |          1.625   |            6.46875 |          0.125   |           0.125    |
-| False           | False          | gpt-4o       | Zero-Shot            |         0.21875 |          7.0625  |            3.53125 |          0       |           0        |
-| False           | False          | llama3.1:70b | Few-Shot       |         0.125   |          2.71875 |            5.65625 |          0.03125 |           0.03125  |
-| True            | True           | llama3.1:8b  | MIPROv2             |         0.03125 |          0.5     |            8.78125 |          0.03125 |           0        |
-| False           | False          | llama3.1:70b | Zero-Shot            |         0       |          0       |            9.03125 |          0       |           0        |
-| False           | False          | gpt-4o-mini  | Zero-Shot            |         0       |          0.53125 |            8.90625 |          0       |           0        |
-| False           | False          | llama3.1:70b | MIPROv2             |         0       |          0.09375 |            8.84375 |          0       |           0        |
-| False           | True           | gpt-4o-mini  | Zero-Shot            |         0       |          0.71875 |            8.84375 |          0       |           0        |
-| False           | False          | llama3.1:8b  | Few-Shot       |         0       |          1.40625 |            8.96875 |          0       |           0        |
-| False           | False          | llama3.1:8b  | Zero-Shot            |         0       |          0       |            9.03125 |          0       |           0        |
-| False           | True           | llama3.1:8b  | Zero-Shot            |         0       |          0       |            9.03125 |          0       |           0        |
-| False           | True           | llama3.1:8b  | Few-Shot       |         0       |          0       |            9.03125 |          0       |           0        |
-| False           | True           | llama3.1:8b  | MIPROv2             |         0       |          0.75    |            9       |          0       |           0        |
-| False           | True           | llama3.1:70b | Zero-Shot            |         0       |          0       |            9.03125 |          0       |           0        |
-| False           | False          | llama3.1:8b  | MIPROv2             |         0       |          0.15625 |            9       |          0       |           0        |
+## Prompts
 
 
 ## MIPROv2 with cooklang with ings prompt example
@@ -372,4 +336,8 @@ Recipe Text: {recipe text}
 
 Reasoning: Let's think step by step in order to Cooklang: 
 
+```
+## Citation
+
+```shell
 ```
