@@ -66,11 +66,11 @@ Evaluating Large Language Models for Recipe Conversion. Code repository for the 
 
 [Table](./examples/specific-metrics-results.md)
 
-## Prerequisites
+## Setup
+
+### Prerequisites
 
 - Python 3.12
-
-## Setup
 
 1. Clone the repository:
    ```
