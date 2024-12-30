@@ -72,6 +72,8 @@ Evaluating Large Language Models for Recipe Conversion. Code repository for the 
 
 - Python 3.12
 
+### Installation
+
 1. Clone the repository:
    ```
    git clone https://github.com/williambrach/llm-text2cooklang.git
