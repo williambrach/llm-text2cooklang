@@ -1,0 +1,86 @@
+**  
+Transform the given plain text recipe and accompanying ingredients into a structured Cooklang format. Use the following specifications:
+
+1. **Ingredients:**
+   - Prefix each ingredient with `@`.
+   - For multi-word ingredients, wrap the entire ingredient in `{}`.
+   - Indicate the quantity directly after the ingredient name in `{}`, followed by a `%` for the unit.
+   - Example: `@salt`, `@ground black pepper{}`, `@potato{2}`, `@bacon strips{1%kg}`, `@syrup{1/2%tbsp}`.
+
+2. **Comments:**
+   - Use `--` to denote single-line comments.
+   - For multi-line comments, enclose them in `[- -]`.
+   - Example: `-- Don't burn the roux!`.
+
+3. **Cookware:**
+   - Use `#` to specify the cookware required.
+   - For multi-word items, enclose in `{}`.
+   - Example: `#pot`, `#potato masher{}`.
+
+4. **Timers:**
+   - Use `~` to specify timing instructions.
+   - Indicate the duration in `{}`.
+   - You may include a name before the duration.
+   - Example: `~{25%minutes}`, `~eggs{3%minutes}`.
+
+Return only the Cooklang formatted recipe without any additional commentary or information. Ensure that the output is complete and captures all elements of the recipe succinctly.
+
+---
+
+Ingredients: 1 kg corn beef,3 medium potatoes,3 medium carrots,1 cup frozen peas,4 eggs,6 pickles,1 cup mayonnaise,1 tbsp dill
+Recipe Text: Zero step is cook corn beef (1 kg). Put into a large pan and simmer for 2 hours. The first step is to cook your potatoes (3 medium) and carrots (3 medium). I used a steamer, but you can always go the traditional route and boil them. In either case, peel the carrots but not the potatoes. Steam the potatoes for 30 minutes to start with, and then add the peeled carrots. Continue steaming for 10-15 more minutes, or until the potatoes and carrots are firm but tender when poked. Meanwhile, cook your frozen peas (1 cup) according to package directions. I use the kind that can be steamed in the package in the microwave. When they are done, set them aside to cool. When the potatoes and carrots are done, allow them to cool to the point that you can handle them easily. Peel the potatoes. Using your fingers or the back of a knife, gently scrape the thin layer of skin off of the potatoes. Dice them into 1cm cube-ish shapes and put them into a medium serving bowl. Next, dice your carrots. I've heard it said that a Soviet housewife could be judged on her housekeeping skills by how finely she could dice vegetables for her soups and salads. I, however, won't judge you. In fact, if you chop your potatoes and carrots a little larger, I would probably even thank you. I happen to like chunky salads. Toss the carrots and a cup of steamed peas into the bowl with the potatoes. Peel and dice your hardboiled eggs (4). Again, I know some like to have their salads with finely diced ingredients, but I don't. So dice them however you like. Chop pickles (6) finely. I used small snacking dill pickles, so I needed to use six of them. If you have larger pickles, try using three and see if that is enough for you. Add the meat if using and mix everything together gently before you add the mayonnaise (1 cup). Stir in one cup of mayo to start with, and add more if you think that the salad needs more binding together. Cover the salad and chill for at least one hour or overnight to allow the flavors to come together. And of course, garnish with finely chopped dill (1 tbsp). This is a Russian salad, after all.
+Cooklang: Zero step is cook @corn beef{1%kg}. Put into a large pan and simmer for ~{2%hours}. The first step is to cook your @potatoes{3%medium} and @carrots{3%medium}. I used a steamer, but you can always go the traditional route and boil them. In either case, peel the carrots but not the potatoes. Steam the potatoes for ~{30%minutes} to start with, and then add the peeled carrots. Continue steaming for 10-15 more minutes, or until the potatoes and carrots are firm but tender when poked. Meanwhile, cook your @frozen peas{1%cup} according to package directions. I use the kind that can be steamed in the package in the microwave. When they are done, set them aside to cool. When the potatoes and carrots are done, allow them to cool to the point that you can handle them easily. Peel the potatoes. Using your fingers or the back of a knife, gently scrape the thin layer of skin off of the potatoes. Dice them into 1cm cube-ish shapes and put them into a medium serving bowl. Next, dice your carrots. I've heard it said that a Soviet housewife could be judged on her housekeeping skills by how finely she could dice vegetables for her soups and salads. I, however, won't judge you. In fact, if you chop your potatoes and carrots a little larger, I would probably even thank you. I happen to like chunky salads. Toss the carrots and a cup of steamed peas into the bowl with the potatoes. Peel and dice your hardboiled @eggs{4}. Again, I know some like to have their salads with finely diced ingredients, but I don't. So dice them however you like. Chop @pickles{6} finely. I used small snacking dill pickles, so I needed to use six of them. If you have larger pickles, try using three and see if that is enough for you. Add the meat if using and mix everything together gently before you add the @mayonnaise{1%cup}. Stir in one cup of mayo to start with, and add more if you think that the salad needs more binding together. Cover the salad and chill for at least one hour or overnight to allow the flavors to come together. And of course, garnish with finelly chopped @dill{1%tbsp}. This is a Russian salad, after all.
+
+Ingredients: 100 g aubergine,80 g potatoes,40 g onions,70 g carrots,100 g red bell pepper,some oil.,120 g tomatoes,0.333 tsp smoked paprika,0.333 tsp rosemary,0.333 tsp thyme,0.333 tsp caraway,75 g tomato paste,0.333 tsp garlic paste,0.500 tsp sugar,some salt,some pepper,30 ml water
+Recipe Text: Dice the aubergine into neat cubes of the same size, peel and cube the potatoes, onions, carrots and red bell pepper into medium chunks. Heat a deep frying pan or wok over a high heat with a little vegetable oil. Add the carrots and onions and sauté for 2 minutes until the onions are soft and translucent. Add the aubergines, potatoes and bell peppers to the pan and fry, then dice the tomatoes and add them to the pan. Stir in smoked paprika, rosemary, thyme and caraway and sauté over a medium heat for 8 minutes to reduce the sauce. Fry on a medium heat for 8 minutes, stirring occasionally to prevent burning on the bottom. Add the tomato paste and garlic paste, sugar per serving, salt and pepper to taste at the end. Stir in a little water to add some more liquid. Cover and stew over a low heat for 30 minutes, stirring occasionally. Serve warm or completely cooled like a ratatouille with pasta or toasted ciabatta.
+Cooklang: Dice the @aubergine{100%g} into neat cubes of the same size, peel and cube the @potatoes{80%g}, @onions{40%g}, @carrots{70%g} and @red bell pepper{100%g} into medium chunks. Heat a #deep frying pan{} or wok over a high heat with a little vegetable @oil. Add the carrots and onions and sauté for ~{2%minutes} until the onions are soft and translucent. Add the aubergines, potatoes and bell peppers to the pan and fry, then dice the @tomatoes{120%g} and add them to the pan. Stir in @smoked paprika{1/3%tsp}, @rosemary{1/3%tsp}, @thyme{1/3%tsp} and @caraway{1/3%tsp} and sauté over a medium heat for ~{8%minutes} to reduce the sauce. Fry on a medium heat for ~{8%minutes}, stirring occasionally to prevent burning on the bottom. Add the @tomato paste{75%g} and @garlic paste{1/3%tsp}, @sugar{1/2%tsp} per serving, @salt and @pepper to taste at the end. Stir in a little @water{30%ml} to add some more liquid. Cover and stew over a low heat for ~{30%minutes}, stirring occasionally. Serve warm or completely cooled like a ratatouille with pasta or toasted ciabatta.
+
+---
+
+Follow the following format.
+
+Ingredients: Ingredients for the recipe. Comma separated list of ingredients.
+
+Recipe Text: Recipe text to convert to Cooklang format.
+
+Reasoning: Let's think step by step in order to ${produce the cooklang}. We ...
+
+Cooklang: Cooklang formatted recipe.
+
+---
+
+Ingredients: 3 eggs,125 g flour,250 ml milk,1 pinch sea salt,some oil
+
+Recipe Text: Crack the eggs into a blender, then add the flour, milk and sea salt, and blitz until smooth. Pour into a bowl and leave to stand for 15 minutes. Melt the butter (or a drizzle of oil if you want to be a bit healthier) in a large non-stick frying pan on a medium heat, then tilt the pan so the butter coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for 1 to 2 minutes, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through. Serve straightaway with your favourite topping.
+
+Reasoning: Let's think step by step in order to ``` @eggs{3} @flour{125%g} @milk{250%ml} @sea salt{1%pinch} @oil{} Crack the @eggs{3} into a #blender{} then add the @flour{125%g}, @milk{250%ml} and @sea salt{1%pinch}, and blitz until smooth. Pour into a bowl and leave to stand for ~{15%minutes}. Melt the @oil{} in a large non-stick #frying pan{} on a medium heat, then tilt the pan so the @oil{} coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for ~{1-2%minutes}, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for ~{1%minute}, or until cooked through. Serve straightaway with your favourite topping. ```
+
+Cooklang: ``` @eggs{3} @flour{125%g} @milk{250%ml} @sea salt{1%pinch} @oil{} Crack the @eggs{3} into a #blender{} then add the @flour{125%g}, @milk{250%ml} and @sea salt{1%pinch}, and blitz until smooth. Pour into a bowl and leave to stand for ~{15%minutes}. Melt the @oil{} in a large non-stick #frying pan{} on a medium heat, then tilt the pan so the @oil{} coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for ~{1-2%minutes}, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for ~{1%minute}, or until cooked through. Serve straightaway with your favourite topping. ```
+
+---
+
+Ingredients: 100 g potatoes,50 g onions,200 g mushrooms,some oil,4 g salt,0.250 tsp pepper,0.250 tsp rosemary,50 g double cream,some salt
+
+Recipe Text: Peel and chop the potatoes, onions and mushrooms into chunks. The potatoes will need to be cut a bit smaller. Heat a frying pan over a medium heat with a little oil and sauté the vegetables until golden. Season with salt, pepper and chopped fresh rosemary. Put the sautéed vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender. Remove the soup from the heat and blend with a blender, add the double cream and salt to taste. Garnish with freshly cracked black pepper.
+
+Reasoning: Let's think step by step in order to ``` @potatoes{100%g} @onions{50%g} @mushrooms{200%g} @oil{} @salt{4%g} @pepper{1/4%tsp} @rosemary{1/4%tsp} @double cream{50%g} @salt{} Peel and chop the @potatoes, @onions and @mushrooms into chunks. The @potatoes will need to be cut a bit smaller. Heat a #frying pan{} over a medium heat with a little @oil and sauté the vegetables until golden. Season with @salt, @pepper and chopped fresh @rosemary. Put the sautéed vegetables into a #saucepan{} and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the @potatoes are tender. Remove the soup from the heat and blend with a #blender{}, add the @double cream and @salt to taste. Garnish with freshly cracked black @pepper. ```
+
+Cooklang: ``` @potatoes{100%g} @onions{50%g} @mushrooms{200%g} @oil{} @salt{4%g} @pepper{1/4%tsp} @rosemary{1/4%tsp} @double cream{50%g} @salt{} Peel and chop the @potatoes, @onions and @mushrooms into chunks. The @potatoes will need to be cut a bit smaller. Heat a #frying pan{} over a medium heat with a little @oil and sauté the vegetables until golden. Season with @salt, @pepper and chopped fresh @rosemary. Put the sautéed vegetables into a #saucepan{} and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the @potatoes are tender. Remove the soup from the heat and blend with a #blender{}, add the @double cream and @salt to taste. Garnish with freshly cracked black @pepper. ```
+
+---
+
+Ingredients: 50 g strawberries,1 banana,50 g blueberries,100 g milk,30 g oat flakes,10 g chia seeds,10 g granola,1 g salt,10 g fresh blueberries,10 g fresh raspberries
+
+Recipe Text: Blend strawberries, banana, blueberries, milk, oat flakes, chia seeds, granola, salt with a blender, allow to settle for 10 minutes, pour into a bowl and garnish with fresh blueberries and fresh raspberries. You can use fresh or frozen fruit for this smoothie.
+
+Reasoning: Let's think step by step in order to ``` @strawberries{50%g} @banana{1} @blueberries{50%g} @milk{100%g} @oat flakes{30%g} @chia seeds{10%g} @granola{10%g} @salt{1%g} @fresh blueberries{10%g} @fresh raspberries{10%g} Blend @strawberries{50%g}, @banana{1}, @blueberries{50%g}, @milk{100%g}, @oat flakes{30%g}, @chia seeds{10%g}, @granola{10%g}, @salt{1%g} with a #blender{}; allow to settle for ~{10%minutes}. Pour into a bowl and garnish with @fresh blueberries{10%g} and @fresh raspberries{10%g}. You can use fresh or frozen fruit for this smoothie. ```
+
+Cooklang: ``` @strawberries{50%g} @banana{1} @blueberries{50%g} @milk{100%g} @oat flakes{30%g} @chia seeds{10%g} @granola{10%g} @salt{1%g} @fresh blueberries{10%g} @fresh raspberries{10%g} Blend @strawberries{50%g}, @banana{1}, @blueberries{50%g}, @milk{100%g}, @oat flakes{30%g}, @chia seeds{10%g}, @granola{10%g}, @salt{1%g} with a #blender{}; allow to settle for ~{10%minutes}. Pour into a bowl and garnish with @fresh blueberries{10%g} and @fresh raspberries{10%g}. You can use fresh or frozen fruit for this smoothie. ```
+
+---
+
+Ingredients: {ingredients}
+
+Recipe Text: {recipe text}
+
+Reasoning: Let's think step by step in order to 

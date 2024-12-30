@@ -1,65 +1,26 @@
 # Project
 Evaluating Large Language Models for Recipe Conversion. Code repository for the project.
 
-## Prerequisites
+![flow](./plots/flow.png)
 
-- Python 3.12
+## Results
 
-## Setup
+### Results by model
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/williambrach/llm-text2cooklang.git
-   cd llm-text2cooklang
-   ```
+![Model comparison](./plots/standard_model_comparison.png)
 
-2. Install cooklang-in-c:
-    ```
-    git clone https://github.com/cooklang/cook-in-c.git
+### Results by prompt technique
 
-    python setup.py build
-    ```
+![Model comparison](./plots/standard_prompt_technique_analysis.png)
 
-3. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+## Prompt examples
 
-4. Set up environment variables:
-   Create a `.env` file in the project root with the following variables:
-   ```
-   AZURE_OPENAI_KEY=your_azure_openai_key
-   AZURE_OPENAI_ENDPOINT=your_azure_openai_endpoint
-   AZURE_OPENAI_DEPLOYMENT_4o_mini=your_deployment_name
-   AZURE_OPENAI_DEPLOYMENT_4o=your_deployment_name
-   AZURE_OPENAI_VERSION=your_api_version
-   OLLAMA_URL=your_ollama_url
-   ```
-
-## Running the Script
-
-1. The `pycooklang.ipynb` notebook will:
-   - Parse the input dataset
-   - Create examples for training
-   - Train and optimize various models (Llama, Azure OpenAI)
-   - Save the optimized programs in the `data/programs/` directory
-
-2. The `predict.ipynb` notebook will:
-   - Load and parse the input dataset from a TSV file
-   - Set up language models (Azure OpenAI or Ollama) based on environment variables
-   - Load optimized programs from JSON files in the `data/programs/` directory
-   - Prepare to generate CookLang predictions for each recipe using the loaded programs
-   - Cooklang prediction into CSV output
-
-3. The `eval.ipynb` notebook will:
-   - Load and process evaluation data from TSV files
-   - Calculate various metrics (WER, ROUGE-L, TER) on the predictions
-   - Evaluate ingredient, unit, and amount accuracy
-   - Generate visualizations comparing model performance across different metrics
-   - Save the resulting plots in the `plots/` directory
+- **[Few-shot example with cooklang with ingredients](./examples/few-shot-cooklang-with-ings.txt)** (default and best performing prompt)
+- [Few-shot example without cooklang with ingredients](./examples/few-shot-no-cooklang-with-ings.txt) (example without cooklang specification)
+- [MIPROv2 with cooklang with ings prompt example](./examples/miprov2-with-cooklang-with-ings.txt) (example of MIPROv2 prompt)
 
 
-# Results table (WER, ROUGUE-L, TER)
+## Results table (WER, ROUGUE-L, TER)
 
 | with_cooklang | without_ings | model        | prompt_techqnique |       WER |   ROUGE-L |       TER |
 |:--------------|:-------------|:-------------|:------------------|----------:|----------:|----------:|
@@ -100,243 +61,73 @@ Evaluating Large Language Models for Recipe Conversion. Code repository for the 
 | False         | False        | llama3.1:8b  | MIPROv2           | 1.87905   |  0.230551 |  8.92181  |
 | False         | False        | llama3.1:70b | MIPROv2           | 1.45797   |  0.197413 |  7.50252  |
 
-## Model comparison
+### Results table (Ingredient Identification, Amount Identification, Unit Identification)
 
-![Model comparison](./plots/standard_model_comparison.png)
+[Table](./examples/specific-metrics-results.md)
 
-## Prompts
+## Prerequisites
 
+- Python 3.12
 
-## MIPROv2 with cooklang with ings prompt example
+## Setup
 
-```
-**  
-Transform the given plain text recipe and accompanying ingredients into a structured Cooklang format. Use the following specifications:
+1. Clone the repository:
+   ```
+   git clone https://github.com/williambrach/llm-text2cooklang.git
+   cd llm-text2cooklang
+   ```
 
-1. **Ingredients:**
-   - Prefix each ingredient with `@`.
-   - For multi-word ingredients, wrap the entire ingredient in `{}`.
-   - Indicate the quantity directly after the ingredient name in `{}`, followed by a `%` for the unit.
-   - Example: `@salt`, `@ground black pepper{}`, `@potato{2}`, `@bacon strips{1%kg}`, `@syrup{1/2%tbsp}`.
-
-2. **Comments:**
-   - Use `--` to denote single-line comments.
-   - For multi-line comments, enclose them in `[- -]`.
-   - Example: `-- Don't burn the roux!`.
-
-3. **Cookware:**
-   - Use `#` to specify the cookware required.
-   - For multi-word items, enclose in `{}`.
-   - Example: `#pot`, `#potato masher{}`.
-
-4. **Timers:**
-   - Use `~` to specify timing instructions.
-   - Indicate the duration in `{}`.
-   - You may include a name before the duration.
-   - Example: `~{25%minutes}`, `~eggs{3%minutes}`.
-
-Return only the Cooklang formatted recipe without any additional commentary or information. Ensure that the output is complete and captures all elements of the recipe succinctly.
-
----
-
-Ingredients: 1 kg corn beef,3 medium potatoes,3 medium carrots,1 cup frozen peas,4 eggs,6 pickles,1 cup mayonnaise,1 tbsp dill
-Recipe Text: Zero step is cook corn beef (1 kg). Put into a large pan and simmer for 2 hours. The first step is to cook your potatoes (3 medium) and carrots (3 medium). I used a steamer, but you can always go the traditional route and boil them. In either case, peel the carrots but not the potatoes. Steam the potatoes for 30 minutes to start with, and then add the peeled carrots. Continue steaming for 10-15 more minutes, or until the potatoes and carrots are firm but tender when poked. Meanwhile, cook your frozen peas (1 cup) according to package directions. I use the kind that can be steamed in the package in the microwave. When they are done, set them aside to cool. When the potatoes and carrots are done, allow them to cool to the point that you can handle them easily. Peel the potatoes. Using your fingers or the back of a knife, gently scrape the thin layer of skin off of the potatoes. Dice them into 1cm cube-ish shapes and put them into a medium serving bowl. Next, dice your carrots. I've heard it said that a Soviet housewife could be judged on her housekeeping skills by how finely she could dice vegetables for her soups and salads. I, however, won't judge you. In fact, if you chop your potatoes and carrots a little larger, I would probably even thank you. I happen to like chunky salads. Toss the carrots and a cup of steamed peas into the bowl with the potatoes. Peel and dice your hardboiled eggs (4). Again, I know some like to have their salads with finely diced ingredients, but I don't. So dice them however you like. Chop pickles (6) finely. I used small snacking dill pickles, so I needed to use six of them. If you have larger pickles, try using three and see if that is enough for you. Add the meat if using and mix everything together gently before you add the mayonnaise (1 cup). Stir in one cup of mayo to start with, and add more if you think that the salad needs more binding together. Cover the salad and chill for at least one hour or overnight to allow the flavors to come together. And of course, garnish with finely chopped dill (1 tbsp). This is a Russian salad, after all.
-Cooklang: Zero step is cook @corn beef{1%kg}. Put into a large pan and simmer for ~{2%hours}. The first step is to cook your @potatoes{3%medium} and @carrots{3%medium}. I used a steamer, but you can always go the traditional route and boil them. In either case, peel the carrots but not the potatoes. Steam the potatoes for ~{30%minutes} to start with, and then add the peeled carrots. Continue steaming for 10-15 more minutes, or until the potatoes and carrots are firm but tender when poked. Meanwhile, cook your @frozen peas{1%cup} according to package directions. I use the kind that can be steamed in the package in the microwave. When they are done, set them aside to cool. When the potatoes and carrots are done, allow them to cool to the point that you can handle them easily. Peel the potatoes. Using your fingers or the back of a knife, gently scrape the thin layer of skin off of the potatoes. Dice them into 1cm cube-ish shapes and put them into a medium serving bowl. Next, dice your carrots. I've heard it said that a Soviet housewife could be judged on her housekeeping skills by how finely she could dice vegetables for her soups and salads. I, however, won't judge you. In fact, if you chop your potatoes and carrots a little larger, I would probably even thank you. I happen to like chunky salads. Toss the carrots and a cup of steamed peas into the bowl with the potatoes. Peel and dice your hardboiled @eggs{4}. Again, I know some like to have their salads with finely diced ingredients, but I don't. So dice them however you like. Chop @pickles{6} finely. I used small snacking dill pickles, so I needed to use six of them. If you have larger pickles, try using three and see if that is enough for you. Add the meat if using and mix everything together gently before you add the @mayonnaise{1%cup}. Stir in one cup of mayo to start with, and add more if you think that the salad needs more binding together. Cover the salad and chill for at least one hour or overnight to allow the flavors to come together. And of course, garnish with finelly chopped @dill{1%tbsp}. This is a Russian salad, after all.
-
-Ingredients: 100 g aubergine,80 g potatoes,40 g onions,70 g carrots,100 g red bell pepper,some oil.,120 g tomatoes,0.333 tsp smoked paprika,0.333 tsp rosemary,0.333 tsp thyme,0.333 tsp caraway,75 g tomato paste,0.333 tsp garlic paste,0.500 tsp sugar,some salt,some pepper,30 ml water
-Recipe Text: Dice the aubergine into neat cubes of the same size, peel and cube the potatoes, onions, carrots and red bell pepper into medium chunks. Heat a deep frying pan or wok over a high heat with a little vegetable oil. Add the carrots and onions and sauté for 2 minutes until the onions are soft and translucent. Add the aubergines, potatoes and bell peppers to the pan and fry, then dice the tomatoes and add them to the pan. Stir in smoked paprika, rosemary, thyme and caraway and sauté over a medium heat for 8 minutes to reduce the sauce. Fry on a medium heat for 8 minutes, stirring occasionally to prevent burning on the bottom. Add the tomato paste and garlic paste, sugar per serving, salt and pepper to taste at the end. Stir in a little water to add some more liquid. Cover and stew over a low heat for 30 minutes, stirring occasionally. Serve warm or completely cooled like a ratatouille with pasta or toasted ciabatta.
-Cooklang: Dice the @aubergine{100%g} into neat cubes of the same size, peel and cube the @potatoes{80%g}, @onions{40%g}, @carrots{70%g} and @red bell pepper{100%g} into medium chunks. Heat a #deep frying pan{} or wok over a high heat with a little vegetable @oil. Add the carrots and onions and sauté for ~{2%minutes} until the onions are soft and translucent. Add the aubergines, potatoes and bell peppers to the pan and fry, then dice the @tomatoes{120%g} and add them to the pan. Stir in @smoked paprika{1/3%tsp}, @rosemary{1/3%tsp}, @thyme{1/3%tsp} and @caraway{1/3%tsp} and sauté over a medium heat for ~{8%minutes} to reduce the sauce. Fry on a medium heat for ~{8%minutes}, stirring occasionally to prevent burning on the bottom. Add the @tomato paste{75%g} and @garlic paste{1/3%tsp}, @sugar{1/2%tsp} per serving, @salt and @pepper to taste at the end. Stir in a little @water{30%ml} to add some more liquid. Cover and stew over a low heat for ~{30%minutes}, stirring occasionally. Serve warm or completely cooled like a ratatouille with pasta or toasted ciabatta.
-
----
-
-Follow the following format.
-
-Ingredients: Ingredients for the recipe. Comma separated list of ingredients.
-
-Recipe Text: Recipe text to convert to Cooklang format.
-
-Reasoning: Let's think step by step in order to ${produce the cooklang}. We ...
-
-Cooklang: Cooklang formatted recipe.
-
----
-
-Ingredients: 3 eggs,125 g flour,250 ml milk,1 pinch sea salt,some oil
-
-Recipe Text: Crack the eggs into a blender, then add the flour, milk and sea salt, and blitz until smooth. Pour into a bowl and leave to stand for 15 minutes. Melt the butter (or a drizzle of oil if you want to be a bit healthier) in a large non-stick frying pan on a medium heat, then tilt the pan so the butter coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for 1 to 2 minutes, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through. Serve straightaway with your favourite topping.
-
-Reasoning: Let's think step by step in order to ``` @eggs{3} @flour{125%g} @milk{250%ml} @sea salt{1%pinch} @oil{} Crack the @eggs{3} into a #blender{} then add the @flour{125%g}, @milk{250%ml} and @sea salt{1%pinch}, and blitz until smooth. Pour into a bowl and leave to stand for ~{15%minutes}. Melt the @oil{} in a large non-stick #frying pan{} on a medium heat, then tilt the pan so the @oil{} coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for ~{1-2%minutes}, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for ~{1%minute}, or until cooked through. Serve straightaway with your favourite topping. ```
-
-Cooklang: ``` @eggs{3} @flour{125%g} @milk{250%ml} @sea salt{1%pinch} @oil{} Crack the @eggs{3} into a #blender{} then add the @flour{125%g}, @milk{250%ml} and @sea salt{1%pinch}, and blitz until smooth. Pour into a bowl and leave to stand for ~{15%minutes}. Melt the @oil{} in a large non-stick #frying pan{} on a medium heat, then tilt the pan so the @oil{} coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for ~{1-2%minutes}, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for ~{1%minute}, or until cooked through. Serve straightaway with your favourite topping. ```
-
----
-
-Ingredients: 100 g potatoes,50 g onions,200 g mushrooms,some oil,4 g salt,0.250 tsp pepper,0.250 tsp rosemary,50 g double cream,some salt
-
-Recipe Text: Peel and chop the potatoes, onions and mushrooms into chunks. The potatoes will need to be cut a bit smaller. Heat a frying pan over a medium heat with a little oil and sauté the vegetables until golden. Season with salt, pepper and chopped fresh rosemary. Put the sautéed vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender. Remove the soup from the heat and blend with a blender, add the double cream and salt to taste. Garnish with freshly cracked black pepper.
-
-Reasoning: Let's think step by step in order to ``` @potatoes{100%g} @onions{50%g} @mushrooms{200%g} @oil{} @salt{4%g} @pepper{1/4%tsp} @rosemary{1/4%tsp} @double cream{50%g} @salt{} Peel and chop the @potatoes, @onions and @mushrooms into chunks. The @potatoes will need to be cut a bit smaller. Heat a #frying pan{} over a medium heat with a little @oil and sauté the vegetables until golden. Season with @salt, @pepper and chopped fresh @rosemary. Put the sautéed vegetables into a #saucepan{} and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the @potatoes are tender. Remove the soup from the heat and blend with a #blender{}, add the @double cream and @salt to taste. Garnish with freshly cracked black @pepper. ```
-
-Cooklang: ``` @potatoes{100%g} @onions{50%g} @mushrooms{200%g} @oil{} @salt{4%g} @pepper{1/4%tsp} @rosemary{1/4%tsp} @double cream{50%g} @salt{} Peel and chop the @potatoes, @onions and @mushrooms into chunks. The @potatoes will need to be cut a bit smaller. Heat a #frying pan{} over a medium heat with a little @oil and sauté the vegetables until golden. Season with @salt, @pepper and chopped fresh @rosemary. Put the sautéed vegetables into a #saucepan{} and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the @potatoes are tender. Remove the soup from the heat and blend with a #blender{}, add the @double cream and @salt to taste. Garnish with freshly cracked black @pepper. ```
-
----
-
-Ingredients: 50 g strawberries,1 banana,50 g blueberries,100 g milk,30 g oat flakes,10 g chia seeds,10 g granola,1 g salt,10 g fresh blueberries,10 g fresh raspberries
-
-Recipe Text: Blend strawberries, banana, blueberries, milk, oat flakes, chia seeds, granola, salt with a blender, allow to settle for 10 minutes, pour into a bowl and garnish with fresh blueberries and fresh raspberries. You can use fresh or frozen fruit for this smoothie.
-
-Reasoning: Let's think step by step in order to ``` @strawberries{50%g} @banana{1} @blueberries{50%g} @milk{100%g} @oat flakes{30%g} @chia seeds{10%g} @granola{10%g} @salt{1%g} @fresh blueberries{10%g} @fresh raspberries{10%g} Blend @strawberries{50%g}, @banana{1}, @blueberries{50%g}, @milk{100%g}, @oat flakes{30%g}, @chia seeds{10%g}, @granola{10%g}, @salt{1%g} with a #blender{}; allow to settle for ~{10%minutes}. Pour into a bowl and garnish with @fresh blueberries{10%g} and @fresh raspberries{10%g}. You can use fresh or frozen fruit for this smoothie. ```
-
-Cooklang: ``` @strawberries{50%g} @banana{1} @blueberries{50%g} @milk{100%g} @oat flakes{30%g} @chia seeds{10%g} @granola{10%g} @salt{1%g} @fresh blueberries{10%g} @fresh raspberries{10%g} Blend @strawberries{50%g}, @banana{1}, @blueberries{50%g}, @milk{100%g}, @oat flakes{30%g}, @chia seeds{10%g}, @granola{10%g}, @salt{1%g} with a #blender{}; allow to settle for ~{10%minutes}. Pour into a bowl and garnish with @fresh blueberries{10%g} and @fresh raspberries{10%g}. You can use fresh or frozen fruit for this smoothie. ```
-
----
-
-Ingredients: {ingredients}
-
-Recipe Text: {recipe text}
-
-Reasoning: Let's think step by step in order to 
-```
-
-## Few-shot example with cooklang with ingredients
-
-```
-Convert plain recipe text with provided ingredients into Cooklang text format.
-Cooklang Recipe Specification:
-    1. Ingredients
-    - Use `@` to define ingredients
-    - For multi-word ingredients, end with `{}`
-    - Specify quantity in `{}` after the name
-    - Use `%` to separate quantity and unit
+2. Install cooklang-in-c:
     ```
-    @salt
-    @ground black pepper{}
-    @potato{2}
-    @bacon strips{1%kg}
-    @syrup{1/2%tbsp}
+    git clone https://github.com/cooklang/cook-in-c.git
+
+    python setup.py build
     ```
-    2. Comments
-    - Single-line: Use `--` at the end of a line
-    - Multi-line: Enclose in `[- -]`
-    ```
-    -- Don't burn the roux!
-    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.
-    ```
-    3. Cookware
-    - Define with `#`
-    - Use `{}` for multi-word items
-    ```
-    #pot
-    #potato masher{}
-    ```
-    4. Timers
-    - Define with `~`
-    - Specify duration in `{}`
-    - Can include a name before the duration
-    ```
-    ~{25%minutes}
-    ~eggs{3%minutes}
-    ```
-Return only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.
 
----
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-Follow the following format.
+4. Set up environment variables:
+   Create a `.env` file in the project root with the following variables:
+   ```
+   AZURE_OPENAI_KEY=your_azure_openai_key
+   AZURE_OPENAI_ENDPOINT=your_azure_openai_endpoint
+   AZURE_OPENAI_DEPLOYMENT_4o_mini=your_deployment_name
+   AZURE_OPENAI_DEPLOYMENT_4o=your_deployment_name
+   AZURE_OPENAI_VERSION=your_api_version
+   OLLAMA_URL=your_ollama_url
+   ```
 
-Ingredients: Ingredients for the recipe. Comma separated list of ingredients.
+## Running the Script
 
-Recipe Text: Recipe text to convert to Cooklang format.
+0. The `program.py` contains:
+   - Dspy classes for all programs and signatures
+   - Util functions for loading programs 
 
-Reasoning: Let's think step by step in order to ${produce the cooklang}. We ...
+1. The `pycooklang.ipynb` notebook will:
+   - Parse the input dataset
+   - Create examples for training
+   - Train and optimize various models (Llama, Azure OpenAI)
+   - Save the optimized programs in the `data/programs/` directory
 
-Cooklang: Cooklang formatted recipe.
+2. The `predict.ipynb` notebook will:
+   - Load and parse the input dataset from a TSV file
+   - Set up language models (Azure OpenAI or Ollama) based on environment variables
+   - Load optimized programs from JSON files in the `data/programs/` directory
+   - Prepare to generate CookLang predictions for each recipe using the loaded programs
+   - Cooklang prediction into CSV output
 
----
+3. The `eval.ipynb` notebook will:
+   - Load and process evaluation data from TSV files
+   - Calculate various metrics (WER, ROUGE-L, TER) on the predictions
+   - Evaluate ingredient, unit, and amount accuracy
+   - Generate visualizations comparing model performance across different metrics
+   - Save the resulting plots in the `plots/` directory
 
-Ingredients: 1 egg yoke,125 g condenced milk,3tsp instant coffee,1,1/2cups water,3tsp gelatine,1 eggwhite,60 g cashew
-Recipe Text: Crack the egg yoke into a bowl, then add the condenced milk and instant coffee, and mix until a nice caramel is formed. Do not allow to bubble. Pour into a bowl and leave to cool down for 15 minutes. Heat water and gelatine then stir till gelatine is dissolved completely. Once gelatine is cooled down mix it with the caramel. Beat eggwhite until formy. Then mix the whites bit by bit to the the gelatine-caramel mixture. Pour into a pudding bowl and leave in fridge for 2 hours minimum. Add some cashew and enjoy!
-Cooklang: Crack the @egg yoke{1} into a bowl, then add the @condenced milk{125%g} and @instant coffee{3tsp}, and mix until a nice caramel is formed. Do not allow to bubble. Pour into a #bowl and leave to cool down for ~{15%minutes}. heat @water{1,1/2cups} and @gelatine{3tsp} then stir till gelatine is dissolved completely.Once gelatine is colled down mix it with the caramel. Beat @eggwhite{1} until formy. Then mix the whites bit by bit to the the gelatinecaramel mixture. Pour into a #puddingbowl and leave in fridge for 2 hours minimum. Add some @cashew{60%g} and enjoy!
 
----
 
-Ingredients: 30 g red bell pepper,30 g courgette,30 g tomatoes,30 g mozzarella cheese,2 eggs,30 g double cream,0.250 tsp salt,0.250 tsp pepper
-Recipe Text: Preheat the oven to 180 degrees. Finely dice red bell pepper, courgette, tomatoes and grate the mozzarella cheese. Beat the eggs in a bowl and add the double cream, salt and pepper and whisk well with a fork. Add the vegetables to the egg mixture and pour it into the pan, sprinkle with cheese and place in the oven to bake for 7 minutes. Take an oven mitt and remove the pan from the oven, fold the omelette in half and place on a plate. Garnish with finely chopped fresh parsley and serve with a relish or chutney.
-Cooklang: Preheat the oven to 180 degrees. Finely dice @red bell pepper{30%g}, @courgette{30%g}, @tomatoes{30%g} and grate the @mozzarella cheese{30%g}. Beat the @eggs{2} in a #bowl and add the @double cream{30%g}, @salt{1/4%tsp} and @pepper{1/4%tsp} and whisk well with a fork. Add the vegetables to the egg mixture and pour it into the #pan, sprinkle with cheese and place in the oven to bake for ~{7%minutes}. Take an #oven mitt{} and remove the pan from the oven, fold the omelette in half and place on a plate. Garnish with finely chopped fresh parsley and serve with a relish or chutney.
-
----
-
-Ingredients: 1 eggs,40 g soba noodles,5 g green pepper,0.400 l chicken stock,50 g chicken fillets,some soy sauce
-Recipe Text: Put a sauté pot on the stove and boil the eggs, then boil the soba noodles, following the instructions on the back of the package. The carrots for the broth can be cut into chunks and boiled till soft. Cut the green pepper into small rings. Put the casserole on the stove, pour chicken stock into the pot and bring to the boil, cut the chicken fillets into strips and boil in the stock for about 5 minutes, then add the chopped boiled carrots and boiled soba noodles to the stock. Pour the broth into a soup bowl, peel the boiled egg and slice in half, place into the soup, add the soy sauce to taste and garnish with green peppers.
-Cooklang: Put a #sauté pot{} on the stove and boil the @eggs{1}, then boil the @soba noodles{40%g}, following the instructions on the back of the package. The carrots for the broth can be cut into chunks and boiled till soft. Cut the @green pepper{5%g} into small rings. Put the #casserole on the stove, pour @chicken stock{0.4%l} into the pot and bring to the boil, cut the @chicken fillets{50%g} into strips and boil in the stock for about ~{5%minutes}, then add the chopped boiled carrots and boiled soba noodles to the stock. Pour the broth into a soup bowl, peel the boiled egg and slice in half, place into the soup, add the @soy sauce{} to taste and garnish with green peppers.
-
----
-
-Ingredients: 3 eggs,125 g flour,250 ml milk,1 pinch sea salt,some oil
-Recipe Text: Crack the eggs into a blender, then add the flour, milk and sea salt, and blitz until smooth. Pour into a bowl and leave to stand for 15 minutes. Melt the butter (or a drizzle of oil if you want to be a bit healthier) in a large non-stick frying pan on a medium heat, then tilt the pan so the butter coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for 1 to 2 minutes, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through. Serve straightaway with your favourite topping.
-Cooklang: Crack the @eggs{3} into a blender, then add the @flour{125%g}, @milk{250%ml} and @sea salt{1%pinch}, and blitz until smooth. Pour into a #bowl and leave to stand for ~{15%minutes}. Melt the butter (or a drizzle of @oil if you want to be a bit healthier) in a #large non-stick frying pan{} on a medium heat, then tilt the pan so the butter coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for 1 to 2 minutes, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through. Serve straightaway with your favourite topping.
-
----
-
-Ingredients: {ingredients}
-
-Recipe Text: {recipe text}
-
-Reasoning: Let's think step by step in order to produce the cooklang. We need to identify and format each ingredient, cookware, and timer according to the Cooklang specification.
-
-Cooklang: 
-```
-
-## Few-shot example without cooklang with ingredients
-
-```
-Convert plain recipe text with provided ingredients into Cooklang text format.
-Return only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.
-
----
-
-Ingredients: 50 g ciabatta,some oil,,50 g cottage cheese,80 g smoked salmon,5 g capers,1 g dill,some lemon,some black pepper
-Recipe Text: Slice the whole ciabatta loaf in half and then slice the halves lengthwise. Fry the ciabatta halves in a frying pan in a little oil, a griddle pan gives the best results and makes nice lines as the bread toasts. Spread the cottage cheese on the toasted ciabatta liberally, cut out the smoked salmon slices and place on the bread with a sprinkling of capers and finally chopped dill. Serve with a lemon wedge and freshly cracked black pepper.
-Cooklang: Slice the whole @ciabatta{50%g} loaf in half and then slice the halves lengthwise. Fry the ciabatta halves in a #frying pan{} in a little @oil, a griddle pan gives the best results and makes nice lines as the bread toasts. Spread the @cottage cheese{50%g} on the toasted ciabatta liberally, cut out the @smoked salmon{80%g} slices and place on the bread with a sprinkling of @capers{5%g} and finally chopped @dill{1%g}. Serve with a @lemon wedge and freshly cracked @black pepper{}.
-
-Ingredients: 0.500 avocado,100 g king prawns,some oil,some salt,,0.200 tsp thyme,0.200 tsp rosemary,1 glove garlic,20 g rocket salad leaves,30 g lime,some olive oil
-Recipe Text: Cut the avocado in half, remove the stone and carefully peel off the skin. Cut the avocado into slices. A little lemon juice will prevent it going brown if necessary. Peel the king prawns, heat a frying pan over a medium heat with a little oil and sauté the prawns with the salt, thyme, rosemary and chopped garlic. Should you like chilli you can finely chop one chilli and add to the prawns. Arrange the avocado on a plate, top with the rocket salad leaves, place the prawns on the rocket salad and drizzle with lime juice and olive oil. This salad makes a lovely, light Summer lunch.
-Cooklang: Cut the @avocado{1/2} in half, remove the stone and carefully peel off the skin. Cut the avocado into slices. A little lemon juice will prevent it going brown if necessary. Peel the @king prawns{100%g}, heat a #frying pan{} over a medium heat with a little @oil and sauté the prawns with the @salt, @thyme{1/5%tsp}, @rosemary{1/5%tsp} and chopped @garlic{1%glove}. Should you like chilli you can finely chop one chilli and add to the prawns. Arrange the avocado on a plate, top with the @rocket salad leaves{20%g}, place the prawns on the rocket salad and drizzle with @lime{30%g} juice and @olive oil{}. This salad makes a lovely, light Summer lunch.
-
-Ingredients: 50 g courgette,0.333 tsp salt,some pepper,0.200 tsp thyme,200 g salmon steak,some salt.,50 g double cream,10 g horseradish,some salt,30 g cherry tomatoes,1 slice lemon
-Recipe Text: Preheat the oven to 180 degrees. Cut a rectangular piece of parchment or baking paper. Wash the courgette and cut into 5 mm thick rounds. Place on the parchment, drizzle with olive oil and season with salt, pepper and chopped thyme. Place the salmon steak on top and season the fish with salt. Wrap the salmon and courgettes in the parchment to prevent drying out and place in the oven to bake for 15 minutes. While the fish is baking, make the sauce. Heat the double cream, horseradish and salt in a saucepan and simmer until thickened. Taste for further seasoning. Place the fish and courgettes on a plate, spoon the sauce over the top and garnish with the cherry tomatoes cut in half and a lemon wedge.
-Cooklang: Preheat the oven to 180 degrees. Cut a rectangular piece of #parchment or baking paper. Wash the @courgette{50%g} and cut into 5 mm thick rounds. Place on the parchment, drizzle with olive oil and season with @salt{1/3%tsp} @pepper and chopped @thyme{1/5%tsp}. Place the @salmon steak{200%g} on top and season the fish with @salt. Wrap the salmon and courgettes in the parchment to prevent drying out and place in the oven to bake for ~{15%minutes}. While the fish is baking, make the sauce. Heat the @double cream{50%g}, @horseradish{10%g} and @salt in a #saucepan and simmer until thickened. Taste for further seasoning. Place the fish and courgettes on a plate, spoon the sauce over the top and garnish with the @cherry tomatoes{30%g} cut in half and a @lemon{1%slice} wedge.
-
----
-
-Follow the following format.
-
-Ingredients: Ingredients for the recipe. Comma separated list of ingredients.
-
-Recipe Text: Recipe text to convert to Cooklang format.
-
-Reasoning: Let's think step by step in order to ${produce the cooklang}. We ...
-
-Cooklang: Cooklang formatted recipe.
-
----
-
-Ingredients: 400 g water,60 g potatoes,30 g carrots,40 g salmon fillet,40 g hake fillet,30 g soy sauce,20 g fish sauce,20 g cherry tomatoes,5 g green peppers,50 g double cream
-
-Recipe Text: Pour 400g of water into a saucepan and put on a medium heat. Peel and cut the potatoes (60g) into large pieces (if the potatoes are small with thin skin, you can simply rinse them and cut them in half without peeling), peel the carrots (30g) and cut them into smaller chunks. Place the vegetables into the pan and boil covered with a lid on until soft. Next, cut the salmon fillet (40g) and hake fillet (40g) into large pieces and add to the vegetables, add soy sauce (30g) and fish sauce (20g), halved cherry tomatoes (20g), chopped green peppers (5g) and double cream (50g). It is not necessary to cook for a long time, so as not to overcook the fish, it is enough to bring the soup gently to a boil.
-
-Reasoning: Let's think step by step in order to Cooklang: Pour @water{400%g} into a #saucepan and put on a medium heat. Peel and cut the @potatoes{60%g} into large pieces (if the potatoes are small with thin skin, you can simply rinse them and cut them in half without peeling), peel the @carrots{30%g} and cut them into smaller chunks. Place the vegetables into the pan and boil covered with a lid on until soft. Next, cut the @salmon fillet{40%g} and @hake fillet{40%g} into large pieces and add to the vegetables, add @soy sauce{30%g} and @fish sauce{20%g}, halved @cherry tomatoes{20%g}, chopped @green peppers{5%g} and @double cream{50%g}. It is not necessary to cook for a long time, so as not to overcook the fish, it is enough to bring the soup gently to a boil.
-
-Cooklang: Pour @water{400%g} into a #saucepan and put on a medium heat. Peel and cut the @potatoes{60%g} into large pieces (if the potatoes are small with thin skin, you can simply rinse them and cut them in half without peeling), peel the @carrots{30%g} and cut them into smaller chunks. Place the vegetables into the pan and boil covered with a lid on until soft. Next, cut the @salmon fillet{40%g} and @hake fillet{40%g} into large pieces and add to the vegetables, add @soy sauce{30%g} and @fish sauce{20%g}, halved @cherry tomatoes{20%g}, chopped @green peppers{5%g} and @double cream{50%g}. It is not necessary to cook for a long time, so as not to overcook the fish, it is enough to bring the soup gently to a boil.
-
----
-
-Ingredients: {ingredients}
-
-Recipe Text: {recipe text}
-
-Reasoning: Let's think step by step in order to Cooklang: 
-
-```
 ## Citation
 
 ```shell
