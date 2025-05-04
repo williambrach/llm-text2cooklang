@@ -47,8 +47,8 @@ class CookLangSignature(dspy.Signature):
     )
     recipe_text = dspy.InputField(desc="Recipe text to convert to Cooklang format.")
 
-    cooklang = dspy.OutputField(
-        desc="Cooklang formatted recipe.",
+    cooklang: str = dspy.OutputField(
+        desc="Cooklang formatted recipe. If you cant convert the recipe to Cooklang format, return 'No Cooklang format found.'",
     )
 
 
@@ -74,8 +74,8 @@ class CookLangSignatureNoSteps(dspy.Signature):
     )
     recipe_text = dspy.InputField(desc="Recipe text to convert to Cooklang format.")
 
-    cooklang = dspy.OutputField(
-        desc="Cooklang formatted recipe.",
+    cooklang: str = dspy.OutputField(
+        desc="Cooklang formatted recipe.  If you cant convert the recipe to Cooklang format, return 'No Cooklang format found.",
     )
 
 
@@ -98,8 +98,8 @@ class CookLangSignatureNoStepsNoIngredients(dspy.Signature):
 
     recipe_text = dspy.InputField(desc="Recipe text to convert to Cooklang format.")
 
-    cooklang = dspy.OutputField(
-        desc="Cooklang formatted recipe.",
+    cooklang: str = dspy.OutputField(
+        desc="Cooklang formatted recipe. If you cant convert the recipe to Cooklang format, return 'No Cooklang format found.'",
     )
 
 

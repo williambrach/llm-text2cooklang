@@ -7,8 +7,10 @@ __pycache__/
 *$py.class
 *.DS_Store
 # C extensions
+old/
 *.so
-
+data/bronze/recipes
+data/bronze/bonmot
 # Distribution / packaging
 .Python
 build/

@@ -1,29 +1,57 @@
 {
-  "prog": {
-    "lm": null,
+  "prog.predict": {
     "traces": [],
     "train": [],
     "demos": [
       {
-        "recipe_text": " Make the pesto first from the Pesto sauce recipe. Rinse and dry lettuce leaves (if they are not washed), tear into pieces suitable for the salad. Tearing rather than cutting prevents the leaves from bruising. Cut bell peppers into strips. Halve the cherry tomatoes and slice the sun-dried tomatoes into julienne strips. Heat a frying pan, preferably cast-iron as it conducts better heat. Add a little oil and fry the beef loin or fillet in one piece, along with the bell\/ red peppers in the same pan. Take a mixing bowl and toss together the torn salad leaves, rocket salad, cherry tomatoes, sun-dried tomatoes and pesto sauce. Place in a heaped pile on a plate, garnish with the roasted bell peppers, cut the beef into slices and arrange with the bell peppers. The longer you cook the beef, the less rare it will be.",
-        "cooklang": " Make the @pesto{20%g} first from the .\/Pesto sauce.cook recipe.  Rinse and dry @lettuce leaves{80%g} (if they are not washed), tear into pieces suitable for the salad. Tearing rather than cutting prevents the leaves from bruising. Cut @bell peppers{50%g} into strips. Halve the @cherry tomatoes{30%g} and slice the @sun-dried tomatoes{30%g} into julienne strips.  Heat a #frying pan{}, preferably cast-iron as it conducts better heat. Add a little @oil and fry the @beef loin{100%g} or fillet in one piece, along with the bell\/ red peppers in the same pan.  Take a #mixing bowl{} and toss together the torn salad leaves, @rocket salad{20%g}, cherry tomatoes, sun-dried tomatoes and pesto sauce. Place in a heaped pile on a plate, garnish with the roasted bell peppers, cut the beef into slices and arrange with the bell peppers. The longer you cook the beef, the less rare it will be."
+        "augmented": true,
+        "recipe_text": " Rinse the jasmin rice (50g) and white quinoa (30g) under running water to get rid of the starch. Pour the water into a saucepan, add the rice and quinoa, season with salt (2g) and simmer on a medium heat. Rinse and pat dry the turkey breast fillets (125g) or chicken breast fillets (125g) gently with paper towel. Cut them into cubes. Defrost the frozen corn (40g) and frozen green beans (40g) and cut into slices. Often these are already prepared for you. Peel red onion (40g) and finely chop along with red bell peppers (40g). Heat a frying pan with a little oil (1 tbsp) and saut\u00e9 the onion and pepper for 5 minutes. Add the turkey or chicken fillets to the vegetables, stir-fry for about 5 minutes and add the green beans and corn, stir-fry for another 5 minutes. The quinoa rice should be cooked by this time, just check to make sure it is al dente. Remove side dish from the heat. Add the tinned tomatoes (40g) to the turkey, add sugar (5g) to balance acidity and salt (1\/2 tsp) to taste. Braise for 5 minutes. Place the quinoa rice on a plate and top with the turkey\/chicken and vegetables. Garnish with chopped parsley.",
+        "reasoning": "Not supplied for this particular example.",
+        "cooklang": "Rinse the @jasmin rice{50%g} and @white quinoa{30%g} under running water to get rid of the starch. Pour the water into a #saucepan{}, add the rice and quinoa, season with @salt{2%g} and simmer on a medium heat.  Rinse and pat dry the @turkey breast fillets{125%g} or @chicken breast fillets{125%g} gently with paper towel. Cut them into cubes.  Defrost the @frozen corn{40%g} and @frozen green beans{40%g} and cut into slices. Often these are already prepared for you.  Peel @red onion{40%g} and finely chop along with @red bell peppers{40%g}.  Heat a #frying pan{} with a little @oil{1%tbsp} and saut\u00e9 the onion and pepper for 5 minutes.  Add the turkey or chicken fillets to the vegetables, stir-fry for about 5 minutes and add the green beans and corn, stir-fry for another 5 minutes.  The quinoa rice should be cooked by this time, just check to make sure it is al dente. Remove side dish from the heat.  Add the @tinned tomatoes{40%g} to the turkey, add @sugar{5%g} to balance acidity and @salt{1\/2%tsp} to taste. Braise for 5 minutes.  Place the quinoa rice on a plate and top with the turkey\/chicken and vegetables. Garnish with chopped parsley."
       },
       {
-        "recipe_text": "Peel and chop the potatoes, onions and mushrooms into chunks. The potatoes will need to be cut a bit smaller. Heat a frying pan over a medium heat with a little oil and saut\u00e9 the vegetables until golden. Season with salt, pepper and chopped fresh rosemary. Put the saut\u00e9ed vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender. Remove the soup from the heat and blend with a blender, add the double cream and salt to taste. Garnish with freshly cracked black pepper.",
-        "cooklang": " Peel and chop the @potatoes{100%g}, @onions{50%g} and @mushrooms{200%g} into chunks. The potatoes will need to be cut a bit smaller.  Heat a #frying pan{} over a medium heat with a little @oil and saut\u00e9 the vegetables until golden. Season with @salt{4%g}, @pepper{1\/4%tsp} and chopped fresh @rosemary{1\/4%tsp}.  Put the sauted vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender.  Remove the soup from the heat and blend with a #blender, add the @double cream{50%g} and @salt to taste. Garnish with freshly cracked black pepper."
-      },
-      {
-        "recipe_text": "Mix together oyster sauce, soy sauce and sesame oil, set aside. Heat peanut oil in a wok or heavy based skillet\/fry pan over medium heat. Add eggs and cook until scrambled, then remove onto plate. Increase heat to high and add chopped bacon, excess fat trimmed. Cook until golden, then remove onto plate with egg - about 2 minutes. Drain off excess bacon fat. Add remaining peanut oil, minced garlic and ginger. Return wok to stove on high heat. Stir fry as it comes up to heat, don't let it burn. When garlic starts to sizzle, add finally chopped onion and stir fry for 2 minutes until golden. Add Chinese cooking wine and sugar and let it simmer rapidly, stirring, for 20 seconds, until mostly evaporated. Add prawns and stir fry for 1 minute to heat through if pre-cooked, cook longer to cook if raw. Add refrigerated overnight cooked rice, Sauce, eggs, bacon and thinly sliced scallions. Stir fry for 2 minutes until rice is hot - around 2 minutes. Transfer to serving plate, sprinkle with thinly sliced scallions and serve.",
-        "cooklang": "Mix together @oyster sauce{1%tbsp}, @soy sauce{5%tbsp} and @sesame oil{5%tsp}, set aside.  Heat @peanut oil{1%tbsp} in a wok or heavy based skillet\/fry pan over medium heat. Add @eggs{2%items} and cook until scrambled, then remove onto plate.  Increase heat to high and add chopped @bacon{75%cup}, excess fat trimmed. Cook until golden, then remove onto plate with egg - about 2 minutes.  Drain off excess bacon fat.  Add remaining @peanut oil{2%tbsp}, minced @garlic{2%gloves} and @ginger{3%tsp}. Return wok to stove on high heat. Stir fry as it comes up to heat, don\u2019t let it burn. When garlic starts to sizzle, add finally chopped @onion{2%medium} and stir fry for 2 minutes until golden.  Add @Chinese cooking wine{1%tbsp} and @sugar{2%tsp} and let it simmer rapidly, stirring, for 20 seconds, until mostly evaporated.  Add @prawns{150%g} and stir fry for 1 minute to heat through if pre-cooked, cook longer to cook if raw.  Add refrigerated overnight @cooked rice{3%cups}, Sauce, eggs, bacon and thinly sliced @scallions{5%items}. Stir fry for 2 minutes until rice is hot - around 2 minutes.  Transfer to serving plate, sprinkle with thinly sliced @scallions{2%items} and serve."
-      },
-      {
+        "augmented": true,
         "recipe_text": " Remove any excess fat or sinew and finely dice the beef loin or beef fillet (120g). Peel and finely dice the red onion (15g). Mix together the diced beef and onion in a mixing bowl, season with salt (1\/4 tsp), pepper (1\/5 tsp) and Worcester sauce (15g). You can also add some finely chopped parsley to the tar-tar. Toast the ciabatta (2 slices) in a pan without oil. It's nice to use a griddle pan to get the toasted lines. Place the tar-tar on a plate and serve with the ciabatta and a wedge of lemon.  ",
-        "cooklang": " Remove any excess fat or sinew and finely dice the @beef loin{120%g} or beef fillet.  Peel and finely dice the @red onion{15%g}.  Mix together the diced beef and onion in a #mixing bowl{}, season with @salt{1\/4%tsp}, @pepper{1\/5%tsp} and @Worcester sauce{15%g}. You can also add some finely chopped parsley to the tar-tar.  Toast the @ciabatta{2%slices} in a #pan without oil. It's nice to use a griddle pan to get the toasted lines.  Place the tar-tar on a plate and serve with the ciabatta and a wedge of lemon."
+        "reasoning": "Not supplied for this particular example.",
+        "cooklang": "Remove any excess fat or sinew and finely dice the @beef loin{120%g} or @beef fillet{120%g}. Peel and finely dice the @red onion{15%g}. Mix together the diced beef and onion in a #mixing bowl{}, season with @salt{1\/4%tsp}, @pepper{1\/5%tsp} and @Worcester sauce{15%g}. You can also add some finely chopped @parsley{} to the tar-tar. Toast the @ciabatta{2%slices} in a pan without oil. It's nice to use a #griddle pan{} to get the toasted lines. Place the tar-tar on a plate and serve with the ciabatta and a wedge of @lemon{}."
+      },
+      {
+        "augmented": true,
+        "recipe_text": " Pour 3.5 litres of cold water into a large saucepan, rinse the chicken wings (750g) under running water and place in the pot with the water. Put the pot on a high heat, skimming off any protein foam as it forms on top. Meanwhile peel the carrots (200g) and onions (200g). The carrots can be cut lengthwise and the onions in half. As soon as the broth starts to boil, add the carrots and onions. Add salt (2 tsp) to season and reduce the heat to a low simmer for 60-90 minutes. After the broth has simmered, strain it into another pan to remove the onions and chicken wings and allow to cool. Keep the carrots to finely chop and add to the broth. Shred some of the meat from the wings and add as well. Check for seasoning and enjoy.\\",
+        "reasoning": "Not supplied for this particular example.",
+        "cooklang": "Pour @water{3.5%litres} into a large #saucepan{}, rinse the @chicken wings{750%g} under running water and place in the pot with the water.  Put the pot on a high heat, skimming off any protein foam as it forms on top. Meanwhile peel the @carrots{200%g} and @onions{200%g}. The carrots can be cut lengthwise and the onions in half.  As soon as the broth starts to boil, add the carrots and onions. Add @salt{2%tsp} to season and reduce the heat to a low simmer for 60-90 minutes.  After the broth has simmered, strain it into another pan to remove the onions and chicken wings and allow to cool. Keep the carrots to finely chop and add to the broth. Shred some of the meat from the wings and add as well. Check for seasoning and enjoy."
+      },
+      {
+        "augmented": true,
+        "recipe_text": "Pour 400g of water into a saucepan and put on a medium heat. Peel and cut the potatoes (60g) into large pieces (if the potatoes are small with thin skin, you can simply rinse them and cut them in half without peeling), peel the carrots (30g) and cut them into smaller chunks. Place the vegetables into the pan and boil covered with a lid on until soft. Next, cut the salmon fillet (40g) and hake fillet (40g) into large pieces and add to the vegetables, add soy sauce (30g) and fish sauce (20g), halved cherry tomatoes (20g), chopped green peppers (5g) and double cream (50g). It is not necessary to cook for a long time, so as not to overcook the fish, it is enough to bring the soup gently to a boil.",
+        "reasoning": "Not supplied for this particular example.",
+        "cooklang": "Pour @water{400%g} into a #saucepan and put on a medium heat. Peel and cut the @potatoes{60%g} into large pieces (if the potatoes are small with thin skin, you can simply rinse them and cut them in half without peeling), peel the @carrots{30%g} and cut them into smaller chunks. Place the vegetables into the pan and boil covered with a lid on until soft. Next, cut the @salmon fillet{40%g} and @hake fillet{40%g} into large pieces and add to the vegetables, add @soy sauce{30%g} and @fish sauce{20%g}, halved @cherry tomatoes{20%g}, chopped @green peppers{5%g} and @double cream{50%g}. It is not necessary to cook for a long time, so as not to overcook the fish, it is enough to bring the soup gently to a boil."
       }
     ],
-    "signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "signature_prefix": "Cooklang:",
-    "extended_signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "extended_signature_prefix": "Cooklang:"
+    "signature": {
+      "instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+      "fields": [
+        {
+          "prefix": "Recipe Text:",
+          "description": "Recipe text to convert to Cooklang format."
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Cooklang:",
+          "description": "Cooklang formatted recipe. If you cant convert the recipe to Cooklang format, return 'No Cooklang format found.'"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.10",
+      "cloudpickle": "3.1"
+    }
   }
 }

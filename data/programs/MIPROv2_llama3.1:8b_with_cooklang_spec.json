@@ -1,38 +1,36 @@
 {
-  "prog": {
-    "lm": null,
+  "prog.predict": {
     "traces": [],
     "train": [],
-    "demos": [
-      {
-        "ingredients": "150 g chicken fillets,0.200 tsp pepper,0.500 tsp salt,50 g bacon,150 g string beans,5 g dill florets,10 g pickled onion,0.500 glove garlic,0.200 tsp salt,30 g sour cream",
-        "recipe_text": "Wash and pat dry the chicken fillets, rub them with pepper and salt and leave to absorb. In a dry frying pan, fry the bacon, oil isn't necessary as bacon has its own fat, add the string beans (frozen, freshly boiled or canned). Reduce the heat and braise slowly. In a second frying pan, over a medium heat, fry the chicken fillets for 2 minutes on either side, then add the chicken fillets to the pan with the beans and braise all together. Make the sauce. Finely chop the dill florets, pickled onion and garlic, stir in salt to taste and the sour cream. Place the beans on a plate, top with the chicken fillets which you can slice at an angle, Spoon the sauce over the chicken.",
-        "cooklang": " Wash and pat dry the @chicken fillets{150%g}, rub them with @pepper{1\/5%tsp} and @salt{1\/2%tsp} and leave to absorb.  In a dry #frying pan{}, fry the @bacon{50%g}, oil isn't necessary as bacon has it's own fat, add the @string beans{150%g} (frozen, freshly boiled or canned). Reduce the heat and braise slowely.  In a second #frying pan{}, over a medium heat, fry the chicken fillets for 2 minutes on either side, then add the chicken fillets to the pan with the beans and braise all together.  Make the sauce. Finely chop the @dill florets{5%g}, @pickled onion{10%g} and @garlic{1\/2%glove}, stir in @salt{1\/5%tsp} to taste and the @sour cream{30%g}.  Place the beans on a plate, top with the chicken fillets which you can slice at an angle, Spoon the sauce over the chicken."
-      },
-      {
-        "ingredients": "200 g tomatoes,10 g red onions,10 g coriander,0.250 tsp salt,10 g Worcester sauce",
-        "recipe_text": "Wash the tomatoes and slice them into chunks, if they are cherry tomatoes, you can just halve them. Peel the red onions and slice them into thin rings, which you can then halve. Wash the coriander and chop coarsely. Mix the tomatoes, onion and coriander in a bowl and season with salt, pepper, a splash of olive oil and Worcester sauce. Enjoy as a simple side salad with any meal.",
-        "cooklang": " Wash the @tomatoes{200%g} and slice them into chunks, if they are cherry tomatoes, you can just halve them. Peel the @red onions{10%g} and slice them into thin rings, which you can then halve. Wash the @coriander{10%g} and chop coarsely. Mix the tomatoes, onion and coriander in a bowl and season with @salt{1\/4%tsp}, pepper, a splash of olive oil and @Worcester sauce{10%g}. Enjoy as a simple side salad with any meal."
-      },
-      {
-        "ingredients": "100 g aubergine,80 g potatoes,40 g onions,70 g carrots,100 g red bell pepper,some  oil.,120 g tomatoes,0.333 tsp smoked paprika,0.333 tsp rosemary,0.333 tsp thyme,0.333 tsp caraway,75 g tomato paste,0.333 tsp garlic paste,0.500 tsp sugar,some  salt,some  pepper,30 ml water",
-        "recipe_text": "Dice the aubergine into neat cubes of the same size, peel and cube the potatoes, onions, carrots and red bell pepper into medium chunks. Heat a deep frying pan or wok over a high heat with a little vegetable oil. Add the carrots and onions and saut\u00e9 for 2 minutes until the onions are soft and translucent. Add the aubergines, potatoes and bell peppers to the pan and fry, then dice the tomatoes and add them to the pan. Stir in smoked paprika, rosemary, thyme and caraway and saut\u00e9 over a medium heat for 8 minutes to reduce the sauce. Fry on a medium heat for 8 minutes, stirring occasionally to prevent burning on the bottom. Add the tomato paste and garlic paste, sugar per serving, salt and pepper to taste at the end. Stir in a little water to add some more liquid. Cover and stew over a low heat for 30 minutes, stirring occasionally. Serve warm or completely cooled like a ratatouille with pasta or toasted ciabatta.",
-        "cooklang": " Dice the @aubergine{100%g} into neat cubes of the same size, peel and cube the @potatoes{80%g}, @onions{40%g}, @carrots{70%g} and @red bell pepper{100%g} into medium chunks.  Heat a #deep frying pan{} or wok over a high heat with a little vegetable @oil. Add the carrots and onions and saut\u00e9 for ~{2%minutes} until the onions are soft and translucent.  Add the aubergines, potatoes and bell peppers to the pan and fry, then dice the @tomatoes{120%g} and add them to the pan. Stir in @smoked paprika{1\/3%tsp}, @rosemary{1\/3%tsp}, @thyme{1\/3%tsp} and @caraway{1\/3%tsp} and saut\u00e9 over a medium heat for ~{8%minutes} to reduce the sauce.  Fry on a medium heat for ~{8%minutes}, stirring occasionally to prevent burning on the bottom.  Add the @tomato paste{75%g} and @garlic paste{1\/3%tsp}, @sugar{1\/2%tsp} per serving, @salt and @pepper to taste at the end.  Stir in a little @water{30%ml} to add some more liquid. Cover and stew over a low heat for ~{30%minutes}, stirring occasionally.  Serve warm or completely cooled like a ratatouille with pasta or toasted ciabatta."
-      },
-      {
-        "ingredients": "50 g courgette,0.333 tsp salt,some  pepper,0.200 tsp thyme,200 g salmon steak,some  salt.,50 g double cream,10 g horseradish,some  salt,30 g cherry tomatoes,1 slice lemon",
-        "recipe_text": "Preheat the oven to 180 degrees. Cut a rectangular piece of parchment or baking paper. Wash the courgette and cut into 5 mm thick rounds. Place on the parchment, drizzle with olive oil and season with salt, pepper and chopped thyme. Place the salmon steak on top and season the fish with salt. Wrap the salmon and courgettes in the parchment to prevent drying out and place in the oven to bake for 15 minutes. While the fish is baking, make the sauce. Heat the double cream, horseradish and salt in a saucepan and simmer until thickened. Taste for further seasoning. Place the fish and courgettes on a plate, spoon the sauce over the top and garnish with the cherry tomatoes cut in half and a lemon wedge.",
-        "cooklang": " Preheat the oven to 180 degrees.  Cut a rectangular piece of #parchment or baking paper. Wash the @courgette{50%g} and cut into 5 mm thick rounds. Place on the parchment, drizzle with olive oil and season with @salt{1\/3%tsp}  @pepper and chopped @thyme{1\/5%tsp}.  Place the @salmon steak{200%g} on top and season the fish with @salt. Wrap the salmon and courgettes in the parchment to prevent drying out and place in the oven to bake for ~{15%minutes}.  While the fish is baking, make the sauce. Heat the @double cream{50%g}, @horseradish{10%g} and @salt in a #saucepan and simmer until thickened. Taste for further seasoning.  Place the fish and courgettes on a plate, spoon the sauce over the top and garnish with the @cherry tomatoes{30%g} cut in half and a @lemon{1%slice} wedge."
-      },
-      {
-        "ingredients": "100 g potatoes,50 g onions,200 g mushrooms,some  oil,4 g salt,0.250 tsp pepper,0.250 tsp rosemary,50 g double cream,some  salt",
-        "recipe_text": "Peel and chop the potatoes, onions and mushrooms into chunks. The potatoes will need to be cut a bit smaller. Heat a frying pan over a medium heat with a little oil and saut\u00e9 the vegetables until golden. Season with salt, pepper and chopped fresh rosemary. Put the saut\u00e9ed vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender. Remove the soup from the heat and blend with a blender, add the double cream and salt to taste. Garnish with freshly cracked black pepper.",
-        "cooklang": " Peel and chop the @potatoes{100%g}, @onions{50%g} and @mushrooms{200%g} into chunks. The potatoes will need to be cut a bit smaller.  Heat a #frying pan{} over a medium heat with a little @oil and saut\u00e9 the vegetables until golden. Season with @salt{4%g}, @pepper{1\/4%tsp} and chopped fresh @rosemary{1\/4%tsp}.  Put the sauted vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender.  Remove the soup from the heat and blend with a #blender, add the @double cream{50%g} and @salt to taste. Garnish with freshly cracked black pepper."
-      }
-    ],
-    "signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "signature_prefix": "Cooklang:",
-    "extended_signature_instructions": "Here's a proposed instruction that follows the BASIC INSTRUCTION guidelines:\n\n**Convert Plain Recipe Text to Cooklang Format**\n\nTake as input plain recipe text with ingredients, comments, cookware, and timers. Convert the entire recipe into Cooklang format. The output should be the entire converted recipe in Cooklang format.\n\nThe input recipe text may contain various components, including:\n\n* Ingredients: defined using `@`, with optional quantity and unit specifications\n* Comments: single-line or multi-line, marked by `--` or enclosed in `[[- -]]`\n* Cookware: defined using `#`, with optional descriptive name\n* Timers: defined using `~`, with option duration specification\n\nThe output should contain the entire converted recipe in Cooklang format, without any additional information.\n\n**Example Input**\n\nPlain recipe text:\n```\n@flour to dredge\n-- Use high-quality flour for best results!\n#whisk\n~{5%minutes}\nUse @salt and @black_pepper to season.\n```\n\n**Expected Output**\n\nConverted recipe in Cooklang format:\n```\n@flour{}\n-- Use high-quality flour for best results!\n\n#whisk{}\n\n~{5 minutes}\n\n@salt\n\n@black_pepper\n```",
-    "extended_signature_prefix": "Cooklang:"
+    "demos": [],
+    "signature": {
+      "instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+      "fields": [
+        {
+          "prefix": "Ingredients:",
+          "description": "Ingredients for the recipe. Comma separated list of ingredients."
+        },
+        {
+          "prefix": "Recipe Text:",
+          "description": "Recipe text to convert to Cooklang format."
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Cooklang:",
+          "description": "Cooklang formatted recipe."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.10",
+      "cloudpickle": "3.1"
+    }
   }
 }

@@ -1,12 +1,61 @@
 {
-  "prog": {
-    "lm": null,
+  "prog.predict": {
     "traces": [],
     "train": [],
-    "demos": [],
-    "signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "signature_prefix": "Cooklang:",
-    "extended_signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "extended_signature_prefix": "Cooklang:"
+    "demos": [
+      {
+        "augmented": true,
+        "recipe_text": " Make the pesto first from the Pesto sauce recipe. Rinse and dry lettuce leaves (if they are not washed), tear into pieces suitable for the salad. Tearing rather than cutting prevents the leaves from bruising. Cut bell peppers into strips. Halve the cherry tomatoes and slice the sun-dried tomatoes into julienne strips. Heat a frying pan, preferably cast-iron as it conducts better heat. Add a little oil and fry the beef loin or fillet in one piece, along with the bell\/ red peppers in the same pan. Take a mixing bowl and toss together the torn salad leaves, rocket salad, cherry tomatoes, sun-dried tomatoes and pesto sauce. Place in a heaped pile on a plate, garnish with the roasted bell peppers, cut the beef into slices and arrange with the bell peppers. The longer you cook the beef, the less rare it will be.",
+        "ingredients": "20 g pesto,80 g lettuce leaves,50 g bell peppers,30 g cherry tomatoes,30 g sun-dried tomatoes,some  oil,100 g beef loin,20 g rocket salad",
+        "reasoning": "Not supplied for this particular example.",
+        "cooklang": "Make the @pesto{20%g} first from the Pesto sauce recipe. Rinse and dry the @lettuce leaves{80%g}, tear into pieces suitable for the salad. Tearing rather than cutting prevents the leaves from bruising. Cut the @bell peppers{50%g} into strips. Halve the @cherry tomatoes{30%g} and slice the @sun-dried tomatoes{30%g} into julienne strips. Heat a #frying pan{} preferably cast-iron as it conducts better heat. Add a little @oil and fry the @beef loin{100%g}, or fillet in one piece, along with the bell\/ red peppers in the same pan. Take a mixing bowl and toss together the torn salad leaves, @rocket salad{20%g}, cherry tomatoes, sun-dried tomatoes and @pesto sauce{}. Place in a heaped pile on a plate, garnish with the roasted bell peppers, cut the beef into slices and arrange with the bell peppers. The longer you cook the beef, the less rare it will be."
+      },
+      {
+        "augmented": true,
+        "recipe_text": "In a large mixing bowl mix together the flour (3 cups), baking powder (1 tbsp), garlic salt (1 tsp), sugar (1\/2 cup), shredded Cheddar cheese (1 cup) and green onions (3). Mix in the beer (12 oz) using as few strokes as possible until the mix is well moistened. Pour the batter (it will be thick) into a greased bread loaf pan. Drizzle with melted butter (1\/2 cup) on top before baking. Bake for 50 minutes in a 375 degree oven, allow to cool.",
+        "ingredients": "3 cups flour,1 tbsp baking powder,1 tsp garlic salt,0.500 cup sugar,1 cup Cheddar cheese,3  green onions,12 oz beer,0.500 cup butter",
+        "reasoning": "The ingredients list is in a non-standard format (e.g. \"3 cups flour\" instead of \"flour{3%cup}\"), which may require some adjustments to convert it to Cooklang format.",
+        "cooklang": "Mix together the @flour{3%cups}, @baking powder{1%tbsp}, @garlic salt{1%tsp}, @sugar{0.5%cup}, shredded @Cheddar cheese{1%cup} and @green onions{3} in a large #mixing bowl{}. Mix in the @beer{12%oz} using as few strokes as possible until the mix is well moistened. Pour the batter (it will be thick) into a greased bread loaf pan. Drizzle with melted @butter{0.5%cup} on top before baking. Bake for 50 minutes in a 375 degree #oven, allow to cool."
+      },
+      {
+        "ingredients": "50 g tomatoes,50 g cucumber,50 g red bell pepper,40 g lettuce,20 g pesto,20 g olives,10 g red onion,50 g feta cheese",
+        "recipe_text": "Wash tomatoes, cucumber, red bell pepper and cut into large chunks, tear up the lettuce and mix together in a bowl with the other ingredients. Add the pesto and olives, toss lightly. Place on a plate, garnish with thinly sliced rings of red onion and blocks of feta cheese. If necessary drizzle with a little olive oil and season.",
+        "cooklang": " Wash @tomatoes{50%g}, @cucumber{50%g}, @red bell pepper{50%g} and cut into large chunks, tear up the @lettuce{40%g} and mix together in a #bowl with the other ingredients.  Add the @pesto{20%g} and @olives{20%g}, toss lightly. Place on a plate, garnish with thinnly sliced rings of @red onion{10%g} and blocks of @feta cheese{50%g}. If necessary drizzle with a little olive oil and season."
+      },
+      {
+        "ingredients": "200 g tomatoes,10 g red onions,10 g coriander,0.250 tsp salt,10 g Worcester sauce",
+        "recipe_text": "Wash the tomatoes and slice them into chunks, if they are cherry tomatoes, you can just halve them. Peel the red onions and slice them into thin rings, which you can then halve. Wash the coriander and chop coarsely. Mix the tomatoes, onion and coriander in a bowl and season with salt, pepper, a splash of olive oil and Worcester sauce. Enjoy as a simple side salad with any meal.",
+        "cooklang": " Wash the @tomatoes{200%g} and slice them into chunks, if they are cherry tomatoes, you can just halve them. Peel the @red onions{10%g} and slice them into thin rings, which you can then halve. Wash the @coriander{10%g} and chop coarsely. Mix the tomatoes, onion and coriander in a bowl and season with @salt{1\/4%tsp}, pepper, a splash of olive oil and @Worcester sauce{10%g}. Enjoy as a simple side salad with any meal."
+      }
+    ],
+    "signature": {
+      "instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+      "fields": [
+        {
+          "prefix": "Ingredients:",
+          "description": "Ingredients for the recipe. Comma separated list of ingredients."
+        },
+        {
+          "prefix": "Recipe Text:",
+          "description": "Recipe text to convert to Cooklang format."
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Cooklang:",
+          "description": "Cooklang formatted recipe."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.10",
+      "cloudpickle": "3.1"
+    }
   }
 }

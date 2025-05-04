@@ -1,29 +1,51 @@
 {
-  "prog": {
-    "lm": null,
+  "prog.predict": {
     "traces": [],
     "train": [],
     "demos": [
       {
-        "recipe_text": "Crack the egg yoke into a bowl, then add the condenced milk and instant coffee, and mix until a nice caramel is formed. Do not allow to bubble. Pour into a bowl and leave to cool down for 15 minutes. Heat water and gelatine then stir till gelatine is dissolved completely. Once gelatine is cooled down mix it with the caramel. Beat eggwhite until formy. Then mix the whites bit by bit to the the gelatine-caramel mixture. Pour into a pudding bowl and leave in fridge for 2 hours minimum. Add some cashew and enjoy!",
-        "cooklang": "Crack the @egg yoke{1} into a bowl, then add the @condenced milk{125%g} and @instant coffee{3tsp}, and mix until a nice caramel is formed. Do not allow to bubble.  Pour into a #bowl and leave to cool down for ~{15%minutes}.  heat @water{1,1\/2cups} and @gelatine{3tsp} then stir till gelatine is dissolved completely.Once gelatine is colled down mix it with the caramel.  Beat @eggwhite{1} until formy. Then mix the whites bit by bit to the the gelatinecaramel mixture.   Pour into a #puddingbowl and leave in fridge for 2 hours minimum. Add some @cashew{60%g} and enjoy!"
+        "augmented": true,
+        "recipe_text": " Remove any excess fat or sinew and finely dice the beef loin or beef fillet (120g). Peel and finely dice the red onion (15g). Mix together the diced beef and onion in a mixing bowl, season with salt (1\/4 tsp), pepper (1\/5 tsp) and Worcester sauce (15g). You can also add some finely chopped parsley to the tar-tar. Toast the ciabatta (2 slices) in a pan without oil. It's nice to use a griddle pan to get the toasted lines. Place the tar-tar on a plate and serve with the ciabatta and a wedge of lemon.  ",
+        "reasoning": "Not supplied for this particular example.",
+        "cooklang": "Remove any excess fat or sinew and finely dice the @beef loin{120%g} or @beef fillet{120%g}.  Peel and finely dice the @red onion{15%g}.  Mix together the diced beef and onion in a #mixing bowl{}, season with @salt{1\/4%tsp}, @pepper{1\/5%tsp} and @Worcester sauce{15%g}.  You can also add some finely chopped @parsley to the tar-tar.  Toast the @ciabatta{2%slices} in a pan without oil. It's nice to use a griddle pan to get the toasted lines. Place the tar-tar on a plate and serve with the ciabatta and a wedge of @lemon."
       },
       {
-        "recipe_text": "Preheat the oven to 180 degrees. Finely dice red bell pepper, courgette, tomatoes and grate the mozzarella cheese. Beat the eggs in a bowl and add the double cream, salt and pepper and whisk well with a fork. Add the vegetables to the egg mixture and pour it into the pan, sprinkle with cheese and place in the oven to bake for 7 minutes. Take an oven mitt and remove the pan from the oven, fold the omelette in half and place on a plate. Garnish with finely chopped fresh parsley and serve with a relish or chutney.",
-        "cooklang": "Preheat the oven to 180 degrees.  Finely dice @red bell pepper{30%g}, @courgette{30%g}, @tomatoes{30%g} and grate the @mozzarella cheese{30%g}.  Beat the @eggs{2} in a #bowl and add the @double cream{30%g}, @salt{1\/4%tsp} and @pepper{1\/4%tsp} and whisk well with a fork.  Add the vegetables to the egg mixture and pour it into the #pan, sprinkle with cheese and place in the oven to bake for ~{7%minutes}.  Take an #oven mitt{} and remove the pan from the oven, fold the omelette in half and place on a plate. Garnish with finely chopped fresh parsley and serve with a relish or chutney."
+        "recipe_text": " Rinse the jasmin rice (50g) and white quinoa (30g) under running water to get rid of the starch. Pour the water into a saucepan, add the rice and quinoa, season with salt (2g) and simmer on a medium heat. Rinse and pat dry the turkey breast fillets (125g) or chicken breast fillets (125g) gently with paper towel. Cut them into cubes. Defrost the frozen corn (40g) and frozen green beans (40g) and cut into slices. Often these are already prepared for you. Peel red onion (40g) and finely chop along with red bell peppers (40g). Heat a frying pan with a little oil (1 tbsp) and saut\u00e9 the onion and pepper for 5 minutes. Add the turkey or chicken fillets to the vegetables, stir-fry for about 5 minutes and add the green beans and corn, stir-fry for another 5 minutes. The quinoa rice should be cooked by this time, just check to make sure it is al dente. Remove side dish from the heat. Add the tinned tomatoes (40g) to the turkey, add sugar (5g) to balance acidity and salt (1\/2 tsp) to taste. Braise for 5 minutes. Place the quinoa rice on a plate and top with the turkey\/chicken and vegetables. Garnish with chopped parsley.",
+        "cooklang": " Rinse the @jasmin rice{50%g} and @white quinoa{30%g} under running water to get rid of the starch. Pour the water into a #saucepan, add the rice and quinoa, season with @salt{2%g} and simmer on a medium heat.  Rinse and pat dry the @turkey breast fillets{125%g}[- | @chicken breast fillets{125%g} -] gently with paper towel. Cut them into cubes.  Defrost the @frozen corn{40%g} and @frozen green beans{40%g} and cut into slices. Often these are already prepared for you.  Peel @red onion{40%g} and finely chop along with @red bell peppers{40%g}.  Heat a #frying pan{} with a little @oil{1%tbsp} and saut\u00e9 the onion and pepper for ~{5%minutes}. Add the turkey or chicken fillets to the vegetables, stir-fry for about ~{5%minutes} and add the green beans and corn, stir-fry for another ~{5%minutes}.  The quinoa rice should be cooked by this time, just check to make sure it is al dente'. Remove side dish from the heat. Add the @tinned tomatoes{40%g} to the turkey, add @sugar{5%g} to balance acidity and @salt{1\/2%tsp} to taste. Braise for ~{5%minutes}. Place the quinoa rice on a plate and top with the turkey\/ chicken and vegetables. Garnish with chopped parsley."
       },
       {
-        "recipe_text": "Put a saut\u00e9 pot on the stove and boil the eggs, then boil the soba noodles, following the instructions on the back of the package. The carrots for the broth can be cut into chunks and boiled till soft. Cut the green pepper into small rings. Put the casserole on the stove, pour chicken stock into the pot and bring to the boil, cut the chicken fillets into strips and boil in the stock for about 5 minutes, then add the chopped boiled carrots and boiled soba noodles to the stock. Pour the broth into a soup bowl, peel the boiled egg and slice in half, place into the soup, add the soy sauce to taste and garnish with green peppers.",
-        "cooklang": " Put a #saut\u00e9 pot{} on the stove and boil the @eggs{1}, then boil the @soba noodles{40%g}, following the instructions on the back of the package.  The carrots for the broth can be cut into chunks and boiled till soft. Cut the @green pepper{5%g} into small rings.  Put the #casserole on the stove, pour @chicken stock{0.4%l} into the pot and bring to the boil, cut the @chicken fillets{50%g} into strips and boil in the stock for about ~{5%minutes}, then add the chopped boiled carrots and boiled soba noodles to the stock.  Pour the broth into a soup bowl, peel the boiled egg and slice in half, place into the soup, add the @soy sauce{} to taste and garnish with green peppers."
+        "recipe_text": "Blend strawberries, banana, blueberries, milk, oat flakes, chia seeds, granola, salt with a blender, allow to settle for 10 minutes, pour into a bowl and garnish with fresh blueberries and fresh raspberries. You can use fresh or frozen fruit for this smoothie.",
+        "cooklang": " Blend @strawberries{50%g}, @banana{1}, @blueberries{50%g}, @milk{100%g}, @oat flakes{30%g}, @chia seeds{10%g}, @granola{10%g}, @salt{1%g} with a #blender, allow to settle for ~{10%minutes}, pour into a #bowl and garnish with @fresh blueberries{10%g} and @fresh raspberries{10%g}. You can use fresh or frozen fruit for this smoothie."
       },
       {
-        "recipe_text": "Crack the eggs into a blender, then add the flour, milk and sea salt, and blitz until smooth. Pour into a bowl and leave to stand for 15 minutes. Melt the butter (or a drizzle of oil if you want to be a bit healthier) in a large non-stick frying pan on a medium heat, then tilt the pan so the butter coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for 1 to 2 minutes, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through. Serve straightaway with your favourite topping.",
-        "cooklang": "Crack the @eggs{3} into a blender, then add the @flour{125%g}, @milk{250%ml} and @sea salt{1%pinch}, and blitz until smooth.  Pour into a #bowl and leave to stand for ~{15%minutes}.  Melt the butter (or a drizzle of @oil if you want to be a bit healthier) in a #large non-stick frying pan{} on a medium heat, then tilt the pan so the butter coats the surface.  Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for 1 to 2 minutes, or until it starts to come away from the sides.  Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through.  Serve straightaway with your favourite topping."
+        "recipe_text": "Pour 400g of water into a saucepan and put on a medium heat. Peel and cut the potatoes (60g) into large pieces (if the potatoes are small with thin skin, you can simply rinse them and cut them in half without peeling), peel the carrots (30g) and cut them into smaller chunks. Place the vegetables into the pan and boil covered with a lid on until soft. Next, cut the salmon fillet (40g) and hake fillet (40g) into large pieces and add to the vegetables, add soy sauce (30g) and fish sauce (20g), halved cherry tomatoes (20g), chopped green peppers (5g) and double cream (50g). It is not necessary to cook for a long time, so as not to overcook the fish, it is enough to bring the soup gently to a boil.",
+        "cooklang": " Pour @water{400%g} into a #saucepan and put on a medium heat.  Peel and cut the @potatoes{60%g} into large pieces (if the potatoes are small with thin skin, you can simply rinse them and cut them in half without peeling), peel the @carrots{30%g} and cut them into smaller chunks.  Place the vegetables into the pan and boil covered with a lid on until soft.  Next, cut the @salmon fillet{40%g} and @hake fillet{40%g} into large pieces and add to the vegetables, add @soy sauce{30%g} and @fish sauce{20%g}, halved @cherry tomatoes{20%g}, chopped @green peppers{5%g} and @double cream{50%g}. It is not necessary to cook for a long time, so as not to overcook the fish, it is enough to bring the soup gently to a boil."
       }
     ],
-    "signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "signature_prefix": "Cooklang:",
-    "extended_signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "extended_signature_prefix": "Cooklang:"
+    "signature": {
+      "instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+      "fields": [
+        {
+          "prefix": "Recipe Text:",
+          "description": "Recipe text to convert to Cooklang format."
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Cooklang:",
+          "description": "Cooklang formatted recipe."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.10",
+      "cloudpickle": "3.1"
+    }
   }
 }

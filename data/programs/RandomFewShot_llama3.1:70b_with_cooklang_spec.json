@@ -1,12 +1,57 @@
 {
-  "prog": {
-    "lm": null,
+  "prog.predict": {
     "traces": [],
     "train": [],
-    "demos": [],
-    "signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "signature_prefix": "Cooklang:",
-    "extended_signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "extended_signature_prefix": "Cooklang:"
+    "demos": [
+      {
+        "ingredients": "20 g pesto,80 g lettuce leaves,50 g bell peppers,30 g cherry tomatoes,30 g sun-dried tomatoes,some  oil,100 g beef loin,20 g rocket salad",
+        "recipe_text": " Make the pesto first from the Pesto sauce recipe. Rinse and dry lettuce leaves (if they are not washed), tear into pieces suitable for the salad. Tearing rather than cutting prevents the leaves from bruising. Cut bell peppers into strips. Halve the cherry tomatoes and slice the sun-dried tomatoes into julienne strips. Heat a frying pan, preferably cast-iron as it conducts better heat. Add a little oil and fry the beef loin or fillet in one piece, along with the bell\/ red peppers in the same pan. Take a mixing bowl and toss together the torn salad leaves, rocket salad, cherry tomatoes, sun-dried tomatoes and pesto sauce. Place in a heaped pile on a plate, garnish with the roasted bell peppers, cut the beef into slices and arrange with the bell peppers. The longer you cook the beef, the less rare it will be.",
+        "cooklang": " Make the @pesto{20%g} first from the .\/Pesto sauce.cook recipe.  Rinse and dry @lettuce leaves{80%g} (if they are not washed), tear into pieces suitable for the salad. Tearing rather than cutting prevents the leaves from bruising. Cut @bell peppers{50%g} into strips. Halve the @cherry tomatoes{30%g} and slice the @sun-dried tomatoes{30%g} into julienne strips.  Heat a #frying pan{}, preferably cast-iron as it conducts better heat. Add a little @oil and fry the @beef loin{100%g} or fillet in one piece, along with the bell\/ red peppers in the same pan.  Take a #mixing bowl{} and toss together the torn salad leaves, @rocket salad{20%g}, cherry tomatoes, sun-dried tomatoes and pesto sauce. Place in a heaped pile on a plate, garnish with the roasted bell peppers, cut the beef into slices and arrange with the bell peppers. The longer you cook the beef, the less rare it will be."
+      },
+      {
+        "ingredients": "100 g potatoes,50 g onions,200 g mushrooms,some  oil,4 g salt,0.250 tsp pepper,0.250 tsp rosemary,50 g double cream,some  salt",
+        "recipe_text": "Peel and chop the potatoes, onions and mushrooms into chunks. The potatoes will need to be cut a bit smaller. Heat a frying pan over a medium heat with a little oil and saut\u00e9 the vegetables until golden. Season with salt, pepper and chopped fresh rosemary. Put the saut\u00e9ed vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender. Remove the soup from the heat and blend with a blender, add the double cream and salt to taste. Garnish with freshly cracked black pepper.",
+        "cooklang": " Peel and chop the @potatoes{100%g}, @onions{50%g} and @mushrooms{200%g} into chunks. The potatoes will need to be cut a bit smaller.  Heat a #frying pan{} over a medium heat with a little @oil and saut\u00e9 the vegetables until golden. Season with @salt{4%g}, @pepper{1\/4%tsp} and chopped fresh @rosemary{1\/4%tsp}.  Put the sauted vegetables into a saucepan and pour water over them until just covered. Bring to the boil over a medium heat, then lower the heat and leave at a low simmer until the potatoes are tender.  Remove the soup from the heat and blend with a #blender, add the @double cream{50%g} and @salt to taste. Garnish with freshly cracked black pepper."
+      },
+      {
+        "ingredients": "1 tbsp oyster sauce,5 tbsp soy sauce,5 tsp sesame oil,1 tbsp peanut oil,2 items eggs,75 cup bacon,2 tbsp peanut oil,2 gloves garlic,3 tsp ginger,2 medium onion,1 tbsp Chinese cooking wine,2 tsp sugar,150 g prawns,3 cups cooked rice,5 items scallions,2 items scallions",
+        "recipe_text": "Mix together oyster sauce, soy sauce and sesame oil, set aside. Heat peanut oil in a wok or heavy based skillet\/fry pan over medium heat. Add eggs and cook until scrambled, then remove onto plate. Increase heat to high and add chopped bacon, excess fat trimmed. Cook until golden, then remove onto plate with egg - about 2 minutes. Drain off excess bacon fat. Add remaining peanut oil, minced garlic and ginger. Return wok to stove on high heat. Stir fry as it comes up to heat, don't let it burn. When garlic starts to sizzle, add finally chopped onion and stir fry for 2 minutes until golden. Add Chinese cooking wine and sugar and let it simmer rapidly, stirring, for 20 seconds, until mostly evaporated. Add prawns and stir fry for 1 minute to heat through if pre-cooked, cook longer to cook if raw. Add refrigerated overnight cooked rice, Sauce, eggs, bacon and thinly sliced scallions. Stir fry for 2 minutes until rice is hot - around 2 minutes. Transfer to serving plate, sprinkle with thinly sliced scallions and serve.",
+        "cooklang": "Mix together @oyster sauce{1%tbsp}, @soy sauce{5%tbsp} and @sesame oil{5%tsp}, set aside.  Heat @peanut oil{1%tbsp} in a wok or heavy based skillet\/fry pan over medium heat. Add @eggs{2%items} and cook until scrambled, then remove onto plate.  Increase heat to high and add chopped @bacon{75%cup}, excess fat trimmed. Cook until golden, then remove onto plate with egg - about 2 minutes.  Drain off excess bacon fat.  Add remaining @peanut oil{2%tbsp}, minced @garlic{2%gloves} and @ginger{3%tsp}. Return wok to stove on high heat. Stir fry as it comes up to heat, don\u2019t let it burn. When garlic starts to sizzle, add finally chopped @onion{2%medium} and stir fry for 2 minutes until golden.  Add @Chinese cooking wine{1%tbsp} and @sugar{2%tsp} and let it simmer rapidly, stirring, for 20 seconds, until mostly evaporated.  Add @prawns{150%g} and stir fry for 1 minute to heat through if pre-cooked, cook longer to cook if raw.  Add refrigerated overnight @cooked rice{3%cups}, Sauce, eggs, bacon and thinly sliced @scallions{5%items}. Stir fry for 2 minutes until rice is hot - around 2 minutes.  Transfer to serving plate, sprinkle with thinly sliced @scallions{2%items} and serve."
+      },
+      {
+        "ingredients": "120 g beef loin,15 g red onion,0.250 tsp salt,0.200 tsp pepper,15 g Worcester sauce,2 slices ciabatta",
+        "recipe_text": " Remove any excess fat or sinew and finely dice the beef loin or beef fillet (120g). Peel and finely dice the red onion (15g). Mix together the diced beef and onion in a mixing bowl, season with salt (1\/4 tsp), pepper (1\/5 tsp) and Worcester sauce (15g). You can also add some finely chopped parsley to the tar-tar. Toast the ciabatta (2 slices) in a pan without oil. It's nice to use a griddle pan to get the toasted lines. Place the tar-tar on a plate and serve with the ciabatta and a wedge of lemon.  ",
+        "cooklang": " Remove any excess fat or sinew and finely dice the @beef loin{120%g} or beef fillet.  Peel and finely dice the @red onion{15%g}.  Mix together the diced beef and onion in a #mixing bowl{}, season with @salt{1\/4%tsp}, @pepper{1\/5%tsp} and @Worcester sauce{15%g}. You can also add some finely chopped parsley to the tar-tar.  Toast the @ciabatta{2%slices} in a #pan without oil. It's nice to use a griddle pan to get the toasted lines.  Place the tar-tar on a plate and serve with the ciabatta and a wedge of lemon."
+      }
+    ],
+    "signature": {
+      "instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+      "fields": [
+        {
+          "prefix": "Ingredients:",
+          "description": "Ingredients for the recipe. Comma separated list of ingredients."
+        },
+        {
+          "prefix": "Recipe Text:",
+          "description": "Recipe text to convert to Cooklang format."
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Cooklang:",
+          "description": "Cooklang formatted recipe."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.10",
+      "cloudpickle": "3.1"
+    }
   }
 }

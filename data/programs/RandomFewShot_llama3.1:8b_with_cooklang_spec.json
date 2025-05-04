@@ -1,12 +1,61 @@
 {
-  "prog": {
-    "lm": null,
+  "prog.predict": {
     "traces": [],
     "train": [],
-    "demos": [],
-    "signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "signature_prefix": "Cooklang:",
-    "extended_signature_instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
-    "extended_signature_prefix": "Cooklang:"
+    "demos": [
+      {
+        "augmented": true,
+        "recipe_text": "Put a saut\u00e9 pot on the stove and boil the eggs, then boil the soba noodles, following the instructions on the back of the package. The carrots for the broth can be cut into chunks and boiled till soft. Cut the green pepper into small rings. Put the casserole on the stove, pour chicken stock into the pot and bring to the boil, cut the chicken fillets into strips and boil in the stock for about 5 minutes, then add the chopped boiled carrots and boiled soba noodles to the stock. Pour the broth into a soup bowl, peel the boiled egg and slice in half, place into the soup, add the soy sauce to taste and garnish with green peppers.",
+        "ingredients": "1  eggs,40 g soba noodles,5 g green pepper,0.400 l chicken stock,50 g chicken fillets,some  soy sauce",
+        "reasoning": "The ingredients list contains a mix of quantities (e.g. 1 eggs) that need to be converted into Cooklang format, where quantities are specified in {} after the ingredient name.",
+        "cooklang": "Put a #saut\u00e9 pot{} on the stove and boil the @eggs{1} then boil the @soba noodles{40%g}. The carrots for the broth can be cut into chunks and boiled till soft. Cut the @green pepper{5%g} into small rings.  Put the #casserole on the stove, pour @chicken stock{0.4%l} into the pot and bring to the boil, cut the @chicken fillets{50%g} into strips and boil in the stock for about ~{5%minutes}, then add the chopped boiled carrots and boiled soba noodles to the stock.  Pour the broth into a #soup bowl{}, peel the boiled @eggs{} and slice in half, place into the soup, add the @soy sauce{} to taste and garnish with the @green pepper{}."
+      },
+      {
+        "augmented": true,
+        "recipe_text": "Crack the eggs into a blender, then add the flour, milk and sea salt, and blitz until smooth. Pour into a bowl and leave to stand for 15 minutes. Melt the butter (or a drizzle of oil if you want to be a bit healthier) in a large non-stick frying pan on a medium heat, then tilt the pan so the butter coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for 1 to 2 minutes, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for 1 further minute, or until cooked through. Serve straightaway with your favourite topping.",
+        "ingredients": "3  eggs,125 g flour,250 ml milk,1 pinch sea salt,some  oil",
+        "reasoning": "The recipe text describes a pancake batter made from eggs, flour, milk, and sea salt. The ingredients are then used to make pancakes in a frying pan.",
+        "cooklang": "@eggs{3}\n@flour{125%g}\n@milk{250%ml}\n@sea salt{1%pinch}\n@oil\n\nCrack the @eggs into a #blender, then add the @flour, @milk and @sea salt, and blitz until smooth. Pour into a #bowl and leave to stand for ~{15%minutes}. Melt the @butter in a large non-stick #frying pan{} on a medium heat, then tilt the pan so the butter coats the surface. Pour in 1 ladle of batter and tilt again, so that the batter spreads all over the base, then cook for ~{1-2%minutes}, or until it starts to come away from the sides. Once golden underneath, flip the pancake over and cook for ~{1%minute} further, or until cooked through. Serve straightaway with your favourite topping."
+      },
+      {
+        "ingredients": "1 tbsp oyster sauce,5 tbsp soy sauce,5 tsp sesame oil,1 tbsp peanut oil,2 items eggs,75 cup bacon,2 tbsp peanut oil,2 gloves garlic,3 tsp ginger,2 medium onion,1 tbsp Chinese cooking wine,2 tsp sugar,150 g prawns,3 cups cooked rice,5 items scallions,2 items scallions",
+        "recipe_text": "Mix together oyster sauce, soy sauce and sesame oil, set aside. Heat peanut oil in a wok or heavy based skillet\/fry pan over medium heat. Add eggs and cook until scrambled, then remove onto plate. Increase heat to high and add chopped bacon, excess fat trimmed. Cook until golden, then remove onto plate with egg - about 2 minutes. Drain off excess bacon fat. Add remaining peanut oil, minced garlic and ginger. Return wok to stove on high heat. Stir fry as it comes up to heat, don't let it burn. When garlic starts to sizzle, add finally chopped onion and stir fry for 2 minutes until golden. Add Chinese cooking wine and sugar and let it simmer rapidly, stirring, for 20 seconds, until mostly evaporated. Add prawns and stir fry for 1 minute to heat through if pre-cooked, cook longer to cook if raw. Add refrigerated overnight cooked rice, Sauce, eggs, bacon and thinly sliced scallions. Stir fry for 2 minutes until rice is hot - around 2 minutes. Transfer to serving plate, sprinkle with thinly sliced scallions and serve.",
+        "cooklang": "Mix together @oyster sauce{1%tbsp}, @soy sauce{5%tbsp} and @sesame oil{5%tsp}, set aside.  Heat @peanut oil{1%tbsp} in a wok or heavy based skillet\/fry pan over medium heat. Add @eggs{2%items} and cook until scrambled, then remove onto plate.  Increase heat to high and add chopped @bacon{75%cup}, excess fat trimmed. Cook until golden, then remove onto plate with egg - about 2 minutes.  Drain off excess bacon fat.  Add remaining @peanut oil{2%tbsp}, minced @garlic{2%gloves} and @ginger{3%tsp}. Return wok to stove on high heat. Stir fry as it comes up to heat, don\u2019t let it burn. When garlic starts to sizzle, add finally chopped @onion{2%medium} and stir fry for 2 minutes until golden.  Add @Chinese cooking wine{1%tbsp} and @sugar{2%tsp} and let it simmer rapidly, stirring, for 20 seconds, until mostly evaporated.  Add @prawns{150%g} and stir fry for 1 minute to heat through if pre-cooked, cook longer to cook if raw.  Add refrigerated overnight @cooked rice{3%cups}, Sauce, eggs, bacon and thinly sliced @scallions{5%items}. Stir fry for 2 minutes until rice is hot - around 2 minutes.  Transfer to serving plate, sprinkle with thinly sliced @scallions{2%items} and serve."
+      },
+      {
+        "ingredients": "50 g jasmin rice,30 g white quinoa,2 g salt,125 g turkey breast fillets,125 g chicken breast fillets,40 g frozen corn,40 g frozen green beans,40 g red onion,40 g red bell peppers,1 tbsp oil,40 g tinned tomatoes,5 g sugar,0.500 tsp salt",
+        "recipe_text": " Rinse the jasmin rice (50g) and white quinoa (30g) under running water to get rid of the starch. Pour the water into a saucepan, add the rice and quinoa, season with salt (2g) and simmer on a medium heat. Rinse and pat dry the turkey breast fillets (125g) or chicken breast fillets (125g) gently with paper towel. Cut them into cubes. Defrost the frozen corn (40g) and frozen green beans (40g) and cut into slices. Often these are already prepared for you. Peel red onion (40g) and finely chop along with red bell peppers (40g). Heat a frying pan with a little oil (1 tbsp) and saut\u00e9 the onion and pepper for 5 minutes. Add the turkey or chicken fillets to the vegetables, stir-fry for about 5 minutes and add the green beans and corn, stir-fry for another 5 minutes. The quinoa rice should be cooked by this time, just check to make sure it is al dente. Remove side dish from the heat. Add the tinned tomatoes (40g) to the turkey, add sugar (5g) to balance acidity and salt (1\/2 tsp) to taste. Braise for 5 minutes. Place the quinoa rice on a plate and top with the turkey\/chicken and vegetables. Garnish with chopped parsley.",
+        "cooklang": " Rinse the @jasmin rice{50%g} and @white quinoa{30%g} under running water to get rid of the starch. Pour the water into a #saucepan, add the rice and quinoa, season with @salt{2%g} and simmer on a medium heat.  Rinse and pat dry the @turkey breast fillets{125%g}[- | @chicken breast fillets{125%g} -] gently with paper towel. Cut them into cubes.  Defrost the @frozen corn{40%g} and @frozen green beans{40%g} and cut into slices. Often these are already prepared for you.  Peel @red onion{40%g} and finely chop along with @red bell peppers{40%g}.  Heat a #frying pan{} with a little @oil{1%tbsp} and saut\u00e9 the onion and pepper for ~{5%minutes}. Add the turkey or chicken fillets to the vegetables, stir-fry for about ~{5%minutes} and add the green beans and corn, stir-fry for another ~{5%minutes}.  The quinoa rice should be cooked by this time, just check to make sure it is al dente'. Remove side dish from the heat. Add the @tinned tomatoes{40%g} to the turkey, add @sugar{5%g} to balance acidity and @salt{1\/2%tsp} to taste. Braise for ~{5%minutes}. Place the quinoa rice on a plate and top with the turkey\/ chicken and vegetables. Garnish with chopped parsley."
+      }
+    ],
+    "signature": {
+      "instructions": "Convert plain recipe text with provided ingredients into Cooklang text format.\nCooklang Recipe Specification:\n    1. Ingredients\n    - Use `@` to define ingredients\n    - For multi-word ingredients, end with `{}`\n    - Specify quantity in `{}` after the name\n    - Use `%` to separate quantity and unit\n    ```\n    @salt\n    @ground black pepper{}\n    @potato{2}\n    @bacon strips{1%kg}\n    @syrup{1\/2%tbsp}\n    ```\n    2. Comments\n    - Single-line: Use `--` at the end of a line\n    - Multi-line: Enclose in `[- -]`\n    ```\n    -- Don't burn the roux!\n    Mash @potato{2%kg} until smooth -- alternatively, boil 'em first, then mash 'em, then stick 'em in a stew.\n    ```\n    3. Cookware\n    - Define with `#`\n    - Use `{}` for multi-word items\n    ```\n    #pot\n    #potato masher{}\n    ```\n    4. Timers\n    - Define with `~`\n    - Specify duration in `{}`\n    - Can include a name before the duration\n    ```\n    ~{25%minutes}\n    ~eggs{3%minutes}\n    ```\nReturn only Cooklang formatted recipe, dont return any other information. Return whole recipe in Cooklang format! Dont stop till you reach the end of the recipe.",
+      "fields": [
+        {
+          "prefix": "Ingredients:",
+          "description": "Ingredients for the recipe. Comma separated list of ingredients."
+        },
+        {
+          "prefix": "Recipe Text:",
+          "description": "Recipe text to convert to Cooklang format."
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Cooklang:",
+          "description": "Cooklang formatted recipe."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.10",
+      "cloudpickle": "3.1"
+    }
   }
 }
