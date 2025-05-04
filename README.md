@@ -108,28 +108,52 @@ Reasoning: Let's think step by step in order to
 
 ## Results table (WER, ROUGUE-L, TER)
 
-| Model | WER ↓ | ROUGE-L ↑ | TER ↓ |
-|-------|-------|-----------|-------|
-| GPT-4o (MIPROv2) | 0.3637 | 0.8171 | 1.4566 |
-| GPT-4o (Few-Shot) | 0.3509 | 0.8209 | 1.4467 |
-| GPT-4o (Zero-Shot) | 0.4533 | 0.8005 | 1.6733 |
-| GPT-4o-mini (MIPROv2) | 0.3664 | 0.8008 | 1.5024 |
-| GPT-4o-mini (Few-Shot) | 0.3819 | 0.7928 | 1.5820 |
-| GPT-4o-mini (Zero-Shot) | 0.6943 | 0.6715 | 3.0299 |
-| Llama3.3:70b (MIPROv2) | 0.4037 | 0.8023 | 1.5364 |
-| Llama3.3:70b (Few-Shot) | 0.3747 | 0.8270 | 1.4633 |
-| Llama3.3:70b (Zero-Shot) | 0.8746 | 0.5854 | 3.8408 |
-| Llama3.1:8b (MIPROv2) | 0.4869 | 0.7371 | 2.1442 |
-| Llama3.1:8b (Few-Shot) | 0.4172 | 0.7837 | 1.8714 |
-| Llama3.1:8b (Zero-Shot) | 0.8721 | 0.5526 | 3.8108 |
+| with_cooklang | without_ings | model        | prompt_techqnique |       WER |   ROUGE-L |       TER |
+|:--------------|:-------------|:-------------|:------------------|----------:|----------:|----------:|
+| False         | True         | gpt-4o       | Few-Shot     | 0.0476775 |  0.990331 |  0.125271 |
+| True          | True         | gpt-4o       | MIPROv2           | 0.0517735 |  0.990195 |  0.1246   |
+| True          | True         | gpt-4o       | Few-Shot     | 0.0559931 |  0.984831 |  0.15703  |
+| False         | True         | gpt-4o       | MIPROv2           | 0.058581  |  0.983952 |  0.1391   |
+| False         | True         | gpt-4o-mini  | Few-Shot     | 0.0606936 |  0.983308 |  0.175653 |
+| True          | True         | gpt-4o-mini  | Few-Shot     | 0.0697857 |  0.982162 |  0.19549  |
+| False         | False        | gpt-4o       | Few-Shot     | 0.115338  |  0.941359 |  0.34636  |
+| False         | False        | gpt-4o-mini  | MIPROv2           | 0.135256  |  0.93586  |  0.397854 |
+| False         | False        | gpt-4o-mini  | Few-Shot     | 0.129098  |  0.928446 |  0.381446 |
+| True          | True         | gpt-4o       | Zero-Shot          | 0.199238  |  0.907482 |  1.13835  |
+| False         | True         | gpt-4o-mini  | MIPROv2           | 0.185536  |  0.903004 |  1.104    |
+| False         | False        | gpt-4o       | Zero-Shot          | 0.339778  |  0.869209 |  1.26664  |
+| False         | True         | gpt-4o       | Zero-Shot          | 0.372436  |  0.843238 |  1.7383   |
+| False         | False        | gpt-4o       | MIPROv2           | 0.555943  |  0.841092 |  2.72135  |
+| True          | True         | gpt-4o-mini  | MIPROv2           | 0.278445  |  0.837479 |  1.81314  |
+| True          | True         | gpt-4o-mini  | Zero-Shot          | 0.274373  |  0.811401 |  2.32433  |
+| True          | True         | llama3.1:70b | Few-Shot     | 0.46743   |  0.731679 |  2.73804  |
+| True          | True         | llama3.1:70b | Zero-Shot          | 0.46743   |  0.731679 |  2.73804  |
+| False         | True         | gpt-4o-mini  | Zero-Shot          | 0.675318  |  0.730529 |  2.80864  |
+| False         | False        | gpt-4o-mini  | Zero-Shot          | 0.912785  |  0.674131 |  3.78378  |
+| True          | True         | llama3.1:8b  | Zero-Shot          | 0.692294  |  0.636374 |  4.05067  |
+| True          | True         | llama3.1:70b | MIPROv2           | 0.854265  |  0.621998 |  4.0269   |
+| True          | True         | llama3.1:8b  | Few-Shot     | 0.635604  |  0.617826 |  3.4939   |
+| False         | False        | llama3.1:70b | Few-Shot     | 0.879641  |  0.586772 |  3.96347  |
+| False         | True         | llama3.1:8b  | Few-Shot     | 0.848772  |  0.583771 |  3.64784  |
+| False         | True         | llama3.1:8b  | Zero-Shot          | 0.963108  |  0.565372 |  4.07367  |
+| False         | False        | llama3.1:70b | Zero-Shot          | 1.08496   |  0.560791 |  4.69368  |
+| False         | False        | llama3.1:8b  | Zero-Shot          | 1.10464   |  0.560307 |  5.1225   |
+| False         | True         | llama3.1:70b | Zero-Shot          | 1.04453   |  0.534683 |  4.54761  |
+| False         | True         | llama3.1:70b | Few-Shot     | 1.26057   |  0.532556 |  6.50786  |
+| False         | True         | llama3.1:70b | MIPROv2           | 1.30568   |  0.410476 |  6.35512  |
+| True          | True         | llama3.1:8b  | MIPROv2           | 1.9784    |  0.321543 |  9.43973  |
+| False         | True         | llama3.1:8b  | MIPROv2           | 1.99379   |  0.289787 |  9.4096   |
+| False         | False        | llama3.1:8b  | Few-Shot     | 2.06598   |  0.267919 | 10.2592   |
+| False         | False        | llama3.1:8b  | MIPROv2           | 1.87905   |  0.230551 |  8.92181  |
+| False         | False        | llama3.1:70b | MIPROv2           | 1.45797   |  0.197413 |  7.50252  |
 
-Note: ↓ indicates lower values are better, ↑ indicates higher values are better.
+## Setup
 
-## Prerequisites
+### Prerequisites
 
 - Python 3.12
 
-## Setup
+### Installation
 
 1. Clone the repository:
    ```
